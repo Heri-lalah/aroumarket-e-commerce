@@ -1,1 +1,20 @@
-@import '~bootstrap';
+//New colors
+$violet:#5e37ca;
+$dark_violet:#5f11a8;
+$light_violet: #6a31a4;
+$pink:#c7358a;
+$white:#fff;
+$green: #4cb953;
+$light_green:rgb(43, 167, 12);
+$dark_green:rgb(13, 156, 13);
+$gray: #4f5b60;
+$darkgray:rgb(71, 70, 70);
+$light_gray:rgb(179, 174, 174);
+$super_light_gray: #e9ebec;
+$black:rgb(41, 39, 39);
+$light_blue: #dbe3e8;
+
+html{
+    width: 100%;
+    height: 100%;
+}
