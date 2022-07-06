@@ -1,20 +1,48 @@
-//New colors
-$violet:#5e37ca;
-$dark_violet:#5f11a8;
-$light_violet: #6a31a4;
-$pink:#c7358a;
-$white:#fff;
-$green: #4cb953;
-$light_green:rgb(43, 167, 12);
-$dark_green:rgb(13, 156, 13);
-$gray: #4f5b60;
-$darkgray:rgb(71, 70, 70);
-$light_gray:rgb(179, 174, 174);
-$super_light_gray: #e9ebec;
-$black:rgb(41, 39, 39);
-$light_blue: #dbe3e8;
+@import 'partials/variables';
+@import 'partials/globals';
 
-html{
-    width: 100%;
-    height: 100%;
+header.navbar{
+    .logo{
+        border: 2px solid $pink;
+        border-radius: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+    .logo:hover{
+        border: 2px solid $dark_pink;
+        transform: scale(1.1,1.1);
+    }
+
+    .navbar-text{
+        color: $pink;
+        font-family: Marck Script;
+        font-size: xx-large;
+        transition: transform 0.5s ease-in-out;
+    }
+    .navbar-text:hover{
+        color: $dark_pink;
+        transform: scale(1.1,1.1);
+    }
+
+    nav{
+        ul{
+            li a{
+                font-family:Marck Script;
+                font-size: x-large;
+                color: $dark_pink;
+            }
+            li a:hover{
+                color: $pink;  
+            }
+        }
+    }
+    .toggler-icon{
+        border:1px solid red;
+    }
 }
+
+  .myCarousel{
+      max-height: 60vh;
+      background-color:gainsboro;
+      overflow: hidden;
+  }
+

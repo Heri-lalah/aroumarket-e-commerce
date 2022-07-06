@@ -1,14 +1,30 @@
-<header>
-    <nav class="navbar navbar-expand-md ms-3 me-3">
-        <div class="nav me-auto">
-            <a href="#"> <img src="{{asset('avatars/logo.png')}}" alt="aro-logo" width="40px" class="navbar-brand"></a>
-        </div>
+<header class="navbar navbar-expand-md bg-light mx-3">
+    <a href="#" class="navbar-brand">
+        <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
+    </a>
+    <a href="#" class="navbar-text navbar-brand">
+        AroMarket
+    </a>
 
-        <div>
-            <form action="#" method="get" class="d-flex">
-                <input type="search" class="form-control me-2" placeholder="Rechercher...">
-                <input type="submit" value="search" class="btn btn-outline-primary">
-            </form>
-        </div>
-    </nav>
+    <button type="button" class="navbar-toggler navbar-light" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+        <span class="navbar-toggler-icon border-primary"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbar-content">
+        <nav>
+            <ul class="navbar-nav ms-lg-5">
+                <li class="nav-item"><a href="" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Produits</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="" class="nav-link disabled">Contacter</a></li>
+            </ul>
+        </nav>
+        <form action="#" class="d-flex ms-auto">
+            <div class="input-group">
+                <input type="search" class="form-control" aria-label="Search" placeholder="Search">
+                <button type="search" class="btn btn-outline-primary">Search</button>
+            </div>
+        </form>
+    </div>
 </header>

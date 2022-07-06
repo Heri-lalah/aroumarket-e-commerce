@@ -1,9 +1,36 @@
-html {
-  width: 100%;
-  height: 100%;
+header.navbar .logo {
+  border: 2px solid #c7358a;
+  border-radius: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+header.navbar .logo:hover {
+  border: 2px solid #f50992;
+  transform: scale(1.1, 1.1);
+}
+header.navbar .navbar-text {
+  color: #c7358a;
+  font-family: Marck Script;
+  font-size: xx-large;
+  transition: transform 0.5s ease-in-out;
+}
+header.navbar .navbar-text:hover {
+  color: #f50992;
+  transform: scale(1.1, 1.1);
+}
+header.navbar nav ul li a {
+  font-family: Marck Script;
+  font-size: x-large;
+  color: #f50992;
+}
+header.navbar nav ul li a:hover {
+  color: #c7358a;
+}
+header.navbar .toggler-icon {
+  border: 1px solid red;
 }
 
-.myCarousel{
-    height: 55vh;
-    background-color:gainsboro;
+.myCarousel {
+  max-height: 60vh;
+  background-color: gainsboro;
+  overflow: hidden;
 }
