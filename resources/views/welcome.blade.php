@@ -6,17 +6,19 @@
         <div class="container-sm">
             <div class="wrapper">
                 <div class="intro">
-                    <div class="row mt-sm-2 mt-md-5 align-items-center g-3">
-                        <div class="col-sm-12 col-md-6">
-                            <h2>Besoin de quelques choses ? sans ses déplacer</h2>
-                        </div>
-                        <div class="col-sm-12 col-md-6 text-center">
+                    <div class="d-lg-flex justify-content-between flex-lg-row-reverse">
+                        <div class="text-center col-lg-4">
                             <img src="{{asset('avatars/logo.png')}}" alt="intro-image" width="150px">
+                        </div>
+                        <div class="">
+                            <p class="intro-title text-center">Besoin de quelques choses ? sans ses déplacer</p>
+                            <p class="description h4 mt-md-5 mt-sm-3 ms-md-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat minima labore esse laudantium fuga consequatur deleniti numquam, inventore reprehenderit officia perspiciatis architecto sit delectus non eum dolor, libero consectetur dignissimos?
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <p class="description mt-3">A description of the website</p>
         </div>
     </div>
 </div>

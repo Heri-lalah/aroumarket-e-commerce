@@ -36,14 +36,20 @@ header.navbar{
             }
         }
     }
-    input[placeholder=Search]{
-        color: red;
-    }
 }
-
-.banner{
-    height: 100vh;
-    .layout{
-
+.layout{
+    .wrapper{
+        .intro{
+            min-height: 40vh;
+            .intro-title{
+                font-family: Marck Script;
+                font-size: 3rem;
+                color: $white;
+            }
+            .description{
+                font-family: Marck Script;
+                color: $dark_white;
+            }
+        }
     }
 }

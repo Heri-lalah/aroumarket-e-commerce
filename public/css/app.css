@@ -1,39 +1,50 @@
 body {
-  background-image: linear-gradient(to top left, #f86707, #f50992);
+  background-image: linear-gradient(to top left, orange, #f50992);
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
 }
 
 header.navbar .logo {
-  border: 2px solid #fff;
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 100%;
   transition: transform 0.5s ease-in-out;
 }
 header.navbar .logo:hover {
-  border: 2px solid rgb(243, 236, 236);
+  border: 2px solid #f3eaef;
   transform: scale(1.1, 1.1);
 }
 header.navbar .navbar-text {
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-family: Marck Script;
   font-size: xx-large;
   transition: transform 0.5s ease-in-out;
 }
 header.navbar .navbar-text:hover {
-  color: rgb(243, 236, 236);
+  color: #f3eaef;
   transform: scale(1.1, 1.1);
 }
 header.navbar nav ul li a {
   font-family: Marck Script;
   font-size: x-large;
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 header.navbar nav ul li a:hover {
-  color: rgb(243, 236, 236);
+  color: #f3eaef;
   text-decoration: underline;
 }
-header.navbar input[placeholder=Search] {
-  color: red;
-}
 
-.banner {
-  height: 100vh;
+.layout .wrapper .intro {
+  min-height: 40vh;
+}
+.layout .wrapper .intro .intro-title {
+  font-family: Marck Script;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+}
+.layout .wrapper .intro .description {
+  font-family: Marck Script;
+  color: #f3eaef;
 }
