@@ -10,8 +10,10 @@
     <link rel="shortcut icon" href="{{ asset('avatars/logo.png') }}" type="image/x-icon">
     <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
 </head>
-<body class="layouts position-relative">
-    @include('partials.navbar')
-    @yield('main')
+<body>
+    <div class="banner position-relative">
+        @include('partials.navbar')
+        @yield('main')
+    </div>
 </body>
 </html>

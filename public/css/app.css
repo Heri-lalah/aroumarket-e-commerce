@@ -34,24 +34,6 @@ header.navbar input[placeholder=Search] {
   color: red;
 }
 
-.myCarousel {
-  max-height: 60vh;
-  background-color: gainsboro;
-  overflow: hidden;
-}
-
-.waves {
-  position: relative;
+.banner {
   height: 100vh;
-}
-
-svg {
-  position: absolute;
-  bottom: 0;
-}
-
-.container .lorem {
-  position: absolute;
-  z-index: 2000;
-  top: 0;
 }
