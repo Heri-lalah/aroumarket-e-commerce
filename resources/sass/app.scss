@@ -3,23 +3,23 @@
 
 header.navbar{
     .logo{
-        border: 2px solid $pink;
+        border: 2px solid $white;
         border-radius: 100%;
         transition: transform 0.5s ease-in-out;
     }
     .logo:hover{
-        border: 2px solid $dark_pink;
+        border: 2px solid $dark_white;
         transform: scale(1.1,1.1);
     }
 
     .navbar-text{
-        color: $pink;
+        color: $white;
         font-family: Marck Script;
         font-size: xx-large;
         transition: transform 0.5s ease-in-out;
     }
     .navbar-text:hover{
-        color: $dark_pink;
+        color: $dark_white;
         transform: scale(1.1,1.1);
     }
 
@@ -28,21 +28,30 @@ header.navbar{
             li a{
                 font-family:Marck Script;
                 font-size: x-large;
-                color: $dark_pink;
+                color: $white;
             }
             li a:hover{
-                color: $pink;
+                color: $dark_white;
+                text-decoration: underline;
             }
         }
     }
-    .toggler-icon{
-        border:1px solid red;
+    input[placeholder=Search]{
+        color: red;
     }
 }
 
-  .myCarousel{
-      max-height: 60vh;
-      background-color:gainsboro;
-      overflow: hidden;
-  }
+.myCarousel{
+    max-height: 60vh;
+    background-color:gainsboro;
+    overflow: hidden;
+}
 
+.waves{
+    position: relative;
+    height: 100vh;
+}
+svg{
+    position: absolute;
+    bottom: 0;
+}

@@ -1,4 +1,4 @@
-<header class="navbar navbar-expand-md bg-light mx-3">
+<header class="navbar navbar-expand-md mx-3">
     <a href="#" class="navbar-brand">
         <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
     </a>
@@ -22,8 +22,8 @@
         </nav>
         <form action="#" class="d-flex ms-auto">
             <div class="input-group">
-                <input type="search" class="form-control" aria-label="Search" placeholder="Search">
-                <button type="search" class="btn btn-outline-primary">Search</button>
+                <input type="search" class="form-control bg-transparent" aria-label="Search" placeholder="Search">
+                <button type="search" class="btn border-light text-light">Search</button>
             </div>
         </form>
     </div>

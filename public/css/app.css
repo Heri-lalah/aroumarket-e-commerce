@@ -1,32 +1,37 @@
+body {
+  background-image: linear-gradient(to top left, #f86707, #f50992);
+}
+
 header.navbar .logo {
-  border: 2px solid #c7358a;
+  border: 2px solid #fff;
   border-radius: 100%;
   transition: transform 0.5s ease-in-out;
 }
 header.navbar .logo:hover {
-  border: 2px solid #f50992;
+  border: 2px solid rgb(243, 236, 236);
   transform: scale(1.1, 1.1);
 }
 header.navbar .navbar-text {
-  color: #c7358a;
+  color: #fff;
   font-family: Marck Script;
   font-size: xx-large;
   transition: transform 0.5s ease-in-out;
 }
 header.navbar .navbar-text:hover {
-  color: #f50992;
+  color: rgb(243, 236, 236);
   transform: scale(1.1, 1.1);
 }
 header.navbar nav ul li a {
   font-family: Marck Script;
   font-size: x-large;
-  color: #f50992;
+  color: #fff;
 }
 header.navbar nav ul li a:hover {
-  color: #c7358a;
+  color: rgb(243, 236, 236);
+  text-decoration: underline;
 }
-header.navbar .toggler-icon {
-  border: 1px solid red;
+header.navbar input[placeholder=Search] {
+  color: red;
 }
 
 .myCarousel {
@@ -34,17 +39,13 @@ header.navbar .toggler-icon {
   background-color: gainsboro;
   overflow: hidden;
 }
-svg{
-    min-width: 100%;
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -150;
+
+.waves {
+  position: relative;
+  height: 100vh;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
 }
