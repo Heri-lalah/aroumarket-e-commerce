@@ -40,7 +40,7 @@ header.navbar{
 .layout{
     .wrapper{
         .intro{
-            min-height: 40vh;
+            height: 45vh;
             .intro-title{
                 font-family: Marck Script;
                 font-size: 3rem;
@@ -51,5 +51,8 @@ header.navbar{
                 color: $dark_white;
             }
         }
+    }
+    .myCarousel{
+        height: 40vh;
     }
 }

@@ -5,6 +5,7 @@ body {
 html {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 header.navbar .logo {
@@ -37,7 +38,7 @@ header.navbar nav ul li a:hover {
 }
 
 .layout .wrapper .intro {
-  min-height: 40vh;
+  height: 45vh;
 }
 .layout .wrapper .intro .intro-title {
   font-family: Marck Script;
@@ -47,4 +48,7 @@ header.navbar nav ul li a:hover {
 .layout .wrapper .intro .description {
   font-family: Marck Script;
   color: #f3eaef;
+}
+.layout .myCarousel {
+  height: 40vh;
 }
