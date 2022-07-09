@@ -81,9 +81,6 @@ header.navbar form .btnsearch:hover {
           animation: logo 4s infinite;
 }
 
-.banner {
-  max-height: 100vh;
-}
 .banner .layout .wrapper .intro .intro-title {
   font-family: "Marck Script";
   font-size: 3rem;
@@ -137,4 +134,8 @@ header.navbar form .btnsearch:hover {
 .banner .layout .services .imgpromo {
   width: 100%;
   height: 100%;
+}
+
+.productslist .card {
+  max-width: 18rem;
 }
