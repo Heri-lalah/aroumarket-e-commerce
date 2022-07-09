@@ -1,5 +1,7 @@
 body {
   background-image: linear-gradient(to top left, orange, #f50992);
+  background-size: cover;
+  background-attachment: fixed;
   width: auto;
 }
 
