@@ -2,16 +2,6 @@
 @import 'partials/globals';
 
 header.navbar{
-    .logo{
-        border: 2px solid $white;
-        border-radius: 100%;
-        transition: transform 0.5s ease-in-out;
-        &:hover{
-            border: 2px solid $dark_white;
-            transform: scale(1.1,1.1);
-        }
-    }
-
     .navbar-text{
         color: $white;
         font-family: $primaryfont;
@@ -79,6 +69,7 @@ header.navbar{
                     img{
                         size: 50px;
                     }
+                    font-family: $secondaryfont;
                 }
                 .description{
                     font-family: $primaryfont;

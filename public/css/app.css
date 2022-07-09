@@ -5,6 +5,34 @@ body {
   width: auto;
 }
 
+@-webkit-keyframes logo {
+  0%, 20%, 60%, 100% {
+    transform: rotateZ(0);
+  }
+  40%, 43% {
+    transform: rotateZ(0);
+  }
+  75% {
+    transform: rotateZ(3.142rad);
+  }
+}
+
+@keyframes logo {
+  0%, 20%, 60%, 100% {
+    transform: rotateZ(0);
+  }
+  40%, 43% {
+    transform: rotateZ(0);
+  }
+  75% {
+    transform: rotateZ(3.142rad);
+  }
+}
+.logo {
+  -webkit-animation: logo 2s infinite;
+          animation: logo 2s infinite;
+}
+
 .logo {
   border: 2px solid rgb(255, 255, 255);
   border-radius: 100%;
@@ -15,15 +43,6 @@ body {
   transform: scale(1.1, 1.1);
 }
 
-header.navbar .logo {
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-header.navbar .logo:hover {
-  border: 2px solid #f3eaef;
-  transform: scale(1.1, 1.1);
-}
 header.navbar .navbar-text {
   color: rgb(255, 255, 255);
   font-family: "Marck Script";
@@ -71,6 +90,9 @@ header.navbar .logo, header.navbar .navbar-text {
   font-family: "Marck Script";
   font-size: 3rem;
   color: rgb(255, 255, 255);
+}
+.banner .layout .wrapper .intro .mytopcarousel {
+  font-family: "Lobster";
 }
 .banner .layout .wrapper .intro .mytopcarousel img {
   size: 50px;
