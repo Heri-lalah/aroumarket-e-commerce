@@ -1,8 +1,8 @@
 <header class="navbar navbar-expand-md mx-3">
-    <a href="#" class="navbar-brand">
+    <a href="{{route('home')}}" class="navbar-brand">
         <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
     </a>
-    <a href="#" class="navbar-text navbar-brand">
+    <a href="{{route('home')}}" class="navbar-text navbar-brand">
         AroMarket
     </a>
 

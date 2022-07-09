@@ -5,28 +5,6 @@ body {
   width: auto;
 }
 
-@-webkit-keyframes logo {
-  0%, 100% {
-    transform: rotateZ(-0.5rad);
-  }
-  75% {
-    transform: rotateZ(1rad);
-  }
-}
-
-@keyframes logo {
-  0%, 100% {
-    transform: rotateZ(-0.5rad);
-  }
-  75% {
-    transform: rotateZ(1rad);
-  }
-}
-.logo {
-  -webkit-animation: logo 4s infinite;
-          animation: logo 4s infinite;
-}
-
 .logo {
   border: 2px solid rgb(255, 255, 255);
   border-radius: 100%;
@@ -71,13 +49,39 @@ header.navbar form .btnsearch:hover {
   background-color: rgb(255, 255, 255);
   color: #4f5b60;
 }
-header.navbar .logo, header.navbar .navbar-text {
+
+.footer {
+  height: 1.5rem;
+}
+
+@-webkit-keyframes logo {
+  0%, 100% {
+    transform: rotateZ(-0.5rad);
+  }
+  75% {
+    transform: rotateZ(1rad);
+  }
+}
+
+@keyframes logo {
+  0%, 100% {
+    transform: rotateZ(-0.5rad);
+  }
+  75% {
+    transform: rotateZ(1rad);
+  }
+}
+.logo, .navbar-text {
   -webkit-animation: 0.5s ease-in 1s 1;
           animation: 0.5s ease-in 1s 1;
 }
 
+.logo {
+  -webkit-animation: logo 4s infinite;
+          animation: logo 4s infinite;
+}
+
 .banner {
-  min-height: 100vh;
   max-height: 100vh;
 }
 .banner .layout .wrapper .intro .intro-title {
@@ -88,8 +92,9 @@ header.navbar .logo, header.navbar .navbar-text {
 .banner .layout .wrapper .intro .mytopcarousel {
   font-family: "Lobster";
 }
-.banner .layout .wrapper .intro .mytopcarousel img {
-  size: 50px;
+.banner .layout .wrapper .intro .slide {
+  width: 100%;
+  height: 100%;
 }
 .banner .layout .wrapper .intro .description {
   font-family: "Marck Script";
@@ -132,8 +137,4 @@ header.navbar .logo, header.navbar .navbar-text {
 .banner .layout .services .imgpromo {
   width: 100%;
   height: 100%;
-}
-
-.footer {
-  height: 1.5rem;
 }

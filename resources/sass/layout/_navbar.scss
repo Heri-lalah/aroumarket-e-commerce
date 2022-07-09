@@ -1,0 +1,46 @@
+header.navbar{
+    .navbar-text{
+        color: $white;
+        font-family: $primaryfont;
+        font-size: xx-large;
+        transition: transform 0.5s ease-in-out;
+        &:hover{
+            color: $dark_white;
+            transform: scale(1.1,1.1);
+        }
+    }
+
+    .menuicon{
+        border: 2px solid $white;
+        transition: transform 0.5s ease-in-out;
+        &:hover{
+            transform: scale(1.1,1.1);
+        }
+    }
+
+    nav{
+        ul{
+            li a{
+                font-family:$primaryfont;
+                font-size: x-large;
+                color: $white;
+                &:hover{
+                    color: $dark_white;
+                    //text-decoration: underline;
+                }
+            }
+        }
+    }
+    form{
+        .btnsearch{
+            font-weight: bold;
+            font-family: cursive;
+            color: $white;
+            &:hover{
+                background-color: $white;
+                color: $gray;
+            }
+        }
+    }
+
+}

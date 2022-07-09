@@ -1,0 +1,16 @@
+@keyframes logo{
+    0%,100%{
+        transform: rotateZ(-.5rad);
+    }
+    75%{
+        transform: rotateZ(1rad);
+    }
+}
+
+//Animation navbar
+.logo, .navbar-text{
+    animation:.5s ease-in 1s 1
+}
+.logo{
+    animation: logo 4s infinite;
+}

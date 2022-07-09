@@ -4,18 +4,7 @@ body{
     background-attachment: fixed;
     width: auto;
     //height: 100%;
-    //min-height: 1000px;
-}
-@keyframes logo{
-    0%,100%{
-        transform: rotateZ(-.5rad);
-    }
-    75%{
-        transform: rotateZ(1rad);
-    }
-}
-.logo{
-    animation: logo 4s infinite;
+    //height: 1000px;
 }
 .logo{
     border: 2px solid $white;
