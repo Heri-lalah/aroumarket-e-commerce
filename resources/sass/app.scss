@@ -38,7 +38,7 @@ header.navbar{
     }
 }
 .banner{
-    height: 1080px;
+    min-height: 100vh;
     max-height: 100vh;
     //overflow: hidden;
     .layout{
@@ -58,36 +58,39 @@ header.navbar{
         }
         .services{
             //height: 15rem;
+            overflow: hidden;
+            min-height: 50vh;
             font-family: $secondaryfont;
-            i{
+            color: $white;
+            font-size: 20px;
+            i.service-item{
                 font-size: 70px;
                 color: $white;
                 border: 5px $white solid;
                 padding: 25px;
             }
-            .livraison{
-                font-size: 50px;
-                font-family: $primaryfont;
-                border: 5px $white solid;
-                padding: 30px;
-                border-radius:100%;
-            }
             .hours{
-                font-size: 80px;
+                padding: 0 4px;
+            }
+            .info{
+                font-family: $primaryfont;
+                font-size: 22px;
+            }
+            .brands{
+                font-family: $primaryfont;
+                font-size: 25px;
+                color: $dark_pink;
+                .fa-google-plus-g{
+                    color:green;
+                }
+            }
+            .imgpromo{
+                width: 100%;
+                height: 100%;
             }
         }
     }
 }
 .footer{
-    height: 4rem;
-    .footer-items{
-        .brandsintro{
-            font-family: $primaryfont;
-            font-size: 25px;
-            color: $dark_pink;
-        }
-        .fa-google-plus-g{
-            color:green;
-        }
-    }
+    height: 1.5rem;
 }

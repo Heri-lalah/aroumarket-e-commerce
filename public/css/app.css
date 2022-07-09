@@ -33,7 +33,7 @@ header.navbar nav ul li a:hover {
 }
 
 .banner {
-  height: 1080px;
+  min-height: 100vh;
   max-height: 100vh;
 }
 .banner .layout .wrapper .intro .intro-title {
@@ -46,33 +46,38 @@ header.navbar nav ul li a:hover {
   color: #f3eaef;
 }
 .banner .layout .services {
+  overflow: hidden;
+  min-height: 50vh;
   font-family: "Lobster";
+  color: rgb(255, 255, 255);
+  font-size: 20px;
 }
-.banner .layout .services i {
+.banner .layout .services i.service-item {
   font-size: 70px;
   color: rgb(255, 255, 255);
   border: 5px rgb(255, 255, 255) solid;
   padding: 25px;
 }
-.banner .layout .services .livraison {
-  font-size: 50px;
-  font-family: "Marck Script";
-  border: 5px rgb(255, 255, 255) solid;
-  padding: 30px;
-  border-radius: 100%;
-}
 .banner .layout .services .hours {
-  font-size: 80px;
+  padding: 0 4px;
 }
-
-.footer {
-  height: 4rem;
+.banner .layout .services .info {
+  font-family: "Marck Script";
+  font-size: 22px;
 }
-.footer .footer-items .brandsintro {
+.banner .layout .services .brands {
   font-family: "Marck Script";
   font-size: 25px;
   color: #f50992;
 }
-.footer .footer-items .fa-google-plus-g {
+.banner .layout .services .brands .fa-google-plus-g {
   color: green;
+}
+.banner .layout .services .imgpromo {
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  height: 1.5rem;
 }
