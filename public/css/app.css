@@ -136,6 +136,9 @@ header.navbar form .btnsearch:hover {
   height: 100%;
 }
 
-.productslist .card {
+.banner {
+  position: relative;
+}
+.banner .productslist .card {
   max-width: 18rem;
 }
