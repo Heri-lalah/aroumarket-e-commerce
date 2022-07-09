@@ -14,7 +14,7 @@ header.navbar{
 
     .navbar-text{
         color: $white;
-        font-family: Marck Script;
+        font-family: $primaryfont;
         font-size: xx-large;
         transition: transform 0.5s ease-in-out;
     }
@@ -26,7 +26,7 @@ header.navbar{
     nav{
         ul{
             li a{
-                font-family:Marck Script;
+                font-family:$primaryfont;
                 font-size: x-large;
                 color: $white;
             }
@@ -37,25 +37,57 @@ header.navbar{
         }
     }
 }
-.layout{
-    .wrapper{
-        .intro{
-            height: 45vh;
-            .intro-title{
-                font-family: Marck Script;
-                font-size: 3rem;
-                color: $white;
+.banner{
+    height: 1080px;
+    max-height: 100vh;
+    //overflow: hidden;
+    .layout{
+        //height: 80%;
+        .wrapper{
+            .intro{
+                .intro-title{
+                    font-family: $primaryfont;
+                    font-size: 3rem;
+                    color: $white;
+                }
+                .description{
+                    font-family: $primaryfont;
+                    color: $dark_white;
+                }
             }
-            .description{
-                font-family: Marck Script;
-                color: $dark_white;
+        }
+        .services{
+            //height: 15rem;
+            font-family: $secondaryfont;
+            i{
+                font-size: 70px;
+                color: $white;
+                border: 5px $white solid;
+                padding: 25px;
+            }
+            .livraison{
+                font-size: 50px;
+                font-family: $primaryfont;
+                border: 5px $white solid;
+                padding: 30px;
+                border-radius:100%;
+            }
+            .hours{
+                font-size: 80px;
             }
         }
     }
-    .myCarousel{
-        height: 40vh;
-    }
-    .carousel{
-        background-color: blueviolet;
+}
+.footer{
+    height: 4rem;
+    .footer-items{
+        .brandsintro{
+            font-family: $primaryfont;
+            font-size: 25px;
+            color: $dark_pink;
+        }
+        .fa-google-plus-g{
+            color:green;
+        }
     }
 }

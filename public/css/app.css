@@ -1,10 +1,6 @@
 body {
   background-image: linear-gradient(to top left, orange, #f50992);
-}
-
-html {
-  height: 100vh;
-  width: 100vw;
+  width: auto;
 }
 
 header.navbar .logo {
@@ -18,7 +14,7 @@ header.navbar .logo:hover {
 }
 header.navbar .navbar-text {
   color: rgb(255, 255, 255);
-  font-family: Marck Script;
+  font-family: "Marck Script";
   font-size: xx-large;
   transition: transform 0.5s ease-in-out;
 }
@@ -27,7 +23,7 @@ header.navbar .navbar-text:hover {
   transform: scale(1.1, 1.1);
 }
 header.navbar nav ul li a {
-  font-family: Marck Script;
+  font-family: "Marck Script";
   font-size: x-large;
   color: rgb(255, 255, 255);
 }
@@ -36,21 +32,47 @@ header.navbar nav ul li a:hover {
   text-decoration: underline;
 }
 
-.layout .wrapper .intro {
-  height: 45vh;
+.banner {
+  height: 1080px;
+  max-height: 100vh;
 }
-.layout .wrapper .intro .intro-title {
-  font-family: Marck Script;
+.banner .layout .wrapper .intro .intro-title {
+  font-family: "Marck Script";
   font-size: 3rem;
   color: rgb(255, 255, 255);
 }
-.layout .wrapper .intro .description {
-  font-family: Marck Script;
+.banner .layout .wrapper .intro .description {
+  font-family: "Marck Script";
   color: #f3eaef;
 }
-.layout .myCarousel {
-  height: 40vh;
+.banner .layout .services {
+  font-family: "Lobster";
 }
-.layout .carousel {
-  background-color: blueviolet;
+.banner .layout .services i {
+  font-size: 70px;
+  color: rgb(255, 255, 255);
+  border: 5px rgb(255, 255, 255) solid;
+  padding: 25px;
+}
+.banner .layout .services .livraison {
+  font-size: 50px;
+  font-family: "Marck Script";
+  border: 5px rgb(255, 255, 255) solid;
+  padding: 30px;
+  border-radius: 100%;
+}
+.banner .layout .services .hours {
+  font-size: 80px;
+}
+
+.footer {
+  height: 4rem;
+}
+.footer .footer-items .brandsintro {
+  font-family: "Marck Script";
+  font-size: 25px;
+  color: #f50992;
+}
+.footer .footer-items .fa-google-plus-g {
+  color: green;
 }
