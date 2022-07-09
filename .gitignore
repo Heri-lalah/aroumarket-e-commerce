@@ -1,7 +1,7 @@
 /node_modules
 /public/hot
 /public/
-/resources/views/tmp
+/resources/views/layouts/tmp
 /storage/*.key
 /vendor
 .env

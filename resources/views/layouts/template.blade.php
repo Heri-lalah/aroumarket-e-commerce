@@ -13,9 +13,9 @@
 </head>
 <body>
     <div class="banner position-relative">
-        @include('partials.navbar')
+        @include('layouts.partials.navbar')
         @yield('main')
-        @include('partials.footer')
+        @include('layouts.partials.footer')
     </div>
 </body>
 </html>
