@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(to top left, orange, #f50992);
+  background-image: linear-gradient(to top left, #f86707, #f50992);
   background-size: cover;
   background-attachment: fixed;
   width: auto;
@@ -12,6 +12,13 @@ header.navbar .logo {
 }
 header.navbar .logo:hover {
   border: 2px solid #f3eaef;
+  transform: scale(1.1, 1.1);
+}
+header.navbar .menuicon {
+  border: 2px solid rgb(255, 255, 255);
+  transition: transform 0.5s ease-in-out;
+}
+header.navbar .menuicon:hover {
   transform: scale(1.1, 1.1);
 }
 header.navbar .navbar-text {
@@ -31,7 +38,15 @@ header.navbar nav ul li a {
 }
 header.navbar nav ul li a:hover {
   color: #f3eaef;
-  text-decoration: underline;
+}
+header.navbar form .btnsearch {
+  font-weight: bold;
+  font-family: cursive;
+  color: rgb(255, 255, 255);
+}
+header.navbar form .btnsearch:hover {
+  background-color: rgb(255, 255, 255);
+  color: #4f5b60;
 }
 
 .banner {

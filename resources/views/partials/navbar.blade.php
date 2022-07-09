@@ -7,7 +7,8 @@
     </a>
 
     <button type="button" class="navbar-toggler navbar-light" data-bs-toggle="collapse" data-bs-target="#navbar-content">
-        <span class="navbar-toggler-icon border-primary"></span>
+        {{--<span class="navbar-toggler-icon border-primary"></span>--}}
+        <i class="fa fa-align-justify p-2 menuicon rounded"></i>
     </button>
 
 
@@ -22,8 +23,8 @@
         </nav>
         <form action="#" class="d-flex ms-auto">
             <div class="input-group">
-                <input type="search" class="form-control bg-transparent" aria-label="Search" placeholder="Search">
-                <button type="search" class="btn border-light text-light">Search</button>
+                <input type="search" class="form-control bg-transparent" aria-label="Search" placeholder="Rechercher ...">
+                <button type="search" class="btn border-light btnsearch">Rechercher</button>
             </div>
         </form>
     </div>
