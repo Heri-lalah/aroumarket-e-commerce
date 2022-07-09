@@ -6,8 +6,34 @@
         <div class="wrapper">
             <div class="intro mt-4">
                 <div class="d-lg-flex justify-content-between flex-lg-row-reverse">
-                    <div class="text-center col-xl-4">
-                        <img src="{{asset('avatars/logo.png')}}" alt="intro-image" width="150px">
+                    <div class="text-center col-xl-4 bg-info">
+                        <div class="mytopcarousel carousel slide" data-bs-ride="carousel" id="topproductCarousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active h-100">
+                                    <img src="{{ asset('images/coding.jpg') }}" alt="coding" class="d-block img-fluid w-100">
+                                    <div class="carousel-caption">
+                                        <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
+                                        <a href="" class="btn btn-primary">Plus de details</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('images/mixing.jpg') }}" alt="mixing" class="d-block img-fluid w-100">
+                                    <div class="carousel-caption">
+                                        <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
+                                        <a href="" class="btn btn-primary">Plus de details</a>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('images/teaching.jpg') }}" alt="teaching" class="d-block img-fluid w-100">
+                                    <div class="carousel-caption">
+                                        <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
+                                        <a href="" class="btn btn-primary">Plus de details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{--<img src="{{asset('avatars/logo.png')}}" alt="intro-image" width="150px">--}}
                     </div>
                     <div class="col-xl-8">
                         <p class="intro-title text-center d-none d-md-block">Besoin de quelques choses ? sans ses déplacer</p>
@@ -20,8 +46,8 @@
         </div>
     </div>
 
-    <div class="services col-12 mt-lg-5 text-center container">
-        <div class="row">
+    <div class="services col-12 mt-lg-5 text-center">
+        <div class="d-lg-flex justify-content-between">
             <div class="col-sm-12 col-xl-8">
                 <div class="d-lg-flex flex-lg-column">
                     <div class="row">
@@ -58,16 +84,28 @@
 
             {{-- IMAGES PUB --}}
             <div class="d-none d-xl-block col-xl-4 align-self-center8 position-relative">
-                <div class="carousel slide" data-bs-ride="carousel" id="productCarousel">
+                <div class="mybottomcarousel carousel slide" data-bs-ride="carousel" id="bottomproductCarousel">
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item">
                             <img src="{{ asset('images/coding.jpg') }}" alt="coding" class="d-block w-100 img-fluid">
+                            <div class="carousel-caption">
+                                <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
+                                <a href="" class="btn btn-primary">Plus de details</a>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('images/mixing.jpg') }}" alt="mixing" class="d-block w-auto img-fluid">
+                            <img src="{{ asset('images/mixing.jpg') }}" alt="mixing" class="d-block w-100 img-fluid">
+                            <div class="carousel-caption">
+                                <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
+                                <a href="" class="btn btn-primary">Plus de details</a>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('images/teaching.jpg') }}" alt="teaching" class="d-block w-auto img-fluid">
+                        <div class="carousel-item active">
+                            <img src="{{ asset('images/teaching.jpg') }}" alt="teaching" class="d-block w-100 img-fluid">
+                            <div class="carousel-caption">
+                                <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
+                                <a href="" class="btn btn-primary">Plus de details</a>
+                            </div>
                         </div>
                     </div>
                 </div>

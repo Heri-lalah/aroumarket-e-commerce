@@ -11,13 +11,6 @@ header.navbar{
             transform: scale(1.1,1.1);
         }
     }
-    .menuicon{
-        border: 2px solid $white;
-        transition: transform 0.5s ease-in-out;
-        &:hover{
-            transform: scale(1.1,1.1);
-        }
-    }
 
     .navbar-text{
         color: $white;
@@ -29,6 +22,15 @@ header.navbar{
             transform: scale(1.1,1.1);
         }
     }
+
+    .menuicon{
+        border: 2px solid $white;
+        transition: transform 0.5s ease-in-out;
+        &:hover{
+            transform: scale(1.1,1.1);
+        }
+    }
+
     nav{
         ul{
             li a{
@@ -53,6 +55,12 @@ header.navbar{
             }
         }
     }
+
+    //Animation navbar
+    .logo, .navbar-text{
+        animation:.5s ease-in 1s 1
+    }
+
 }
 .banner{
     min-height: 100vh;
@@ -66,6 +74,11 @@ header.navbar{
                     font-family: $primaryfont;
                     font-size: 3rem;
                     color: $white;
+                }
+                .mytopcarousel{
+                    img{
+                        size: 50px;
+                    }
                 }
                 .description{
                     font-family: $primaryfont;
@@ -92,6 +105,12 @@ header.navbar{
             .info{
                 font-family: $primaryfont;
                 font-size: 22px;
+                a .fa-facebook{
+                    color:rgb(0, 89, 255);
+                }
+                a .fab{
+                    font-size: 30px;
+                }
             }
             .brands{
                 font-family: $primaryfont;
