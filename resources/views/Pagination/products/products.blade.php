@@ -1,26 +1,25 @@
 @extends('layouts.template')
 @section('main')
-<div class="banner">
+<div class="bannerProduct">
     <div class="row me-2">
         <div class="col-2 col-md-3 col-lg-2">
             <div class="sidebar navbar-nav flex-column position-sticky top-0">
                 <ul class="nav flex-column">
-                    <li class="categorie shadow py-2 text-center">
+                    <li class="categorie shadow py-2 text-center rounded-end">
                         <span class="d-none d-md-block">Catégories</span>
                         <i class="fa fa-outdent d-md-none"></i>
                     </li>
-                    <li class="categorieItem nav-item ps-md-4"><a href="">Item1</a></li>
-                    <li class="categorieItem nav-item ps-md-4"><a href="">Item1</a></li>
-                    <li class="categorieItem nav-item ps-md-4"><a href="">Item1</a></li>
+                    <li class="categorieItem nav-item ps-md-4 rounded-end"><a href="">Item1</a></li>
+                    <li class="categorieItem nav-item ps-md-4 rounded-end"><a href="">Item1</a></li>
+                    <li class="categorieItem nav-item ps-md-4 rounded-end"><a href="">Item1</a></li>
                 </ul>
             </div>
         </div>
         <div class="col-10 col-md-9 col-lg-10">
-            <div class="productslist">
-                <div class="row g-4">
+            <div class="productslist container d-flex flex-wrap justify-content-center">
 
                     @for ($i=0;$i<100;$i++)
-                        <div class="col-sm-6 col-lg-3">
+                        <div class="productItem m-2">
                             <div class="card border-light">
                                 <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded h-100">
                                 <div class="fade"></div>
@@ -42,7 +41,6 @@
                         </div>
                     @endfor
 
-                </div>
             </div>
         </div>
     </div>

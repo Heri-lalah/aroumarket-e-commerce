@@ -15,3 +15,25 @@ body{
         transform: scale(1.1,1.1);
     }
 }
+.tohome{
+    position: absolute;
+    z-index: 3000;
+    font-size: 20px;
+    left: 10px;
+    bottom: 10px;
+    display: none;
+    a{
+        color: $white;
+    }
+}
+.tohomeactive{
+    position: absolute;
+    z-index: 3000;
+    font-size: 20px;
+    left: 10px;
+    bottom: 10px;
+    display: block;
+    a{
+        color: $white;
+    }
+}

@@ -16,6 +16,7 @@
     <div class="banner position-relative">
         @include('layouts.partials.navbar')
         @yield('main')
+        <p class="position-fixed tohome" id="tohome"><a href="#"><i class="fa fa-home"></i></a></p>
         @include('layouts.partials.footer')
     </div>
 </body>

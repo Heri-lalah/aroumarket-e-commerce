@@ -1,4 +1,4 @@
-.banner{
+.bannerProduct{
     position: relative;
     .sidebar{
         .categorie{
@@ -6,15 +6,16 @@
             font-family: $secondaryfont;
             color: $dark_pink;
             background-color: $white;
-            border-radius: 0 15px 15px 0;
+            //border-radius: 0 15px 15px 0;
         }
         .categorieItem{
             font-family: $primaryfont;
             font-size: 25px;
-            border-radius: 0 15px 15px 0;
+            //border-radius: 0 15px 15px 0;
             &:hover{
+                color: $dark_pink;
                 background-color: $white;
-                transition: background-color .5s ease-in-out;
+                transition: background-color 1s ease-in-out;
             }
             a{
                 color: $white;
@@ -28,7 +29,7 @@
     .productslist{
         .card{
             transition: transform .5s ease-in-out;
-            max-width: 15rem;
+            width: 15rem;
             height: 10rem;
             position: relative;
             overflow: hidden;
