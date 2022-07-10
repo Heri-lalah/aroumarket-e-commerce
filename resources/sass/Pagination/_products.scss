@@ -5,8 +5,8 @@
             transition: transform .5s ease-in-out;
             max-width: 15rem;
             height: 10rem;
+            position: relative;
             overflow: hidden;
-
             &:hover{
                 transform: scale(1.1,1.1);
             }
@@ -31,21 +31,24 @@
                 width: 100%;
                 padding: 3px 15px;
                 z-index: 2000;
+                top: 50px;
+                left: 0;
+                right: 0;
+                font-family: $primaryfont;
+                color: $white;
                 transition: background-color 1s ease-in-out;
-
-                .productname{
-                    position: absolute;
-                    top: 50px;
-                    left: 0;
-                    right: 0;
-                    font-family: $primaryfont;
-                    color: $white;
-                    z-index: 2001;
-                }
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+            .activeproductinfo{
+                opacity: 1;
+                transition: opacity 1s ease-in-out;
             }
             .addto{
                 position: absolute;
-                right: 15px;
+                z-index: 2001;
+                left: 0;
+                right: 0;
                 bottom: 5px;
                 font-family: $secondaryfont;
                 opacity: 0;

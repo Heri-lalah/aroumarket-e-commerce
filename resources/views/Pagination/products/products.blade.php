@@ -25,13 +25,16 @@
                                 <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded h-100">
                                 <div class="fade"></div>
                                 <div class="productinfo text-center">
-                                    <span class="h4 d-block productname">Product name</span>
+                                    <p class="h4 d-block productname">Product name</p>
+                                    <p class="h4 d-block productname">Product ref</p>
                                 </div>
-                                <div class="input-group w-50 float-end addto">
-                                    <input type="number" name="" id="" class="form-control form-control-sm" placeholder="qté">
-                                    <button type="submit" class="btn btn-primary btn-sm">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </button>
+                                <div class="addto input-group w-100 text-center">
+                                    <form action="">
+                                        <input type="number" name="" id="" class="form-control form-control-sm d-inline w-50" placeholder="qté">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </button>
+                                    </form>
                                 </div>
                                 <img src="{{asset('avatars/logo.png')}}" alt="logo" class="logo logoinProduct" width="30px">
                             </div>

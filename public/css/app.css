@@ -143,6 +143,7 @@ header.navbar form .btnsearch:hover {
   transition: transform 0.5s ease-in-out;
   max-width: 15rem;
   height: 10rem;
+  position: relative;
   overflow: hidden;
 }
 .banner .productslist .card:hover {
@@ -167,20 +168,24 @@ header.navbar form .btnsearch:hover {
   width: 100%;
   padding: 3px 15px;
   z-index: 2000;
-  transition: background-color 1s ease-in-out;
-}
-.banner .productslist .card .productinfo .productname {
-  position: absolute;
   top: 50px;
   left: 0;
   right: 0;
   font-family: "Marck Script";
   color: rgb(255, 255, 255);
-  z-index: 2001;
+  transition: background-color 1s ease-in-out;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.banner .productslist .card .activeproductinfo {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
 }
 .banner .productslist .card .addto {
   position: absolute;
-  right: 15px;
+  z-index: 2001;
+  left: 0;
+  right: 0;
   bottom: 5px;
   font-family: "Lobster";
   opacity: 0;
