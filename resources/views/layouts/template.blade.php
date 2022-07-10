@@ -10,6 +10,7 @@
     <title>ArouMarket</title>
     <link rel="shortcut icon" href="{{ asset('avatars/logo.png') }}" type="image/x-icon">
     <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
+    <script src="{{ asset('js/myapp.js') }}" defer></script>
 </head>
 <body>
     <div class="banner position-relative">

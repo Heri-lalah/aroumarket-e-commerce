@@ -16,268 +16,28 @@
             </div>
         </div>
         <div class="col-10 col-md-9 col-lg-10">
-            <div class="productslist text-center">
+            <div class="productslist">
                 <div class="row g-4">
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light ">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
+
+                    @for ($i=0;$i<100;$i++)
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="card border-light">
+                                <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded h-100">
+                                <div class="fade"></div>
+                                <div class="productinfo text-center">
+                                    <span class="h4 d-block productname">Product name</span>
+                                </div>
+                                <div class="input-group w-50 float-end addto">
+                                    <input type="number" name="" id="" class="form-control form-control-sm" placeholder="qté">
+                                    <button type="submit" class="btn btn-primary btn-sm">
+                                        <i class="fa fa-shopping-cart"></i>
+                                    </button>
+                                </div>
+                                <img src="{{asset('avatars/logo.png')}}" alt="logo" class="logo logoinProduct" width="30px">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="card border-light  position-relative">
-                            <img src="{{asset('images/coding.jpg')}}" alt="" class="img-fluid rounded">
-                        </div>
-                    </div>
+                    @endfor
+
                 </div>
             </div>
         </div>

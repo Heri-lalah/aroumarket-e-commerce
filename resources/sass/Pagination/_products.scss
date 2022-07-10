@@ -2,7 +2,68 @@
     position: relative;
     .productslist{
         .card{
-            max-width: 18rem;
+            transition: transform .5s ease-in-out;
+            max-width: 15rem;
+            height: 10rem;
+            overflow: hidden;
+
+            &:hover{
+                transform: scale(1.1,1.1);
+            }
+
+            .fade{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                background-color: transparent;
+                transition: background-color 1s ease-in-out;
+            }
+            .fadeactive{
+                opacity: 20%;
+                background-color: $white;
+                transition: background-color 1s ease-in-out;
+            }
+
+            .productinfo{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                padding: 3px 15px;
+                z-index: 2000;
+                transition: background-color 1s ease-in-out;
+
+                .productname{
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    right: 0;
+                    font-family: $primaryfont;
+                    color: $white;
+                    z-index: 2001;
+                }
+            }
+            .addto{
+                position: absolute;
+                right: 15px;
+                bottom: 5px;
+                font-family: $secondaryfont;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+            }
+            .activecard{
+                opacity: 100%;
+                transition: opacity 1s ease-in-out;
+            }
+            img.logoinProduct{
+                position: absolute;
+                border: none;
+                top: 10px;
+                right: 15px;
+            }
+            .logoinProduct{
+                animation: logo none;
+            }
         }
     }
 
