@@ -139,6 +139,29 @@ header.navbar form .btnsearch:hover {
 .banner {
   position: relative;
 }
+.banner .sidebar .categorie {
+  font-size: 18px;
+  font-family: "Lobster";
+  color: #f50992;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0 15px 15px 0;
+}
+.banner .sidebar .categorieItem {
+  font-family: "Marck Script";
+  font-size: 25px;
+  border-radius: 0 15px 15px 0;
+}
+.banner .sidebar .categorieItem:hover {
+  background-color: rgb(255, 255, 255);
+  transition: background-color 0.5s ease-in-out;
+}
+.banner .sidebar .categorieItem a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.banner .sidebar .categorieItem a:hover {
+  color: #f50992;
+}
 .banner .productslist .card {
   transition: transform 0.5s ease-in-out;
   max-width: 15rem;

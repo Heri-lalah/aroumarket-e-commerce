@@ -3,15 +3,15 @@
 <div class="banner">
     <div class="row me-2">
         <div class="col-2 col-md-3 col-lg-2">
-            <div class="navbar-nav flex-column position-sticky top-0 sidebar bg-info">
-                <p class="shadow p-2 text-center">
-                    <span class="d-none d-md-block">Catégories</span>
-                    <i class="fa fa-outdent d-md-none"></i>
-                </p>
-                <ul class="nav flex-column ps-2">
-                    <li class="nav-item"><a href="" class="nav-link">Item1</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Item1</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Item1</a></li>
+            <div class="sidebar navbar-nav flex-column position-sticky top-0">
+                <ul class="nav flex-column">
+                    <li class="categorie shadow py-2 text-center">
+                        <span class="d-none d-md-block">Catégories</span>
+                        <i class="fa fa-outdent d-md-none"></i>
+                    </li>
+                    <li class="categorieItem nav-item ps-md-4"><a href="">Item1</a></li>
+                    <li class="categorieItem nav-item ps-md-4"><a href="">Item1</a></li>
+                    <li class="categorieItem nav-item ps-md-4"><a href="">Item1</a></li>
                 </ul>
             </div>
         </div>
