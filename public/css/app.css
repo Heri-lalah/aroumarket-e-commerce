@@ -205,3 +205,17 @@ header.navbar form .btnsearch:hover {
   -webkit-animation: logo none;
           animation: logo none;
 }
+.banner .productslist .card .addinfo {
+  position: absolute;
+  right: 3px;
+  bottom: 10px;
+  z-index: 2100;
+  font-family: "Lobster";
+  color: rgb(255, 255, 255);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.banner .productslist .card .addinfoactive {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}

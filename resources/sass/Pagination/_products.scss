@@ -67,7 +67,22 @@
             .logoinProduct{
                 animation: logo none;
             }
+            .addinfo{
+                position: absolute;
+                right: 3px;
+                bottom: 10px;
+                z-index: 2100;
+                font-family: $secondaryfont;
+                color: $white;
+                opacity: 0;
+                transition: opacity .3s ease-in-out;
+            }
+            .addinfoactive{
+                opacity: 1;
+                transition: opacity .3s ease-in-out;
+            }
         }
+
     }
 
 }

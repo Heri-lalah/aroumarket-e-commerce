@@ -36,6 +36,7 @@
                                         </button>
                                     </form>
                                 </div>
+                                <span class="addinfo">Ajouter</span>
                                 <img src="{{asset('avatars/logo.png')}}" alt="logo" class="logo logoinProduct" width="30px">
                             </div>
                         </div>
