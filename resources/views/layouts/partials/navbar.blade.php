@@ -17,7 +17,7 @@
             <ul class="navbar-nav ms-lg-5">
                 <li class="nav-item"><a href="{{route('home')}}" class="nav-link">Accueil</a></li>
                 <li class="nav-item"><a href="{{route('products')}}" class="nav-link">Produits</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="{{route('services')}}" class="nav-link">Services</a></li>
                 <li class="nav-item"><a href="" class="nav-link disabled">Contacter</a></li>
             </ul>
         </nav>

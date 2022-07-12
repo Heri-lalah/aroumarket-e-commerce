@@ -16,4 +16,9 @@ class RouteController extends Controller
     {
         return view('Pagination.products.products');
     }
+
+    public function services()
+    {
+        return view('Pagination.ServicesAroMarket.services');
+    }
 }
