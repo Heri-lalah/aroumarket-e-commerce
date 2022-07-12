@@ -16,7 +16,9 @@
     <div class="banner position-relative">
         @include('layouts.partials.navbar')
         @yield('main')
-        <p class="position-fixed tohome" id="tohome"><a href="#"><i class="fa fa-home"></i></a></p>
+        <p class="tohome bounce position-fixed end-2 w-25 ms-5" id="tohome">
+            <a href="#"><i class="fa fa-angle-double-up"></i></a>
+        </p>
         @include('layouts.partials.footer')
     </div>
 </body>

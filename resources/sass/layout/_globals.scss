@@ -16,14 +16,18 @@ body{
     }
 }
 .tohome{
-    position: absolute;
+    //position: absolute;
     z-index: 3000;
     font-size: 20px;
     left: 10px;
     bottom: 10px;
     display: none;
+    color: $white;
     a{
         color: $white;
+        i{
+            font-size: 50px;
+        }
     }
 }
 .tohomeactive{

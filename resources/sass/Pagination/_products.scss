@@ -12,6 +12,11 @@
             font-family: $primaryfont;
             font-size: 25px;
             //border-radius: 0 15px 15px 0;
+            .categorietitle:hover{
+                a:hover{
+                    color: $dark_pink
+                }
+            }
             &:hover{
                 color: $dark_pink;
                 background-color: $white;

@@ -5,13 +5,13 @@
         <div class="col-2 col-md-3 col-lg-2">
             <div class="sidebar navbar-nav flex-column position-sticky top-0">
                 <ul class="nav flex-column">
-                    <li class="categorie shadow py-2 text-center rounded-end">
-                        <span class="d-none d-md-block">Catégories</span>
+                    <li class="categorie shadow py-2 text-center rounded-top">
+                        <span class="d-none d-md-block categorietitle">Catégories</span>
                         <i class="fa fa-outdent d-md-none"></i>
                     </li>
-                    <li class="categorieItem nav-item ps-md-4 rounded-end"><a href="">Item1</a></li>
-                    <li class="categorieItem nav-item ps-md-4 rounded-end"><a href="">Item1</a></li>
-                    <li class="categorieItem nav-item ps-md-4 rounded-end"><a href="">Item1</a></li>
+                    <li class="categorieItem nav-item ps-md-4 rounded-bottom"><a href="" class="d-md-block">Item1</a></li>
+                    <li class="categorieItem nav-item ps-md-4 rounded-end"><a href="" class="d-md-block">Item1</a></li>
+                    <li class="categorieItem nav-item ps-md-4 rounded-end"><a href="" class="d-md-block">Item1</a></li>
                 </ul>
             </div>
         </div>

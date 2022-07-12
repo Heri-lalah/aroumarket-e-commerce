@@ -16,15 +16,18 @@ body {
 }
 
 .tohome {
-  position: absolute;
   z-index: 3000;
   font-size: 20px;
   left: 10px;
   bottom: 10px;
   display: none;
+  color: rgb(255, 255, 255);
 }
 .tohome a {
   color: rgb(255, 255, 255);
+}
+.tohome a i {
+  font-size: 50px;
 }
 
 .tohomeactive {
@@ -95,6 +98,33 @@ header.navbar form .btnsearch:hover {
     transform: rotateZ(1rad);
   }
 }
+@-webkit-keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40%, 43% {
+    transform: translateY(-30px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40%, 43% {
+    transform: translateY(-30px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+}
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+          animation: bounce 2s infinite;
+}
+
 .logo, .navbar-text {
   -webkit-animation: 0.5s ease-in 1s 1;
           animation: 0.5s ease-in 1s 1;
@@ -172,6 +202,9 @@ header.navbar form .btnsearch:hover {
 .bannerProduct .sidebar .categorieItem {
   font-family: "Marck Script";
   font-size: 25px;
+}
+.bannerProduct .sidebar .categorieItem .categorietitle:hover a:hover {
+  color: #f50992;
 }
 .bannerProduct .sidebar .categorieItem:hover {
   color: #f50992;
