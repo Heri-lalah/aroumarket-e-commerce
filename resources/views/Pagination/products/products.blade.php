@@ -2,22 +2,49 @@
 @section('main')
 <div class="bannerProduct mb-5">
     <div class="row me-2">
-        <div class="col-2 col-md-3 col-lg-2">
+        <div class="col-3 col-lg-2">
             <div class="sidebar navbar-nav flex-column position-sticky top-0">
                 <ul class="nav flex-column">
                     <li class="categorie shadow py-2 text-center rounded-top">
                         <span class="d-none d-md-block categorietitle">Catégories</span>
                         <i class="fa fa-tasks d-md-none"></i>
                     </li>
-                    <li class="categorieItem nav-item ps-sm-2 ps-md-4 rounded-bottom"><a href="" class="d-md-block">Electro-menager</a></li>
-                    <li class="categorieItem nav-item ps-sm-2 ps-md-4 rounded-end"><a href="" class="d-md-block">Meubles</a></li>
-                    <li class="categorieItem nav-item ps-sm-2 ps-md-4 rounded-end"><a href="" class="d-md-block">Multimedia</a></li>
-                    <li class="categorieItem nav-item ps-sm-2 ps-md-4 rounded-end"><a href="" class="d-md-block">Tel/Accessoires</a></li>
+                    <li class="categorieItem nav-item ps-sm-2 ps-md-4 rounded-bottom">
+                        <a href="" class="d-md-block">
+                            <span class="categoriename d-none d-md-inline">Electro-menager</span>
+                            <span class="categorielogo d-block text-center d-md-none"><i class="fa fa-blender"></i></span>
+                        </a>
+                    </li>
+                    <li class="categorieItem nav-item ps-sm-2 ps-md-4 rounded-end">
+                        <a href="" class="d-md-block">
+                            <span class="categoriename d-none d-md-inline">Meubles&Déco</span>
+                            <span class="categorielogo d-block text-center d-md-none"><i class="fa fa-couch"></i></span>
+                        </a>
+                    </li>
+                    <li class="categorieItem nav-item ps-sm-2 ps-md-4 rounded-end">
+                        <a href="" class="d-md-block">
+                            <span class="categoriename d-none d-md-inline">Tel/Accessoires</span>
+                            <span class="categorielogo d-block text-center d-md-none"><i class="fa fa-mobile"></i></span>
+                        </a>
+                    </li>
+                    <li class="categorieItem nav-item ps-sm-2 ps-md-4 rounded-end">
+                        <a href="" class="d-md-block">
+                            <span class="categoriename d-none d-md-inline">Informatique</span>
+                            <span class="categorielogo d-block text-center d-md-none"><i class="fa fa-laptop"></i></span>
+                        </a>
+                    </li>
+                    <li class="categorieItem nav-item ps-sm-2 ps-md-4 rounded-end">
+                        <a href="" class="d-md-block">
+                            <span class="categoriename d-none d-md-inline">Sport/Fitness</span>
+                            <span class="categorielogo d-block text-center d-md-none"><i class="fa fa-dumbbell"></i></span>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
-        <div class="col-10 col-md-9 col-lg-10">
-            <div class="productslist container d-flex flex-wrap justify-content-center">
+        <div class="col-9 col-lg-10">
+            <div class="productslist d-flex flex-wrap justify-content-center">
 
                     @for ($i=0;$i<50;$i++)
                         <div class="productItem m-2">

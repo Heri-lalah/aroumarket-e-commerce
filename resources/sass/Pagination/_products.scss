@@ -30,11 +30,19 @@
                 color: $dark_pink
             }
         }
+        .categorielogo{
+            img{
+                width: 50px;
+            }
+            img .categorieTel{
+                height: 15px;
+            }
+        }
     }
     .productslist{
         .card{
             transition: transform .5s ease-in-out;
-            width: 15rem;
+            width: 12rem;
             height: 10rem;
             position: relative;
             overflow: hidden;
