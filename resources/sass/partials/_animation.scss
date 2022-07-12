@@ -1,0 +1,31 @@
+@keyframes logo{
+    0%,100%{
+        transform: rotateZ(-.5rad);
+    }
+    75%{
+        transform: rotateZ(1rad);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 60%,100%{
+        transform: translateY(0);
+    }
+    40%,43%{
+        transform: translateY(-30px);
+    }
+    75%{
+        transform: translateY(-20px);
+    }
+}
+.bounce{
+    animation: bounce 2s infinite;
+}
+
+//Animation navbar
+.logo, .navbar-text{
+    animation:.5s ease-in 1s 1
+}
+.logo{
+    animation: logo 4s infinite;
+}

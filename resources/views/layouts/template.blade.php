@@ -10,12 +10,16 @@
     <title>ArouMarket</title>
     <link rel="shortcut icon" href="{{ asset('avatars/logo.png') }}" type="image/x-icon">
     <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
+    <script src="{{ asset('js/myapp.js') }}" defer></script>
 </head>
 <body>
     <div class="banner position-relative">
-        @include('partials.navbar')
+        @include('layouts.partials.navbar')
         @yield('main')
-        @include('partials.footer')
+        <p class="tohome bounce position-fixed end-2 w-25 ms-5" id="tohome">
+            <a href="#"><i class="fa fa-angle-double-up py-1 px-2 border rounded-circle"></i></a>
+        </p>
+        @include('layouts.partials.footer')
     </div>
 </body>
 </html>

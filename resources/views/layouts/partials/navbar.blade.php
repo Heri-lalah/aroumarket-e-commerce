@@ -1,8 +1,8 @@
 <header class="navbar navbar-expand-md mx-3">
-    <a href="#" class="navbar-brand">
+    <a href="{{route('home')}}" class="navbar-brand">
         <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
     </a>
-    <a href="#" class="navbar-text navbar-brand">
+    <a href="{{route('home')}}" class="navbar-text navbar-brand">
         AroMarket
     </a>
 
@@ -15,8 +15,8 @@
     <div class="collapse navbar-collapse" id="navbar-content">
         <nav>
             <ul class="navbar-nav ms-lg-5">
-                <li class="nav-item"><a href="" class="nav-link">Accueil</a></li>
-                <li class="nav-item"><a href="" class="nav-link">Produits</a></li>
+                <li class="nav-item"><a href="{{route('home')}}" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="{{route('products')}}" class="nav-link">Produits</a></li>
                 <li class="nav-item"><a href="" class="nav-link">Services</a></li>
                 <li class="nav-item"><a href="" class="nav-link disabled">Contacter</a></li>
             </ul>

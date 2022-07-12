@@ -6,10 +6,10 @@
         <div class="wrapper">
             <div class="intro mt-4">
                 <div class="d-lg-flex justify-content-between flex-lg-row-reverse">
-                    <div class="text-center col-xl-4 bg-info">
+                    <div class="text-center col-xl-4">
                         <div class="mytopcarousel carousel slide" data-bs-ride="carousel" id="topproductCarousel">
                             <div class="carousel-inner">
-                                <div class="carousel-item active h-100">
+                                <div class="carousel-item active">
                                     <img src="{{ asset('images/coding.jpg') }}" alt="coding" class="d-block img-fluid w-100">
                                     <div class="carousel-caption">
                                         <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
@@ -35,7 +35,7 @@
 
                         {{--<img src="{{asset('avatars/logo.png')}}" alt="intro-image" width="150px">--}}
                     </div>
-                    <div class="col-xl-8">
+                    <div class="col-md-8">
                         <p class="intro-title text-center d-none d-md-block">Besoin de quelques choses ? sans ses déplacer</p>
                         <p class="description h4 mt-3 text-center mt-md-5 ms-md-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat minima labore esse laudantium fuga consequatur deleniti numquam, inventore reprehenderit officia perspiciatis architecto sit delectus non eum dolor, libero consectetur dignissimos?

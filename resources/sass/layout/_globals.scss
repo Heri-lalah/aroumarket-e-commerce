@@ -1,0 +1,43 @@
+body{
+    background-image: linear-gradient(to top left,$orange_primary,$dark_pink);
+    background-size: cover;
+    background-attachment: fixed;
+    width: auto;
+    //height: 100%;
+    //height: 1000px;
+}
+.logo{
+    border: 2px solid $white;
+    border-radius: 100%;
+    transition: transform 0.5s ease-in-out;
+    &:hover{
+        border: 2px solid $dark_white;
+        transform: scale(1.1,1.1);
+    }
+}
+.tohome{
+    //position: absolute;
+    z-index: 3000;
+    font-size: 20px;
+    left: 10px;
+    bottom: 10px;
+    display: none;
+    color: $white;
+    a{
+        color: $white;
+        i{
+            font-size: 50px;
+        }
+    }
+}
+.tohomeactive{
+    position: absolute;
+    z-index: 3000;
+    font-size: 20px;
+    left: 10px;
+    bottom: 10px;
+    display: block;
+    a{
+        color: $white;
+    }
+}
