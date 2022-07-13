@@ -308,28 +308,29 @@ header.navbar form .btnsearch:hover {
 .bannerService {
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
-}
-.bannerService .intro {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Comfortaa";
 }
 .bannerService .intro .welcoming {
   color: rgb(255, 255, 255);
   font-family: "Marck Script";
 }
-.bannerService .aide {
-  font-family: "Courier New", Courier, monospace;
+.bannerService .opportinuty i {
+  font-size: 1.5rem;
+  color: chartreuse;
 }
-.bannerService .aide a {
-  text-decoration: none;
-  color: rgb(20, 245, 196);
-}
-.bannerService .payment .paymenttitle {
+.bannerService .payement .paymenttitle {
   font-family: "Marck Script";
   text-decoration: underline;
 }
-.bannerService .payment picture img {
-  width: 10rem;
+.bannerService .payement .titleitem {
+  font-size: 1.5rem;
 }
-.bannerService .payment picture .mobileMoney {
-  display: block;
+.bannerService .payement img {
+  width: 10rem;
+  max-width: 15rem;
+}
+.bannerService .payement .bank img.boa {
+  padding: 18px;
+  border: 2px solid rgba(3, 110, 3, 0.959);
+  border-radius: 8px;
 }

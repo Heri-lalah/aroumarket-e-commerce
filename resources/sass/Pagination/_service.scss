@@ -1,33 +1,36 @@
 .bannerService{
     color: $white;
     font-size: 1.2rem;
+    font-family: 'Comfortaa';
     .intro{
-        font-family: 'Courier New', Courier, monospace;
         .welcoming{
             color: $white;
             font-family: $primaryfont;
         }
-        .opportinuty{
+    }
+    .opportinuty{
+        i{
+            font-size: 1.5rem;
+            color: chartreuse;
         }
     }
-    .aide{
-        font-family: 'Courier New', Courier, monospace;
-        a{
-            text-decoration: none;
-            color: rgb(20, 245, 196);
-        }
-    }
-    .payment{
+    .payement{
         .paymenttitle{
             font-family: $primaryfont;
             text-decoration: underline;
         }
-        picture{
-            img{
-                width: 10rem;
-            }
-            .mobileMoney{
-                display: block;
+        .titleitem{
+            font-size: 1.5rem;
+        }
+        img{
+            width: 10rem;
+            max-width: 15rem;
+        }
+        .bank{
+            img.boa{
+                padding: 18px;
+                border: 2px solid rgba(3, 110, 3, 0.959);
+                border-radius: 8px;
             }
         }
     }
