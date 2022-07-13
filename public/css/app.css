@@ -304,3 +304,32 @@ header.navbar form .btnsearch:hover {
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
+
+.bannerService {
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}
+.bannerService .intro {
+  font-family: "Courier New", Courier, monospace;
+}
+.bannerService .intro .welcoming {
+  color: rgb(255, 255, 255);
+  font-family: "Marck Script";
+}
+.bannerService .aide {
+  font-family: "Courier New", Courier, monospace;
+}
+.bannerService .aide a {
+  text-decoration: none;
+  color: rgb(20, 245, 196);
+}
+.bannerService .payment .paymenttitle {
+  font-family: "Marck Script";
+  text-decoration: underline;
+}
+.bannerService .payment picture img {
+  width: 10rem;
+}
+.bannerService .payment picture .mobileMoney {
+  display: block;
+}
