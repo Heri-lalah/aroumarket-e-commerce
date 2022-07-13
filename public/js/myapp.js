@@ -1,5 +1,6 @@
 //Global animation
 let tohome=document.getElementById('tohome');
+let righttohome=document.getElementById('righttohome');
 document.addEventListener('scroll', function () {
     if(window.scrollY>80){
         tohome.classList.replace('tohome','tohomeactive')
@@ -7,7 +8,6 @@ document.addEventListener('scroll', function () {
         tohome.classList.replace('tohomeactive','tohome')
     }
 })
-
 
 //Cart animation
 let cards=document.querySelectorAll('.card');
@@ -25,13 +25,12 @@ for(let i=0; i<cards.length;i++){
         let fade=this.children[1];
         let productinfo=this.children[2]
         let addto=this.children[3];
-        let btnaddinfo=this.children[4];
         fade.classList.remove('fadeactive');
         addto.classList.remove('activecard');
         productinfo.classList.remove('activeproductinfo');
     })
 
-    let addto=card.children[3];
+    let addto=card.children[3].children[0].children[1];
     let btnaddinfo=card.children[4];
     addto.addEventListener('mouseover', function () {
         btnaddinfo.classList.add('addinfoactive');
@@ -40,3 +39,5 @@ for(let i=0; i<cards.length;i++){
         btnaddinfo.classList.remove('addinfoactive');
     })
 }
+
+
