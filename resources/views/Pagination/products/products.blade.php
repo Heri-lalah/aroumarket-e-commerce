@@ -44,32 +44,36 @@
             </div>
         </div>
         <div class="col-9 col-lg-10">
-            <div class="productslist d-flex flex-wrap justify-content-center">
-
-                    @for ($i=0;$i<50;$i++)
-                        <div class="productItem m-2">
-                            <div class="card border-light">
-                                <img src="{{asset('images/mixing.jpg')}}" alt="" class="img-fluid rounded h-100">
-                                <div class="fade"></div>
-                                <div class="productinfo text-center">
-                                    <p class="h4 d-block productname">Product name</p>
-                                    <p class="h4 d-block productname">Product ref</p>
+            <form action="{{route('store')}}" method="post">
+                <div class="productslist d-flex flex-wrap justify-content-center">
+                        @for ($i=1;$i<50;$i++)
+                            <div class="productItem m-2">
+                                <div class="card border-light">
+                                    <img src="{{asset('images/mixing.jpg')}}" alt="" class="img-fluid rounded h-100">
+                                    <div class="fade"></div>
+                                    <div class="productinfo text-center">
+                                        <p class="h4 d-block productname">{{'Produits '.$i}}</p>
+                                        <p class="h4 d-block productname">{{'ref : '.$i*50}}</p>
+                                    </div>
+                                    <img src="{{asset('avatars/logo.png')}}" alt="logo" class="logo logoinProduct" width="30px">
+                                    <div class="card-footer h-25 d-flex justify-content-between">
+                                        <div>
+                                            <i class="fa fa-shopping-cart addto" id="{{$i}}"></i>
+                                            <input type="number" name="{{'item'.$i}}" id="" class="inputQuantity d-inline" placeholder="qté" value="1">
+                                        </div>
+                                        <p class="price">
+                                            @if ($i > 0)
+                                                {{500*$i.' Ar'}}
+                                            @else
+                                                {{'500 Ar'}}
+                                            @endif
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="addto input-group w-100 text-center">
-                                    <form action="">
-                                        <input type="number" name="" id="" class="form-control form-control-sm d-inline w-50" placeholder="qté">
-                                        <button type="submit" class="btn btn-primary btn-sm">
-                                            <i class="fa fa-shopping-cart"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                                <span class="addinfo">add</span>
-                                <img src="{{asset('avatars/logo.png')}}" alt="logo" class="logo logoinProduct" width="30px">
                             </div>
-                        </div>
-                    @endfor
-
-            </div>
+                        @endfor
+                </div>
+            </form>
         </div>
     </div>
 </div>

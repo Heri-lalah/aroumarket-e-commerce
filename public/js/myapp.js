@@ -18,7 +18,7 @@ for(let i=0; i<cards.length;i++){
         let productinfo=this.children[2]
         let addto=this.children[3];
         fade.classList.add('fadeactive');
-        addto.classList.add('activecard');
+        //addto.classList.add('activecard');
         productinfo.classList.add('activeproductinfo');
     })
     card.addEventListener('mouseout', function () {
@@ -26,18 +26,16 @@ for(let i=0; i<cards.length;i++){
         let productinfo=this.children[2]
         let addto=this.children[3];
         fade.classList.remove('fadeactive');
-        addto.classList.remove('activecard');
+        //addto.classList.remove('activecard');
         productinfo.classList.remove('activeproductinfo');
     })
-
-    let addto=card.children[3].children[0].children[1];
-    let btnaddinfo=card.children[4];
-    addto.addEventListener('mouseover', function () {
-        btnaddinfo.classList.add('addinfoactive');
-    })
-    addto.addEventListener('mouseout', function () {
-        btnaddinfo.classList.remove('addinfoactive');
+}
+var addtos=document.querySelectorAll('.addto');
+for (let index = 0; index < addtos.length; index++) {
+    const element = addtos[index];
+    element.addEventListener('click', function () {
+        element.classList.toggle('addtoclicked');
+        element.nextElementSibling.toggleAttribute('checked')
     })
 }
-
 

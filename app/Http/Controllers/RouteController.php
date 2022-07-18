@@ -21,4 +21,8 @@ class RouteController extends Controller
     {
         return view('Pagination.ServicesAroMarket.services');
     }
+    public function store()
+    {
+        dd('test');
+    }
 }

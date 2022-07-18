@@ -17,3 +17,5 @@ use App\Http\Controllers\RouteController;
 Route::get('', [RouteController::class,'home'])->name('home');
 Route::get('products', [RouteController::class,'products'])->name('products');
 Route::get('services',[RouteController::class,'services'])->name('services');
+
+Route::post('products/test/', [RouteController::class,'store'])->name('store');
