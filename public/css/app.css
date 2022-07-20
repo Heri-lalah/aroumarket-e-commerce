@@ -1,5 +1,4 @@
 body {
-  background-image: linear-gradient(to top left, #f86707, #f50992);
   background-size: cover;
   background-attachment: fixed;
   width: auto;
@@ -43,17 +42,17 @@ body {
 }
 
 header.navbar .navbar-text {
-  color: rgb(255, 255, 255);
+  color: #f50992;
   font-family: "Marck Script";
   font-size: xx-large;
   transition: transform 0.5s ease-in-out;
 }
 header.navbar .navbar-text:hover {
-  color: #f3eaef;
+  color: #6a31a4;
   transform: scale(1.1, 1.1);
 }
 header.navbar .menuicon {
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid #f50992;
   transition: transform 0.5s ease-in-out;
 }
 header.navbar .menuicon:hover {
@@ -62,10 +61,10 @@ header.navbar .menuicon:hover {
 header.navbar nav ul li a {
   font-family: "Marck Script";
   font-size: x-large;
-  color: rgb(255, 255, 255);
+  color: #f50992;
 }
 header.navbar nav ul li a:hover {
-  color: #f3eaef;
+  color: #6a31a4;
 }
 header.navbar form .btnsearch {
   font-weight: bold;
@@ -138,7 +137,7 @@ header.navbar form .btnsearch:hover {
 .banner .layout .wrapper .intro .intro-title {
   font-family: "Marck Script";
   font-size: 3rem;
-  color: rgb(255, 255, 255);
+  color: rgb(71, 70, 70);
 }
 .banner .layout .wrapper .intro .mytopcarousel {
   font-family: "Lobster";
@@ -149,19 +148,18 @@ header.navbar form .btnsearch:hover {
 }
 .banner .layout .wrapper .intro .description {
   font-family: "Marck Script";
-  color: #f3eaef;
+  color: #f50992;
 }
 .banner .layout .services {
   overflow: hidden;
   min-height: 50vh;
   font-family: "Lobster";
-  color: rgb(255, 255, 255);
+  color: rgba(15, 76, 247, 0.925);
   font-size: 20px;
 }
 .banner .layout .services i.service-item {
   font-size: 70px;
-  color: rgb(255, 255, 255);
-  border: 5px rgb(255, 255, 255) solid;
+  color: rgba(15, 76, 247, 0.925);
   padding: 25px;
 }
 .banner .layout .services .hours {
@@ -190,119 +188,13 @@ header.navbar form .btnsearch:hover {
   height: 100%;
 }
 
-.bannerProduct {
-  position: relative;
-}
-.bannerProduct .sidebar .categorie {
-  font-size: 18px;
-  font-family: "Lobster";
-  color: #f50992;
-  background-color: rgb(255, 255, 255);
-}
-.bannerProduct .sidebar .categorieItem {
-  font-family: "Marck Script";
-  font-size: 25px;
-}
-.bannerProduct .sidebar .categorieItem .categorietitle:hover a:hover {
-  color: #f50992;
-}
-.bannerProduct .sidebar .categorieItem:hover {
-  color: #f50992;
-  background-color: rgb(255, 255, 255);
-  transition: background-color 1s ease-in-out;
-}
-.bannerProduct .sidebar .categorieItem a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-}
-.bannerProduct .sidebar .categorieItem a:hover {
-  color: #f50992;
-}
-.bannerProduct .sidebar .categorielogo img {
-  width: 50px;
-}
-.bannerProduct .sidebar .categorielogo img .categorieTel {
-  height: 15px;
-}
-.bannerProduct .productslist .card {
-  transition: transform 0.5s ease-in-out;
-  width: 12rem;
-  height: 10rem;
-  position: relative;
-  overflow: hidden;
-}
-.bannerProduct .productslist .card:hover {
-  transform: scale(1.1, 1.1);
-}
-.bannerProduct .productslist .card .fade {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  background-color: transparent;
-  transition: background-color 1s ease-in-out;
-}
-.bannerProduct .productslist .card .fadeactive {
-  opacity: 20%;
-  background-color: rgb(255, 255, 255);
-  transition: background-color 1s ease-in-out;
-}
-.bannerProduct .productslist .card .productinfo {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  padding: 3px 15px;
-  z-index: 2000;
-  top: 50px;
-  left: 0;
-  right: 0;
-  font-family: "Marck Script";
-  color: rgb(255, 255, 255);
-  transition: background-color 1s ease-in-out;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.bannerProduct .productslist .card .activeproductinfo {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
-}
-.bannerProduct .productslist .card img.logoinProduct {
-  position: absolute;
-  border: none;
-  top: 10px;
-  right: 15px;
-}
-.bannerProduct .productslist .card .logoinProduct {
-  -webkit-animation: logo none;
-          animation: logo none;
-}
-.bannerProduct .productslist .card .card-footer {
-  z-index: 2500;
-}
-.bannerProduct .productslist .card .card-footer .addtoclicked {
-  color: rgb(18, 121, 238);
-}
-.bannerProduct .productslist .card .card-footer input.inputQuantity {
-  width: 5rem;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
-  margin-left: -10rem;
-  text-align: center;
-  transition: margin-left 1s ease-in-out;
-}
-.bannerProduct .productslist .card .card-footer .price {
-  font-family: "Marck Script";
-  font-size: 1.2rem;
-}
-
 .bannerService {
-  color: rgb(255, 255, 255);
+  color: #f50992;
   font-size: 1.2rem;
   font-family: "Comfortaa";
 }
 .bannerService .intro .welcoming {
-  color: rgb(255, 255, 255);
+  color: #f50992;
   font-family: "Marck Script";
 }
 .bannerService .opportinuty i {

@@ -1,0 +1,20 @@
+@extends('layouts.template')
+@section('main')
+<ul class="nav bg-light position-sticky top-0 justify-content-center" style="z-index: 2500">
+    <li class="nav-item"><a href="" class="nav-link">Electroménager</a></li>
+    <li class="nav-item"><a href="" class="nav-link">Catégorie 2</a></li>
+    <li class="nav-item"><a href="" class="nav-link">Catégorie 3</a></li>
+</ul>
+<div class="d-flex container w-100 mt-5 justify-content-around bg-light align-items-center shadow-lg">
+    <div class="">
+        <img src="{{asset('assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}">
+        <p>{{strtoupper($product->name)}}</p>
+        <p>{{$product->description}}</p>
+        <p class="text-primary">Prix HT : {{$product->prix_ht}} Ariary</p>
+    </div>
+    <div class="w-50">
+        <input type="number" class="form form-control text-center" value="1">
+        <button type="submit" class="btn btn-outline-primary w-100 mt-2">Ajouter dans le panier <i class="fa fa-shopping-cart text-primary"></i></button>
+    </div>
+</div>
+@endsection

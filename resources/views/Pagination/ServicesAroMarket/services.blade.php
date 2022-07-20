@@ -4,19 +4,19 @@
     <div class="container">
         <div class="intro text-center">
             <p><img src="{{asset('avatars/logo.png')}}" alt="logo" width="100px"></p>
-            <p class="welcoming display-5">Bienvenue chez ArouMarket</p>
-            <p class="opportinuty mx-md-5">ArouMarket vous offre une opportunité de bénéficier tous ses produits disponibles même si vous n'êtes pas encore membre du ArouMarket Group.</p>
-            <p>Pour les membres, reduction -15 % de votre Montant.</p>
+            <p class="welcoming display-5 text-primary">Bienvenue chez ArouMarket</p>
+            <p class="opportinuty mx-md-5 text-dark">ArouMarket vous offre une opportunité de bénéficier tous ses produits disponibles même si vous n'êtes pas encore membre du ArouMarket Group.</p>
+            <p class="text-dark">Pour les membres, reduction -15 % de votre Montant.</p>
         </div>
         <div class="opportinuty">
-            <p><i class="fa fa-check-circle"></i> Produits de qualité supérieur</p>
-            <p><i class="fa fa-check-circle"></i> Avec garantie</p>
-            <p><i class="fa fa-check-circle"></i> Livraison possible</p>
-            <p><i class="fa fa-check-circle"></i> Service apres vente assurée</p>
+            <p class="text-dark"><i class="fa fa-check-circle text-primary"></i> Produits de qualité supérieur</p>
+            <p class="text-dark"><i class="fa fa-check-circle text-primary"></i> Avec garantie</p>
+            <p class="text-dark"><i class="fa fa-check-circle text-primary"></i> Livraison possible</p>
+            <p class="text-dark"><i class="fa fa-check-circle text-primary"></i> Service apres vente assurée</p>
         </div>
         <div>
             <div class="payement text-center">
-                <h2 class="paymenttitle dispaly-6">Mode de payement</h2>
+                <h2 class="paymenttitle dispaly-6 text-primary">Mode de payement</h2>
                 <div class="mobileMoney mt-5 mx-md-5">
                     <p class="titleitem">Mobile Money :</p>
                     <picture class="row justify-content-center">

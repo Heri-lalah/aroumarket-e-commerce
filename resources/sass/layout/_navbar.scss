@@ -1,17 +1,17 @@
 header.navbar{
     .navbar-text{
-        color: $white;
+        color: $dark_pink;
         font-family: $primaryfont;
         font-size: xx-large;
         transition: transform 0.5s ease-in-out;
         &:hover{
-            color: $dark_white;
+            color: $light_violet;
             transform: scale(1.1,1.1);
         }
     }
 
     .menuicon{
-        border: 2px solid $white;
+        border: 2px solid $dark_pink;
         transition: transform 0.5s ease-in-out;
         &:hover{
             transform: scale(1.1,1.1);
@@ -23,9 +23,9 @@ header.navbar{
             li a{
                 font-family:$primaryfont;
                 font-size: x-large;
-                color: $white;
+                color: $dark_pink;
                 &:hover{
-                    color: $dark_white;
+                    color: $light_violet;
                     //text-decoration: underline;
                 }
             }

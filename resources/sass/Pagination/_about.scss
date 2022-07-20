@@ -7,7 +7,7 @@
                 .intro-title{
                     font-family: $primaryfont;
                     font-size: 3rem;
-                    color: $white;
+                    color: $darkgray;
                 }
                 .mytopcarousel{
                     font-family: $secondaryfont;
@@ -18,7 +18,7 @@
                 }
                 .description{
                     font-family: $primaryfont;
-                    color: $dark_white;
+                    color: $dark_pink;
                 }
             }
         }
@@ -27,12 +27,12 @@
             overflow: hidden;
             min-height: 50vh;
             font-family: $secondaryfont;
-            color: $white;
+            color: $blue;
             font-size: 20px;
             i.service-item{
                 font-size: 70px;
-                color: $white;
-                border: 5px $white solid;
+                color: $blue;
+                //border: 5px $blue solid;
                 padding: 25px;
             }
             .hours{

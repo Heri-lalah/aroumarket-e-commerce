@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RouteController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,9 @@ use App\Http\Controllers\RouteController;
 |
 */
 
-Route::get('', [RouteController::class,'home'])->name('home');
-Route::get('products', [RouteController::class,'products'])->name('products');
-Route::get('services',[RouteController::class,'services'])->name('services');
+Route::get('a-propos', [MainController::class,'about'])->name('about');
+Route::get('', [MainController::class,'products'])->name('products');
+Route::get('products/{id}', [MainController::class,'showproduct'])->name('showproduct');
 
-Route::post('products/test/', [RouteController::class,'store'])->name('store');
+
+Route::get('services',[MainController::class,'services'])->name('services');

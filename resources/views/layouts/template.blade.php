@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <link rel="stylesheet" href="{{ asset('fontawesome-free-5.15.3-web/css/all.css')}}">
     <title>ArouMarket</title>
@@ -12,8 +12,8 @@
     <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
     <script src="{{ asset('js/myapp.js') }}" defer></script>
 </head>
-<body>
-    <div class="banner position-relative">
+<body class="bg-light">
+    <div class="banner position-relative bg-light">
         @include('layouts.partials.navbar')
         @yield('main')
         <p class="tohome bounce position-fixed end-2 w-25 ms-5" id="tohome">
