@@ -1,8 +1,8 @@
-<header class="navbar navbar-expand-md mx-3 shadow-sm">
-    <a href="{{route('about')}}" class="navbar-brand">
+<header class="navbar navbar-expand-md shadow-sm">
+    <a href="{{route('about')}}" class="navbar-brand ms-3">
         <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
     </a>
-    <a href="{{route('about')}}" class="navbar-text navbar-brand">
+    <a href="{{route('about')}}" class="navbar-text navbar-brand text-primary">
         AroMarket
     </a>
 
@@ -21,10 +21,10 @@
                 <li class="nav-item"><a href="" class="nav-link disabled">Contacter</a></li>
             </ul>
         </nav>
-        <form action="#" class="d-flex ms-auto">
+        <form action="#" class="d-flex ms-auto me-3">
             <div class="input-group">
                 <input type="search" class="form-control bg-transparent" aria-label="Search" placeholder="Rechercher ...">
-                <button type="search" class="btn border-light btnsearch">Rechercher</button>
+                <button type="search" class="btn btn-outline-primary btnsearch">Rechercher</button>
             </div>
         </form>
     </div>

@@ -69,11 +69,6 @@ header.navbar nav ul li a:hover {
 header.navbar form .btnsearch {
   font-weight: bold;
   font-family: cursive;
-  color: rgb(255, 255, 255);
-}
-header.navbar form .btnsearch:hover {
-  background-color: rgb(255, 255, 255);
-  color: #4f5b60;
 }
 
 .footer {
