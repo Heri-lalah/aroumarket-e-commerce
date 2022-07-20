@@ -15,9 +15,14 @@ class CategorysSeeder extends Seeder
      */
     public function run()
     {
-        $category=new Category();
-        $category->name='électro-ménager';
-        $category->is_online=true;
-        $category->save();
+        // $category=new Category();
+        // $category->name='électro-ménager';
+        // $category->is_online=true;
+        // $category->save();
+
+        $category2=new Category();
+        $category2->name='Deuble et Décoration';
+        $category2->is_online=true;
+        $category2->save();
     }
 }
