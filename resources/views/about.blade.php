@@ -74,7 +74,7 @@
                         <span class="brands text-center">
                             <a href="#" class="d-inline-block m-1"><i class="fab fa-facebook"></i></a>
                             <a href="#" class="d-inline-block m-1"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="d-inline-block m-1"><i class="fab fa-skype"></i></a>
+                            <a href="#" class="d-inline-block m-1"><i class="fab fa-skype text-info"></i></a>
                             <a href="" class="d-inline-block m-1"><i class="fab fa-google-plus-g"></i></a>
                         </span>
                     </p>
