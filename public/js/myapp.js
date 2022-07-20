@@ -11,31 +11,11 @@ document.addEventListener('scroll', function () {
 
 //Cart animation
 let cards=document.querySelectorAll('.card');
-for(let i=0; i<cards.length;i++){
-    let card=cards[i];
-    card.addEventListener('mouseover', function () {
-        let fade=this.children[1];
-        let productinfo=this.children[2]
-        let addto=this.children[3];
-        fade.classList.add('fadeactive');
-        //addto.classList.add('activecard');
-        productinfo.classList.add('activeproductinfo');
-    })
-    card.addEventListener('mouseout', function () {
-        let fade=this.children[1];
-        let productinfo=this.children[2]
-        let addto=this.children[3];
-        fade.classList.remove('fadeactive');
-        //addto.classList.remove('activecard');
-        productinfo.classList.remove('activeproductinfo');
-    })
-}
-var addtos=document.querySelectorAll('.addto');
-for (let index = 0; index < addtos.length; index++) {
-    const element = addtos[index];
-    element.addEventListener('click', function () {
-        element.classList.toggle('addtoclicked');
-        element.nextElementSibling.toggleAttribute('checked')
+for (let index = 0; index < cards.length; index++) {
+    let card = cards[index];
+    let addto=card.children[1].children[1].children[1]
+    addto.addEventListener('click', function(){
+        this.classList.toggle('text-warning')
     })
 }
 

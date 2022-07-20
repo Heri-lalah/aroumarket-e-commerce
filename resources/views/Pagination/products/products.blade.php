@@ -5,7 +5,7 @@
     <div class="row gy-3 justify-content-center">
         @foreach ($products as $product)
         <div class="col-sm-3">
-            <div class="card shadow-sm">
+            <div class="card shadow-sm {{ $product->name }}">
                 <img src="{{asset('assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}" class="img-fluid">
                 <div class="card-body">
                     <p class="card-text d-none d-md-block">
@@ -16,7 +16,7 @@
                     <div class="btn-group">
                         <a href="{{route('showproduct',['id'=>$product->id])}}" class="btn btn-sm btn-outline-primary">View</a>
                     </div>
-                    <i class="fa fa-shopping-cart h4 text-primary"></i>
+                    <i class="fa fa-shopping-cart h4 text-primary addtocard"></i>
                     </div>
                 </div>
             </div>
