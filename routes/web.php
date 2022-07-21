@@ -14,9 +14,11 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get('a-propos', [MainController::class,'about'])->name('about');
+Route::get('A-propos', [MainController::class,'about'])->name('about');
 Route::get('', [MainController::class,'products'])->name('products');
-Route::get('products/{id}', [MainController::class,'showproduct'])->name('showproduct');
+Route::get('Produit_{id}', [MainController::class,'showproduct'])->name('showproduct');
 
 
-Route::get('services',[MainController::class,'services'])->name('services');
+Route::get('Services',[MainController::class,'services'])->name('services');
+
+Route::get('Produits/Categorie:{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
