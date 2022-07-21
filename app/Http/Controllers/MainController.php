@@ -10,7 +10,7 @@ class MainController extends Controller
 {
     public function products()
     {
-        $products=Product::all();
+        $products=Product::Orderby('name')->get();
         $categorys=Category::where('is_online',true)->get();
         return view('Pagination.products.products', compact('products','categorys'));
     }
@@ -25,11 +25,12 @@ class MainController extends Controller
         return view('Pagination.ServicesAroMarket.services');
     }
 
-    public function showproduct($id)
+    public function showproduct($id, $category_id)
     {
         $product=Product::findOrFail($id);
+        $productsbycategory=Product::where('category_id',$category_id)->where('id','<>',$id)->get();
         $categorys=Category::where('is_online',true)->get();
-        return view('Pagination.products.product', compact('product','categorys'));
+        return view('Pagination.products.product', compact('product','categorys','productsbycategory'));
     }
 
     public function viewproductbycategory($id){

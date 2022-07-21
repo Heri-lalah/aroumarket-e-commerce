@@ -16,7 +16,7 @@ use App\Http\Controllers\MainController;
 
 Route::get('A-propos', [MainController::class,'about'])->name('about');
 Route::get('', [MainController::class,'products'])->name('products');
-Route::get('Produit_{id}', [MainController::class,'showproduct'])->name('showproduct');
+Route::get('Produit_{id}{category_id}', [MainController::class,'showproduct'])->name('showproduct');
 
 
 Route::get('Services',[MainController::class,'services'])->name('services');

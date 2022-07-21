@@ -15,7 +15,7 @@
                     </p>
                     <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
-                        <a href="{{route('showproduct',['id'=>$product->id])}}" class="btn btn-sm btn-outline-primary">View</a>
+                        <a href="{{route('showproduct',['id'=>$product->id,'category_id'=>$product->category_id])}}" class="btn btn-sm btn-outline-primary">View</a>
                     </div>
                     <i class="fa fa-shopping-cart h4 text-primary"></i>
                     </div>
