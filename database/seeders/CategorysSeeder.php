@@ -20,9 +20,14 @@ class CategorysSeeder extends Seeder
         // $category->is_online=true;
         // $category->save();
 
-        $category2=new Category();
-        $category2->name='Deuble et Décoration';
-        $category2->is_online=true;
-        $category2->save();
+        // $category2=new Category();
+        // $category2->name='Deuble et Décoration';
+        // $category2->is_online=true;
+        // $category2->save();
+
+        $category3=new Category();
+        $category3->name='Téléphonie';
+        $category3->is_online=true;
+        $category3->save();
     }
 }
