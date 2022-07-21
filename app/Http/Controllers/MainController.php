@@ -28,11 +28,13 @@ class MainController extends Controller
     public function showproduct($id)
     {
         $product=Product::findOrFail($id);
-        return view('Pagination.products.product', compact('product'));
+        $categorys=Category::where('is_online',true)->get();
+        return view('Pagination.products.product', compact('product','categorys'));
     }
 
     public function viewproductbycategory($id){
-        $products=Product::all();
-        return view('Pagination.products.category', compact('products'));
+        $categorys=Category::where('is_online',true)->get();
+        $products=Product::where('category_id', $id)->get();
+        return view('Pagination.products.category', compact('products','categorys'));
     }
 }
