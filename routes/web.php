@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\MainController;
 
 /*
@@ -22,3 +23,6 @@ Route::get('Produit_{id}{category_id}', [MainController::class,'showproduct'])->
 Route::get('Services',[MainController::class,'services'])->name('services');
 
 Route::get('Produits/Categorie:{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
+
+Route::post('panier/add/{id}',[CartController::class, 'add'])->name('cart_add');
+Route::get('MonPanier',[CartController::class, 'index'])->name('cart_index');

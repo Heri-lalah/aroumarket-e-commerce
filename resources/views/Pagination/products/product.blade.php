@@ -10,8 +10,11 @@
             <p class="text-primary">Prix HT : {{$product->prix_ht}} Ariary</p>
         </div>
         <div class="w-50">
-            <input type="number" class="form form-control text-center" value="1">
-            <button type="submit" class="btn btn-outline-primary w-100 mt-2">Ajouter dans le panier <i class="fa fa-shopping-cart text-primary"></i></button>
+            <form action="{{ route('cart_add',['id'=>$product->id]) }}" method="POST">
+                @csrf
+                <input type="number" name="quantity" class="form form-control text-center" value="1">
+                <button type="submit" class="btn btn-outline-primary w-100 mt-2">Ajouter dans le panier <i class="fa fa-shopping-cart text-primary"></i></button>
+            </form>
         </div>
     </div>
     <hr>
