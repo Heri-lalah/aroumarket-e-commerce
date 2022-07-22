@@ -17,7 +17,7 @@
         @include('layouts.partials.navbar')
         @yield('main')
         <p class="tohome bounce position-fixed end-2 w-25 ms-5" id="tohome">
-            <a href="#"><i class="fa fa-angle-double-up py-1 px-2 border rounded-circle"></i></a>
+            <a href="#"><i class="fa fa-angle-double-up py-1 px-2 border border-dark rounded-circle"></i></a>
         </p>
         @include('layouts.partials.footer')
     </div>
