@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css')}}">
     <link rel="stylesheet" href="{{ asset('fontawesome-free-5.15.3-web/css/all.css')}}">
     <title>ArouMarket</title>
     <link rel="shortcut icon" href="{{ asset('avatars/logo.png') }}" type="image/x-icon">

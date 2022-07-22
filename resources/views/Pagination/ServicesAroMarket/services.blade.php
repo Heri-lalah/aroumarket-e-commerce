@@ -20,16 +20,16 @@
                 <div class="mobileMoney mt-5 mx-md-5">
                     <p class="titleitem">Mobile Money :</p>
                     <picture class="row justify-content-center">
-                        <img class="col rounded rounded-circle mobileMoney" src="{{asset('assets/services/Mvola.jpg')}}" alt="mobileMoney">
-                        <img class="col rounded rounded-circle mobileMoney" src="{{asset('assets/services/AirtelMoney.jpg')}}" alt="mobileMoney">
-                        <img class="col rounded rounded-circle mobileMoney" src="{{asset('assets/services/OrangeMoney.jpg')}}" alt="mobileMoney">
+                        <img class="animate__animated animate__flip col rounded rounded-circle mobileMoney" src="{{asset('assets/services/Mvola.jpg')}}" alt="mobileMoney">
+                        <img class="animate__animated animate__flip col rounded rounded-circle mobileMoney" src="{{asset('assets/services/AirtelMoney.jpg')}}" alt="mobileMoney">
+                        <img class="animate__animated animate__flip col rounded rounded-circle mobileMoney" src="{{asset('assets/services/OrangeMoney.jpg')}}" alt="mobileMoney">
                     </picture>
                 </div>
                 <div class="bank mt-md-5">
                     <p class="titleitem">Virement bancaire :</p>
                     <picture>
-                        <img class="boa" src="{{asset('assets/services/BOA.png')}}" alt="boa">
-                        <img src="{{asset('assets/services/mastercard.png')}}" alt="mastercard">
+                        <img class="boa animate__animated animate__zoomIn" src="{{asset('assets/services/BOA.png')}}" alt="boa">
+                        <img class="animate__animated animate__zoomIn" src="{{asset('assets/services/mastercard.png')}}" alt="mastercard">
                     </picture>
                 </div>
             </div>

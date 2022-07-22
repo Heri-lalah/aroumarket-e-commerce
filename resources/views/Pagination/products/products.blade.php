@@ -5,7 +5,7 @@
 <div class="bannerProduct mb-5 container bg-light">
     <div class="row gy-3 justify-content-center">
         @foreach ($products as $product)
-        <div class="col-sm-3">
+        <div class="col-sm-3 animate__animated animate__fadeIn">
             <div class="card shadow-sm {{ $product->name }}">
                 <img src="{{asset('assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}" class="img-fluid">
                 <div class="card-body">

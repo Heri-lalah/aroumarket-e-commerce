@@ -3,13 +3,13 @@
 @include('layouts.partials.categoryitem')
 <div class="layout">
     <div class="d-flex container w-100 mt-5 justify-content-around bg-light align-items-center">
-        <div class="">
+        <div class=" animate__animated animate__fadeIn">
             <img src="{{asset('assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}">
             <p class="fw-bold">{{strtoupper($product->name)}}</p>
             <p>{{$product->description}}</p>
             <p class="text-primary">Prix HT : {{$product->prix_ht}} Ariary</p>
         </div>
-        <div class="w-50">
+        <div class="w-50 animate__animated animate__fadeIn">
             <form action="{{ route('cart_add',['id'=>$product->id]) }}" method="POST">
                 @csrf
                 <input type="number" name="quantity" class="form form-control text-center">
@@ -18,7 +18,7 @@
             @if($errors->any())
                 <ul class="mt-3">
                     @foreach($errors->all()  as $error)
-                    <li class="nav-link text-danger border btn w-100">{{$error}}</li>
+                    <li class="animate__animated animate__lightSpeedInRight nav-link text-danger border btn w-100">{{$error}}</li>
                     @endforeach
                 </ul>
             @endif
@@ -32,7 +32,7 @@
     <div class="bannerProduct mb-5 container bg-light">
         <div class="row gy-3 justify-content-center">
             @foreach ($productsbycategory as $productbycategory)
-            <div class="col-sm-3">
+            <div class="col-sm-3  animate__animated animate__fadeIn">
                 <div class="card shadow-sm {{ $productbycategory->name }}">
                     <img src="{{asset('assets/products/'.$productbycategory->photo_principal)}}" alt="{{$productbycategory->name}}" class="img-fluid">
                     <div class="card-body">
