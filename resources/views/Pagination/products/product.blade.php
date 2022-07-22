@@ -12,9 +12,16 @@
         <div class="w-50">
             <form action="{{ route('cart_add',['id'=>$product->id]) }}" method="POST">
                 @csrf
-                <input type="number" name="quantity" class="form form-control text-center" value="1">
+                <input type="number" name="quantity" class="form form-control text-center">
                 <button type="submit" class="btn btn-outline-primary w-100 mt-2">Ajouter dans le panier <i class="fa fa-shopping-cart text-primary"></i></button>
             </form>
+            @if($errors->any())
+                <ul class="mt-3">
+                    @foreach($errors->all()  as $error)
+                    <li class="nav-link text-danger border btn w-100">{{$error}}</li>
+                    @endforeach
+                </ul>
+            @endif
         </div>
     </div>
     <hr>

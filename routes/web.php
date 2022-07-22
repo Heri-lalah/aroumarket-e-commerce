@@ -26,3 +26,4 @@ Route::get('Produits/Categorie:{id}',[MainController::class,'viewproductbycatego
 
 Route::post('panier/add/{id}',[CartController::class, 'add'])->name('cart_add');
 Route::get('MonPanier',[CartController::class, 'index'])->name('cart_index');
+Route::post('MonPanier',[CartController::class,'storeAllCommands'])->name('storeAllCommands');

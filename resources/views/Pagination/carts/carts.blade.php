@@ -1,8 +1,9 @@
 @extends('layouts.template')
 @section('main')
 <div class="container">
-    <h1>Mon pannier</h1>
-    <form action="">
+    <h1 class="allcommandstitle">Mon panier</h1>
+    <form action="{{ route('storeAllCommands') }}" method="POST">
+        @csrf
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -17,7 +18,7 @@
                 <tr>
                     <td><img src="{{ asset('assets/products/'.$product->attributes->photo) }}" class="img-thumbnail" alt="{{ $product->name }}" width="50px"></td>
                     <td>{{ $product->name }}</td>
-                    <td><input type="number" value="{{number_format($product->quantity,2)}}" class="form-control w-50 text-center"></td>
+                    <td><input name="quantity" type="number" value="{{number_format($product->quantity,2)}}" class="form-control w-50 text-center"></td>
                     <td class="text-end">{{ number_format($product->quantity * $product->price,2) }} Ariary</td>
                 </tr>
                 @endforeach
@@ -45,6 +46,5 @@
         </table>
         <input type="submit" value="Commander" class="btn btn-outline-primary w-100">
     </form>
-
 </div>
 @endsection

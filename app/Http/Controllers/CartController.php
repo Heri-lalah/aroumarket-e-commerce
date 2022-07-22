@@ -13,6 +13,9 @@ class CartController extends Controller
 
     public function add(Request $request)
     {
+        $request->validate([
+            'quantity'=>['required']
+        ]);
         $product=Product::findOrFail($request->id);
         Cart::add(array(
             'id' =>$product->id, // inique row ID
@@ -28,6 +31,10 @@ class CartController extends Controller
     {
         $content = Cart::getContent();
         $totalHT=Cart::getTotal();
-        return view('pagination.cards.cards', compact('content','totalHT'));
+        return view('pagination.carts.carts', compact('content','totalHT'));
+    }
+    public function storeAllCommands(Request $request)
+    {
+        //return redirect('pagination.cards.cards', compact('content','totalHT'));
     }
 }
