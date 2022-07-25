@@ -44,6 +44,28 @@ body {
 .categoryItems li:active {
   background-color: aqua;
 }
+.categoryItems li {
+  font-family: "Comfortaa";
+}
+
+.pink {
+  color: #f50992;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#usercartsAndMessage {
+  z-index: 3500;
+  position: fixed;
+  right: 1rem;
+  top: 5rem;
+}
 
 header.navbar .navbar-text {
   color: #f50992;
@@ -133,13 +155,16 @@ header.navbar form .btnsearch {
           animation: logo 4s infinite;
 }
 
+.banner {
+  font-family: "Marck Script";
+}
 .banner .layout .wrapper .intro .intro-title {
   font-family: "Marck Script";
   font-size: 3rem;
   color: rgb(71, 70, 70);
 }
 .banner .layout .wrapper .intro .mytopcarousel {
-  font-family: "Lobster";
+  font-family: "Comfortaa";
 }
 .banner .layout .wrapper .intro .slide {
   width: 100%;
@@ -149,40 +174,33 @@ header.navbar form .btnsearch {
   font-family: "Marck Script";
   color: #f50992;
 }
-.banner .layout .services {
-  overflow: hidden;
-  min-height: 50vh;
-  font-family: "Lobster";
-  color: rgba(15, 76, 247, 0.925);
-  font-size: 20px;
-}
-.banner .layout .services i.service-item {
+.banner .layout i.serviceitem {
   font-size: 70px;
   color: rgba(15, 76, 247, 0.925);
   padding: 25px;
 }
-.banner .layout .services .hours {
+.banner .layout .hours {
   padding: 0 4px;
 }
-.banner .layout .services .info {
+.banner .layout .info {
   font-family: "Marck Script";
   font-size: 22px;
 }
-.banner .layout .services .info a .fa-facebook {
+.banner .layout .info a .fa-facebook {
   color: rgb(0, 89, 255);
 }
-.banner .layout .services .info a .fab {
+.banner .layout .info a .fab {
   font-size: 30px;
 }
-.banner .layout .services .brands {
+.banner .layout .brands {
   font-family: "Marck Script";
   font-size: 25px;
   color: #f50992;
 }
-.banner .layout .services .brands .fa-google-plus-g {
+.banner .layout .brands .fa-google-plus-g {
   color: green;
 }
-.banner .layout .services .imgpromo {
+.banner .layout .imgpromo {
   width: 100%;
   height: 100%;
 }

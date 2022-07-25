@@ -2,15 +2,11 @@
 
 namespace App\Models;
 
-use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Category extends Model
+class Command extends Model
 {
     use HasFactory;
-    public function products()
-    {
-        //return $this->belongsTo(Product::class);
-    }
+    protected $fillable=['prix_TTC_Total'];
 }

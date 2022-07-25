@@ -7,11 +7,11 @@
         @foreach ($products as $product)
         <div class="col-sm-3">
             <div class="card shadow-sm animate__animated animate__fadeIn">
-                <img src="{{asset('assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}" class="img-fluid">
+                <img src="{{asset('/storage/assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}" class="img-fluid">
                 <div class="card-body">
                     <p class="card-text d-none d-md-block">
                         {{strtoupper($product->name)}} <br>
-                        Prix H.T : {{number_format($product->prix_ht,2)}} Ar
+                        Prix TTC : {{$product->prixTTC()}} Ar
                     </p>
                     <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">

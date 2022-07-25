@@ -9,11 +9,31 @@
     <link rel="stylesheet" href="{{ asset('css/animate.min.css')}}">
     <link rel="stylesheet" href="{{ asset('fontawesome-free-5.15.3-web/css/all.css')}}">
     <title>ArouMarket</title>
-    <link rel="shortcut icon" href="{{ asset('avatars/logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('/storage/avatars/logo.png') }}" type="image/x-icon">
     <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
     <script src="{{ asset('js/myapp.js') }}" defer></script>
 </head>
-<body class="bg-light">
+<body class="bg-light position-relative">
+    {{-- Liens vers Mon Panier et Message d'info --}}
+    <ul id="usercartsAndMessage">
+        <li class="nav-item position-relative animate__animated animate__bounceInRight">
+            <a href="{{ route('cart_index') }}" class="nav-link"  title="Cliquer ici pour voir votre panier"><i class="fa fa-shopping-cart h3 text-primary"></i></i></a>
+            @if ($infoCarts>0)
+            <span class="badge bg-danger rounded-circle position-absolute top-0 end-0 animate__animated animate__fadeIn">
+                    {{$infoCarts}}
+            </span>
+            @endif
+        </li>
+        <li class="ms-2 position-relative animate__animated animate__fadeIn">
+            <a href="" class="nav-link"><i class="fab fa-facebook-messenger h3 text-info"></i></i></a>
+            @if ($infoCarts>0)
+            <span class="badge bg-danger rounded-circle position-absolute top-0 end-0 animate__animated animate__fadeIn">
+                    {{$infoCarts}}
+            </span>
+            @endif
+        </li>
+    </ul>
+
     <div class="banner position-relative bg-light">
         @include('layouts.partials.navbar')
         @yield('main')

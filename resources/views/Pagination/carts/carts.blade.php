@@ -1,50 +1,48 @@
 @extends('layouts.template')
 @section('main')
 <div class="container">
-    <h1 class="allcommandstitle">Mon panier</h1>
-    <form action="{{ route('storeAllCommands') }}" method="POST">
-        @csrf
-        <table class="table table-hover">
+    @include('Pagination.carts.cartTemplate')
+    @if ($content->isEmpty())
+        <p class="allcommandstitle h4 mt-2">Votre panier est vide <a href="{{route('products')}}">Cliquer ici pour remplir</a></p>
+    @else
+        <table class="table table-hover table-borderless">
             <thead>
-                <tr>
+                <tr class="border-bottom bg-primary text-light">
                     <th scope="col">Images</th>
                     <th scope="col">Nom Produits</th>
                     <th scope="col">Quantité</th>
-                    <th scope="col">Prix HT</th>
+                    <td scope="col">Modification</td>
+                    <th scope="col" class="text-center">Prix TTC</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($content as $product)
+                @foreach($content->all() as $items)
                 <tr>
-                    <td><img src="{{ asset('assets/products/'.$product->attributes->photo) }}" class="img-thumbnail" alt="{{ $product->name }}" width="50px"></td>
-                    <td>{{ $product->name }}</td>
-                    <td><input name="quantity" type="number" value="{{number_format($product->quantity,2)}}" class="form-control w-50 text-center"></td>
-                    <td class="text-end">{{ number_format($product->quantity * $product->price,2) }} Ariary</td>
+                    <td><img src="{{ asset('/storage/assets/products/'.$items->attributes->photo) }}" class="img-thumbnail" alt="{{ $items->name }}" width="50px"></td>
+                    <td>{{ $items->name }}</td>
+                    <form action="{{route('cart_update',['id'=>$items->attributes->id])}}" class="d-inline">
+                        <td><input name="quantity" type="number" value="{{$items->quantity}}" class="form-control w-50 text-center"></td>
+                        <td>
+                            <input type="submit" value="Mettre à jour" class="btn btn-outline-success">
+                        </td>
+                    </form>
+                    <td class="text-end">{{ number_format($items->quantity * $items->price,2) }} Ariary</td>
                 </tr>
                 @endforeach
             </tbody>
             <tfoot>
                 <tr>
+                    <td><td><a href="{{route('products')}}" class="nav-link">Plus des produits</a></td></td>
                     <td></td>
-                    <td></td>
-                    <td>Prix Total H.T</td>
-                    <td class="text-end">{{ number_format($totalHT,2) }} Ariary</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>TVA</td>
-                    <td class="text-end">{{ number_format(($totalHT * 20)/100,2) }} Ariary</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td class="fw-bold">Prix TTC</td>
-                    <td class="text-end fw-bold">{{ number_format($totalHT + (($totalHT * 20)/100),2) }} Ariary</td>
+                    <td class="fw-bold">Montant Total TTC</td>
+                    <td class="text-end fw-bold border border-lg pink fw-bold">{{ number_format($totalTTC,2) }} Ariary</td>
                 </tr>
             </tfoot>
         </table>
-        <input type="submit" value="Commander" class="btn btn-outline-primary w-100">
-    </form>
+        <form action="{{ route('storeAllCommands') }}" method="POST">
+                @csrf
+            <input type="submit" value="Commander" class="btn btn-outline-primary w-100">
+        </form>
+    @endif
 </div>
 @endsection
