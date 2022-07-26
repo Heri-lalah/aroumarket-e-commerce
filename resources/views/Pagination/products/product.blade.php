@@ -4,7 +4,7 @@
 <div class="layout">
     <div class="d-flex container w-100 mt-5 justify-content-around bg-light align-items-center">
         <div class=" animate__animated animate__fadeIn">
-            <img src="{{asset('/storage/assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}">
+            <img src="{{Storage::url('assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}">
             <p class="fw-bold">{{strtoupper($product->name)}}</p>
             <p>{{$product->description}}</p>
             <p class="text-primary">Prix TTC : {{$product->prixTTC()}} Ariary</p>
@@ -34,7 +34,7 @@
             @foreach ($productsbycategory as $productbycategory)
             <div class="col-sm-3  animate__animated animate__fadeIn">
                 <div class="card shadow-sm {{ $productbycategory->name }}">
-                    <img src="{{asset('/storage/assets/products/'.$productbycategory->photo_principal)}}" alt="{{$productbycategory->name}}" class="img-fluid">
+                    <img src="{{Storage::url('/assets/products/'.$productbycategory->photo_principal)}}" alt="{{$productbycategory->name}}" class="img-fluid">
                     <div class="card-body">
                         <p class="card-text d-none d-md-block">
                             {{strtoupper($productbycategory->name)}} <br>

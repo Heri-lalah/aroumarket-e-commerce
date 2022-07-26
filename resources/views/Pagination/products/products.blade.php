@@ -7,7 +7,7 @@
         @foreach ($products as $product)
         <div class="col-sm-3">
             <div class="card shadow-sm animate__animated animate__fadeIn">
-                <img src="{{asset('/storage/assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}" class="img-fluid">
+                <img src="{{Storage::url('/assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}" class="img-fluid">
                 <div class="card-body">
                     <p class="card-text d-none d-md-block">
                         {{strtoupper($product->name)}} <br>

@@ -11,9 +11,9 @@
                             <div class="carousel-inner">
                                 @foreach ($Listpromotion as $product)
                                 <div class="carousel-item active position-relative">
-                                    <img src="{{asset('assets/products/'.$product->photo_principal)}}" alt="coding" class="d-block img-fluid w-100  ">
+                                    <img src="{{Storage::url('/assets/products/'.$product->photo_principal)}}" alt="coding" class="d-block img-fluid w-100  ">
                                     <div class="carousel-caption position-absolute">
-                                        <img src="{{asset('avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
+                                        <img src="{{Storage::url('/avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
                                         <a href="{{route('showproduct',['id'=>$product->id,'category_id'=>$product->category_id])}}" class="btn btn-primary">Plus de details</a>
                                     </div>
                                 </div>
