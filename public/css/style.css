@@ -67,6 +67,9 @@ a {
   top: 5rem;
 }
 
+header.navbar {
+  z-index: 5000;
+}
 header.navbar .navbar-text {
   color: #f50992;
   font-family: "Marck Script";

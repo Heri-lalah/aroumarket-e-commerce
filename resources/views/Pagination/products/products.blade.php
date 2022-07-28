@@ -1,8 +1,9 @@
-@extends('layouts.template')
+@extends('layouts.app')
 @section('main')
 @yield('section')
 @include('layouts.partials.categoryitem')
 <div class="bannerProduct mb-5 container bg-light">
+    @include('layouts.partials.info')
     <div class="row gy-3 justify-content-center">
         @foreach ($products as $product)
         <div class="col-sm-3">

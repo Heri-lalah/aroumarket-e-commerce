@@ -1,4 +1,4 @@
-@extends('layouts.template')
+@extends('layouts.app')
 @section('main')
 <div class="bannerService mb-4 mt-3">
     <div class="container">

@@ -30,3 +30,7 @@ Route::get('SuiviCommandes',[CartController::class, 'cart_command'])->name('cart
 Route::post('',[CartController::class,'storeAllCommands'])->name('storeAllCommands');
 
 Route::get('panier/update/{id}',[CartController::class, 'cart_update'])->name('cart_update');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
