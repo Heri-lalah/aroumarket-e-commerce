@@ -10,11 +10,16 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\CommandList;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use PhpParser\Node\Stmt\Foreach_;
 
 class CartController extends Controller
 {
 
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     //Ajout commande
     public function add(Request $request)
@@ -47,7 +52,7 @@ class CartController extends Controller
     {
         $content = Cart::getContent();
         $totalTTC=Cart::getTotal();
-        $info=Command::where('payement', false)->count();
+        $info=Command::where('user_id', Auth::user()->id)->count();
         $infoCarts=Cart::GetContent()->count();
         return view('pagination.carts.carts', compact('content','totalTTC','info','infoCarts'));
     }
@@ -60,6 +65,8 @@ class CartController extends Controller
         $infoCarts=Cart::GetContent()->count();
         return view('Pagination.carts.commandList', compact('command','info','infoCarts'));
     }
+
+
     //Enregistrement commande en cours
     public function storeAllCommands()
     {
@@ -67,6 +74,8 @@ class CartController extends Controller
 
         //Enregistrer la commande
         $Command=Command::firstOrCreate([
+            'user_id'=>Auth::user()->id,
+            'user_name'=>Auth::user()->name,
             'prix_TTC_Total'=>$totalTTC
         ]);
 
@@ -76,6 +85,7 @@ class CartController extends Controller
         foreach($commandList as $command){
             $store=CommandList::firstOrCreate([
                 'command_id'=>$Command->id,
+                'user_id'=>Auth::user()->id,
                 'produit_id'=>$command->id,
                 'quantity'=>$command->quantity
             ]);

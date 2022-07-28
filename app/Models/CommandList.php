@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class CommandList extends Model
 {
     use HasFactory;
-    protected $fillable=['command_id','produit_id','quantity'];
+    protected $fillable=['command_id','user_id','produit_id','quantity'];
     protected $commandList;
     protected $command;
     public function products()

@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('commands', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('user_name');
             $table->integer('prix_TTC_Total');
             $table->timestamps();
         });

@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Command extends Model
 {
     use HasFactory;
-    protected $fillable=['prix_TTC_Total'];
+    protected $fillable=['user_id','user_name','prix_TTC_Total'];
 }

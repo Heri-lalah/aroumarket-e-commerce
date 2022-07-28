@@ -2,6 +2,7 @@
 @section('main')
 @include('layouts.partials.categoryitem')
 <div class="layout">
+    @include('layouts.partials.info')
     <div class="d-flex container w-100 mt-5 justify-content-around bg-light align-items-center">
         <div class=" animate__animated animate__fadeIn">
             <img src="{{Storage::url('assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}">
