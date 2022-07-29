@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <link rel="stylesheet" href="{{ asset('css/animate.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>ArouMarket | {{Route::currentRouteName()}}</title>
+    <link rel="stylesheet" href="{{ asset('fontawesome-free-5.15.3-web/css/all.min.css')}}">
+    <title>ArouMarket</title>
     <link rel="shortcut icon" href="{{Storage::url('/avatars/logo.png') }}" type="image/x-icon">
     <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
     <script src="{{ asset('js/myapp.js') }}" defer></script>
@@ -21,6 +22,9 @@
             <a href="#"><i class="fa fa-angle-double-up py-1 px-2 border border-dark rounded-circle"></i></a>
         </p>
         @include('layouts.partials.footer')
+        @include('layouts.partials.loginModal')
+        @include('layouts.partials.registerModal')
+        @include('layouts.partials.userOffcanvas')
     </div>
 </body>
 </html>

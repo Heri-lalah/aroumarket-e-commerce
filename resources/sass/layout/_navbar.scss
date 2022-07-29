@@ -1,5 +1,5 @@
 header.navbar{
-    z-index: 5000;
+    //z-index: 5000;
     .navbar-text{
         color: $dark_pink;
         font-family: $primaryfont;
@@ -19,16 +19,14 @@ header.navbar{
         }
     }
 
-    nav{
-        ul{
-            li a{
-                font-family:$primaryfont;
-                font-size: x-large;
-                color: $dark_pink;
-                &:hover{
-                    color: $light_violet;
-                    //text-decoration: underline;
-                }
+    ul{
+        li a{
+            font-family:$primaryfont;
+            font-size: x-large;
+            color: $dark_pink;
+            &:hover{
+                color: $light_violet;
+                //text-decoration: underline;
             }
         }
     }
@@ -38,5 +36,7 @@ header.navbar{
             font-family: cursive;
         }
     }
-
+    .dropdown-menu{
+        z-index: 2500;
+    }
 }

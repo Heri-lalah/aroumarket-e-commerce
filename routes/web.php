@@ -16,21 +16,23 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get('A-propos', [MainController::class,'about'])->name('about');
+Route::get('aroumarketinfo', [MainController::class,'about'])->name('about');
 Route::get('', [MainController::class,'products'])->name('products');
-Route::get('Produit_{id}{category_id}', [MainController::class,'showproduct'])->name('showproduct');
-
+Route::get('aroumarket_pt_{id}{category_id}', [MainController::class,'showproduct'])->name('showproduct');
 
 Route::get('Services',[MainController::class,'services'])->name('services');
 
-Route::get('Produits/Categorie:{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
+Route::get('aroumarket_ct_{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
 
-Route::post('panier/add/{id}',[CartController::class, 'add'])->name('cart_add');
-Route::get('MonPanier',[CartController::class, 'index'])->name('cart_index');
-Route::get('SuiviCommandes',[CartController::class, 'cart_command'])->name('cart_command');
-Route::post('',[CartController::class,'storeAllCommands'])->name('storeAllCommands');
+Route::prefix('cart')->group(function () {
+    Route::post('add/{id}',[CartController::class, 'add'])->name('cart_add');
+    Route::get('list',[CartController::class, 'index'])->name('cart_index');
+    Route::get('update/{id}',[CartController::class, 'cart_update'])->name('cart_update');
+    Route::post('storeAll',[CartController::class,'storeAllCommands'])->name('storeAllCommands'); 
+});
 
-Route::get('panier/update/{id}',[CartController::class, 'cart_update'])->name('cart_update');
+Route::get('CommandList',[CartController::class, 'cart_command'])->name('cart_command');
+
 
 Auth::routes();
 

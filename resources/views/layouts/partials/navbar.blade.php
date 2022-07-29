@@ -1,4 +1,4 @@
-<header class="navbar navbar-expand-md shadow-sm">
+<header class="navbar navbar-expand-md">
     <a href="{{route('about')}}" class="navbar-brand ms-3">
         <img src="{{asset('/storage/avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
     </a>
@@ -27,32 +27,25 @@
             @guest
                 @if (Route::has('login'))
                     <li class="nav-item">
-                        <a class="nav-link h5" href="{{ route('login') }}">{{-- __('Login') --}}Se connecter</a>
+                        <a class="nav-link h5" href="{{ route('login') }}" type="buttom" data-bs-toggle="modal" data-bs-target="#loginModal">{{__('Se connecter')}}</a>
                     </li>
+
+                    {{-- <li class="nav-item">
+                        <a class="nav-link h5" href="">{{__('Login')}}Se connecter</a>
+                    </li> --}}
                 @endif
 
                 @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link h5 pink" href="{{ route('register') }}">{{-- __('Register') --}}S'inscrire</a>
+                        <a class="nav-link h5 pink" href="{{route('register')}}" type="buttom" data-bs-toggle="modal" data-bs-target="#registerModal">{{__("S'inscrire")}}</a>
+                        </a>
                     </li>
                 @endif
             @else
-                <li class="nav-item dropdown">
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle h5" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                <li class="nav-item">
+                    <a class="nav-link h5" href="#" role="button"  data-bs-toggle="offcanvas" data-bs-target="#userTools" aria-haspopup="true" aria-expanded="false" v-pre>
                         {{ Auth::user()->name }}
                     </a>
-
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item text-danger h5" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                                         document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
                 </li>
             @endguest
         </ul>

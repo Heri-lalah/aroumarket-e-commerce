@@ -52,7 +52,7 @@ class CartController extends Controller
     {
         $content = Cart::getContent();
         $totalTTC=Cart::getTotal();
-        $info=Command::where('user_id', Auth::user()->id)->count();
+        $info=Command::where('user_id', Auth::user()->id)->where('payement', false)->count();
         $infoCarts=Cart::GetContent()->count();
         return view('pagination.carts.carts', compact('content','totalTTC','info','infoCarts'));
     }
@@ -60,8 +60,8 @@ class CartController extends Controller
 
     public function cart_command()
     {
-        $command=Command::all();
-        $info=Command::where('payement', false)->count();
+        $command=Command::where('user_id', Auth::user()->id)->get();
+        $info=Command::where('user_id', Auth::user()->id)->where('payement', false)->count();
         $infoCarts=Cart::GetContent()->count();
         return view('Pagination.carts.commandList', compact('command','info','infoCarts'));
     }
@@ -103,7 +103,6 @@ class CartController extends Controller
     //Mettre à jour une commande
     public function cart_update(Request $request, $id)
     {
-        //$cart=Cart::getContent();
         $request->validate(['quantity'=>['required']]);
         $update=Cart::update($id,[
             'quantity' => array(
