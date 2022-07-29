@@ -8,21 +8,28 @@
         </h1>
         <a type="button" class="fa fa-share-square h5" data-bs-dismiss="offcanvas"></a>
     </div>
-    <ul class="offcanvas-body">
-        <li class="nav-link disabled"><i class="fa fa-user-cog"></i> Parametre de compte</li>
-        <li class="nav-link disabled"><i class="fa fa-tools"></i> Changement mot de passe</li>
-        <li class="nav-link btn-danger">
-            <i class="fa fa-redo-alt h6 text-light"></i>
-            <a class=" text-light" href="{{ route('logout') }}"
-            onclick="event.preventDefault();
-                        document.getElementById('logout-form').submit();">
-                {{ __('Déconnection') }}
-            </a>
+    <nav class="offcanvas-body">
+        <a href="" class="nav-link h6 disabled"><i class="fa fa-tools"></i> Parametre de compte</a>
 
+        <a href="" class="nav-link h6 disabled"><i class="fa fa-user-cog"></i> Changement mot de passe</a>
+
+        <a href="{{ route('cart_index') }}" class="nav-link h6 text-info"><i class="fa-solid fa-cart-plus"></i>
+            Mon panier
+            @if ($infoCarts>0)
+            <span class="badge bg-danger rounded-circle position-absolute top-0 end-0 animate__animated animate__fadeIn">
+                    {{$infoCarts}}
+            </span>
+            @endif
+        </a>
+
+        <a href="{{ route('logout') }}" class="nav-link h6 bg-danger text-light fw-bold"  onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+            <i class="fa-solid fa-power-off"></i>
+            {{ __('Déconnection') }}
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>
-        </li>
-    </ul>
+        </a>
+    </nav>
 </div>
 @endauth
