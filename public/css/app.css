@@ -2,6 +2,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   width: auto;
+  font-family: "Comfortaa";
 }
 
 .logo {
@@ -41,6 +42,9 @@ body {
   color: #4f5b60;
 }
 
+.categoryItems {
+  z-index: 1000;
+}
 .categoryItems li:active {
   background-color: aqua;
 }
@@ -61,15 +65,12 @@ a {
 }
 
 #usercartsAndMessage {
-  z-index: 3500;
+  z-index: 1000;
   position: fixed;
   right: 1rem;
   top: 5rem;
 }
 
-header.navbar {
-  z-index: 5000;
-}
 header.navbar .navbar-text {
   color: #f50992;
   font-family: "Marck Script";
@@ -87,17 +88,20 @@ header.navbar .menuicon {
 header.navbar .menuicon:hover {
   transform: scale(1.1, 1.1);
 }
-header.navbar nav ul li a {
+header.navbar ul li a {
   font-family: "Marck Script";
   font-size: x-large;
   color: #f50992;
 }
-header.navbar nav ul li a:hover {
+header.navbar ul li a:hover {
   color: #6a31a4;
 }
 header.navbar form .btnsearch {
   font-weight: bold;
   font-family: cursive;
+}
+header.navbar .dropdown-menu {
+  z-index: 2500;
 }
 
 .footer {
@@ -159,7 +163,7 @@ header.navbar form .btnsearch {
 }
 
 .banner {
-  font-family: "Marck Script";
+  font-family: "Comfortaa";
 }
 .banner .layout .wrapper .intro .intro-title {
   font-family: "Marck Script";
