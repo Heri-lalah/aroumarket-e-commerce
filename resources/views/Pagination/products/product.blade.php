@@ -43,9 +43,9 @@
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                           <a href="{{route('showproduct',['id'=>$productbycategory->id,'category_id'=>$productbycategory->category_id])}}" class="btn btn-sm btn-outline-primary">View</a>
+                           <a href="{{route('showproduct',['id'=>$productbycategory->id,'category_id'=>$productbycategory->category_id])}}" class="btn btn-sm btn-outline-success">View</a>
                         </div>
-                        <i class="fa fa-shopping-cart h4 text-primary addtocard"></i>
+                        <i class="fa fa-shopping-cart h4 text-info addtocard"></i>
                         </div>
                     </div>
                 </div>
