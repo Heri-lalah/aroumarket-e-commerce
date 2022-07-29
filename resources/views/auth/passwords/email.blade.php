@@ -2,10 +2,10 @@
 
 @section('main')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center mt-5">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
+                <div class="card-header">{{ __('Réinitialisation du mot de passe') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -32,9 +32,9 @@
                         </div>
 
                         <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-8 offset-md-2">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
+                                    {{ __('envoyer le lien de réinitialisation du mot de passe') }}
                                 </button>
                             </div>
                         </div>
