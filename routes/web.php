@@ -16,22 +16,21 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get('aroumarketinfo', [MainController::class,'about'])->name('about');
+Route::get('A-propos', [MainController::class,'about'])->name('about');
 Route::get('', [MainController::class,'products'])->name('products');
-Route::get('aroumarket_pt_{id}{category_id}', [MainController::class,'showproduct'])->name('showproduct');
 
-Route::get('Services',[MainController::class,'services'])->name('services');
 
-Route::get('aroumarket_ct_{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
+Route::get('Produits/Catégorie/{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
 
-Route::prefix('cart')->group(function () {
-    Route::post('add/{id}',[CartController::class, 'add'])->name('cart_add');
-    Route::get('list',[CartController::class, 'index'])->name('cart_index');
+Route::prefix('Panier')->group(function () {
+    Route::post('ajout/{id}',[CartController::class, 'add'])->name('cart_add');
+    Route::get('Listes',[CartController::class, 'index'])->name('cart_index');
+    Route::get('Lists',[CartController::class, 'clearCommand'])->name('carts_clear');
     Route::get('update/{id}',[CartController::class, 'cart_update'])->name('cart_update');
-    Route::post('storeAll',[CartController::class,'storeAllCommands'])->name('storeAllCommands'); 
+    Route::post('EnvoieDeLaCommande',[CartController::class,'storeAllCommands'])->name('storeAllCommands')->middleware('auth');
 });
 
-Route::get('CommandList',[CartController::class, 'cart_command'])->name('cart_command');
+Route::get('Commande/Listes',[CartController::class, 'cart_command'])->name('cart_command')->middleware('auth');
 
 
 Auth::routes();

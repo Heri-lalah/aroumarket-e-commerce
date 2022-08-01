@@ -2,7 +2,12 @@
 
 namespace App\Providers;
 
+//use Illuminate\View\View;
+
+use App\Http\ViewComposers\CartComposer;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use App\Http\ViewComposers\HeaderComposer;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +28,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+
+        View::composer(['shop.products','cart.carts','cart.commandList'],HeaderComposer::class);
+
+        View::composer(['shop.products','cart.carts'], CartComposer::class);
+
     }
 }

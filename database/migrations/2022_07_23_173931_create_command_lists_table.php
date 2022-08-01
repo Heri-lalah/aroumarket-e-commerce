@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('command_lists', function (Blueprint $table) {
             $table->foreignId('command_id')->constrained('commands');
             $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('produit_id')->constrained('produits');
+            $table->foreignId('product_id')->constrained('products');
             $table->integer('quantity');
             $table->timestamps();
         });

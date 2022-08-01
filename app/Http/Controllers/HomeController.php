@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return redirect(Route::current());
+        return redirect(Route::currentRouteAction());
         //route('cart_index');
     }
 }

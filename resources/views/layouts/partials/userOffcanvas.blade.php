@@ -15,11 +15,6 @@
 
         <a href="{{ route('cart_index') }}" class="nav-link h6 text-info"><i class="fa-solid fa-cart-plus"></i>
             Mon panier
-            @if ($infoCarts>0)
-            <span class="badge bg-danger rounded-circle position-absolute top-0 end-0 animate__animated animate__fadeIn">
-                    {{$infoCarts}}
-            </span>
-            @endif
         </a>
 
         <a href="{{ route('logout') }}" class="nav-link h6 bg-danger text-light fw-bold"  onclick="event.preventDefault();

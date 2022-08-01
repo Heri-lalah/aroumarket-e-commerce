@@ -1,7 +1,57 @@
-@extends('layouts.app')
 
-@section('main')
-<div class="container">
+@extends('auth.form')
+@section('authform')
+<div class="text-center">
+    <h1 class="h4 text-gray-900 mb-4">Bienvenue !</h1>
+</div>
+
+<form class="user"  method="POST" action="{{ route('login') }}">
+
+    @csrf
+
+    <div class="form-group">
+        <input type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
+            id="exampleInputEmail" aria-describedby="emailHelp"
+            placeholder="adresse e-mail...">
+
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+    </div>
+
+    <div class="form-group">
+        <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror"  name="password" required autocomplete="current-password"
+            id="exampleInputPassword" placeholder="mot de passe">
+
+            @error('password')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+
+    </div>
+
+    <div class="form-group">
+        <div class="custom-control custom-checkbox small">
+            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+            <label class="form-check-label" for="remember">
+                {{ __('Se souvenir de moi') }}
+            </label>
+        </div>
+    </div>
+
+
+    <span>
+        <button type="submit" class="btn btn-primary btn-user btn-block">
+            {{ __('Se connecter') }}
+        </button>
+    </span>
+</form>
+@endsection
+{{-- <div class="container">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-8">
             <div class="card mt-3 mt-md-5">
@@ -68,7 +118,7 @@
                         </div>
                     </form>
                 </div> --}}
-                <div class="card-body">
+                {{-- <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -126,9 +176,7 @@
                             </div>
                         </div>
                     </form>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
-</div>
-@endsection

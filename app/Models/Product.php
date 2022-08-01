@@ -17,16 +17,31 @@ class Product extends Model
 
     public function category()
     {
+
         return $this->belongsTo(Category::class);
+
     }
 
     public function prixTTC()
     {
+
         $prix_ttc=$this->prix_ht * self::$facteur_tva;
+
         return number_format($prix_ttc,2);
+
     }
+
     public function commands()
     {
+
         return $this->hasMany(Command::class);
+
+    }
+
+    public function scopeOrderByName($query)
+    {
+
+        $query->Orderby('name');
+
     }
 }

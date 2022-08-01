@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('main')
 <div class="container">
-    @include('Pagination.carts.cartTemplate')
+    @include('cart.cartTemplate')
     <table class="table table-hover table-borderless w-100">
         <thead class="bg-warning text-light">
             <tr class="border-bottom">

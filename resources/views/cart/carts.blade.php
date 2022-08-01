@@ -1,11 +1,12 @@
 @extends('layouts.app')
 @section('main')
-<div class="container">
-    @include('Pagination.carts.cartTemplate')
+<div class="container mb-5">
+    @include('cart.cartTemplate')
     @if ($content->isEmpty())
         <p class="allcommandstitle h4 mt-2">Votre panier est vide <a href="{{route('products')}}">Cliquer ici pour remplir</a></p>
     @else
         <table class="table table-hover table-borderless">
+            <p class="float-end"><a href="{{route('carts_clear')}}" class="text-danger">Vider le panier</a></p>
             <thead>
                 <tr class="border-bottom bg-primary text-light">
                     <th scope="col">Images</th>

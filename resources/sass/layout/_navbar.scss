@@ -22,18 +22,6 @@ header.navbar{
     ul{
         li a{
             font-family:$primaryfont;
-            font-size: x-large;
-            color: $dark_pink;
-            &:hover{
-                color: $light_violet;
-                //text-decoration: underline;
-            }
-        }
-    }
-    form{
-        .btnsearch{
-            font-weight: bold;
-            font-family: cursive;
         }
     }
     .dropdown-menu{
