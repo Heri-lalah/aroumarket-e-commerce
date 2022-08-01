@@ -42,7 +42,7 @@
         </table>
         <form action="{{ route('storeAllCommands') }}" method="POST">
                 @csrf
-            <input type="submit" value="Commander" class="btn btn-outline-primary w-100">
+            <input type="submit" value="Envoyer la commande" class="btn btn-outline-primary w-100">
         </form>
     @endif
 </div>
