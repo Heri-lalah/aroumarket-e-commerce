@@ -49,20 +49,20 @@
                     </li>
                 @endif --}}
             @else
-                <li class="nav-item dropdown no-arrow mr-2  ml-3">
+                <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle d-flex" href="#"  id="userDropdown" role="button"  data-bs-toggle="dropdown" data-bs-target="#userTools" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <span class="mr-3 d-lg-inline text-gray-600 fs-5">{{ Auth::user()->name }}</span>
-                        <i class="fa fa-user-circle fs-4"></i>
+                            {{-- Auth::user()->name --}}
+                        <img src="{{ Storage::url('avatars/img_avatar.png') }}" class="rounded-circle" alt="avatar" width="40px">
                     </a>
 
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                    <div class="dropdown-menu shadow animated--grow-in"
                         aria-labelledby="userDropdown">
                         <a class="dropdown-item fs-6 text-gray-600 disabled" href="#">
-                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                            <i class="fas fa-user fa-sm fa-fw text-gray-400"></i>
                             Profil
                         </a>
                         <a class="dropdown-item fs-6 text-gray-600 disabled" href="#">
-                            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                            <i class="fas fa-cogs fa-sm fa-fw text-gray-400"></i>
                             Parametres
                         </a>
 
@@ -70,7 +70,7 @@
 
                         <a href="{{ route('logout') }}" class="dropdown-item fs-6 text-danger"  onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
-                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-danger"></i>
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw text-danger"></i>
                             {{ __('Déconnection') }}
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf
