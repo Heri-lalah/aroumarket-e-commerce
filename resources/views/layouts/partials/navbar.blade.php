@@ -52,13 +52,14 @@
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle d-flex  ml-3" href="#"  id="userDropdown" role="button"  data-bs-toggle="dropdown" data-bs-target="#userTools" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{-- Auth::user()->name --}}
+                        <span class="mt-2 me-1">{{ Str::length(Auth::user()->firstName.' '.Auth::user()->name)>10 ? Str::substr(Auth::user()->firstName.' '.Auth::user()->name, 0, 10).'...' : Auth::user()->firstName.' '.Auth::user()->name }}</span>
                         <img src="{{ Storage::url('avatars/img_avatar.png') }}" class="rounded-circle" alt="avatar" width="40px">
                     </a>
 
-                    <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="userDropdown" style="margin-left:-5rem">
+                    <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="userDropdown">
                         <a class="dropdown-item fs-6 text-gray-600 disabled" href="#">
                             <i class="fas fa-user fa-sm fa-fw text-gray-400"></i>
-                            {{ Str::length(Auth::user()->firstName.' '.Auth::user()->name)>10 ? Str::substr(Auth::user()->firstName.' '.Auth::user()->name, 0, 10).'...' : Auth::user()->firstName.' '.Auth::user()->name }}
+                            Profil
                         </a>
                         <a class="dropdown-item fs-6 text-gray-600 disabled" href="#">
                             <i class="fas fa-cogs fa-sm fa-fw text-gray-400"></i>
