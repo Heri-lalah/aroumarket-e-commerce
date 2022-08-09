@@ -8,3 +8,11 @@ ouvrez votre terminal et tapez
 <ul>
     <li><span style="color :red"> composer -install</span> puis npm install & npm run dev</li>
 </ul>
+<p>3-Ajoutez cette ligne de code dans : vendor\laravel\ui\auth-backend\AuthenticatesUsers.php</p>
+
+    protected function authenticated(Request $request, $user)
+    {
+        if($user->admin){
+            return  redirect(route('admin'));
+        }
+    }
