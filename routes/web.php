@@ -38,4 +38,4 @@ Auth::routes();
 
 //Route::get('Administration',[AdminController::class,'index']);
 
-Route::get('Administration', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('Administration', [App\Http\Controllers\HomeController::class, 'index'])->name('admin')->middleware('auth');
