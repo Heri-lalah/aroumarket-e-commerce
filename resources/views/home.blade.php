@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('main')
-<div class="bannerService mb-4 mt-3">
+<div class="bannerService mt-3">
     <div class="container">
         <div class="intro text-center">
             <p><img src="{{Storage::url('/avatars/logo.png')}}" alt="logo" width="100px"></p>
@@ -26,10 +26,10 @@
         </div>
 
         <div class="info container text-center">
-            <p class="col-sm-12 col-xl-auto mt-md-5 text-dark">
+            <p class="col-sm-12 col-xl-auto mt-md-3 text-dark">
                 N'hesitez pas à nous appeler pour toute information complémentaire
             </p>
-            <p class="col-sm-12 col-xl-auto mt-md-3">
+            <p class="col-sm-12 col-xl-auto mt-md-3 mb-3">
                 <span class="brands text-center">
                     <a href="#" class="d-inline-block m-1"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="d-inline-block m-1"><i class="fab fa-twitter"></i></a>

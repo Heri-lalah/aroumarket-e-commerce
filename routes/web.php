@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
@@ -35,4 +36,6 @@ Route::get('Commande/Listes',[CartController::class, 'cart_command'])->name('car
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('Administration',[AdminController::class,'index']);
+
+Route::get('Administration', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
