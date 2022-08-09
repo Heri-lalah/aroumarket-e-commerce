@@ -9,3 +9,6 @@ ouvrez votre terminal et tapez
     <li>a- <span style="color :red"> composer -install</span> puis</li>
     <li>b- npm install & npm run dev</li>
 </ul>
+text in red
+
+Source: https://prograide.com/pregunta/19405/comment-ajouter-de-la-couleur-au-fichier-readmemd-de-github
