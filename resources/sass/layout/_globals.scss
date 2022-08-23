@@ -56,8 +56,17 @@ li{
 }
 a{
     text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
 }
 #usercartsAndMessage{
+    z-index: 1000;
+    position: fixed;
+    right: 1rem;
+    top: 5rem;
+}
+#adminInfo{
     z-index: 1000;
     position: fixed;
     right: 1rem;

@@ -17,7 +17,7 @@ class MainController extends Controller
     public function products()
     {
 
-        $products = Product::OrderByName()->get();
+        $products = Product::OrderByName()->Online()->get();
 
 
         return view('shop.products', compact('products'));
@@ -26,7 +26,7 @@ class MainController extends Controller
 
     public function viewproductbycategory($id){
 
-        $products=Product::where('category_id', $id)->get();
+        $products=Product::where('category_id', $id)->Online()->get();
 
         return view('shop.products', compact('products'));
 

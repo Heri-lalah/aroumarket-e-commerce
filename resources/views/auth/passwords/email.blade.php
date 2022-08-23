@@ -52,7 +52,9 @@
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
                     <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block bg-password-image"></div>
+                        <div class="col-lg-6 d-none d-lg-block text-center align-self-center">
+                            <img src="{{asset('/storage/avatars/logo.png')}}" alt="logoaroumarket" width="300px">
+                        </div>
                         <div class="col-lg-6">
                             <div class="p-5">
                                 <div class="text-center">
@@ -66,7 +68,7 @@
                                     @csrf
 
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user @error('email') is-invalid @enderror"
+                                        <input type="email" class="form-control form-control-lg fs-6 p-3 rounded-pill my-2 @error('email') is-invalid @enderror"
                                             id="exampleInputEmail" aria-describedby="emailHelp"
                                             name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
                                             placeholder="Merci de rentrer votre e-mail...">
@@ -78,7 +80,7 @@
                                         @enderror
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                    <button type="submit" class="btn btn-lg rounded-pill btn-primary my-2 btn-block w-100">
                                         {{ __('Réinitialiser') }}
                                     </button>
 

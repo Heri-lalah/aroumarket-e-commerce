@@ -4,6 +4,7 @@
 @include('layouts.partials.categoryitem')
 <div class="bannerProduct mb-5 container bg-light">
     @include('layouts.partials.info')
+
     <div class="row gy-3 justify-content-center">
         @foreach ($products as $product)
         <div class="col-sm-3">
@@ -23,11 +24,9 @@
                             <div class="input-group input-group-sm">
                                 <input type="number" name="quantity" value="1" class="d-none form-control bg-light border-0"
                                     aria-label="quantity" aria-describedby="basic-addon2">
-                                <div class="input-group-append position-relative">
-                                    <button  type="submit" class="btn btn-primary">
-                                        <i class="fa fa-shopping-cart fa-sm"></i>
-                                    </button>
-                                </div>
+                                <button  type="submit" class="btn btn-primary h-100">
+                                    <i class="fa fa-shopping-cart fa-sm"></i>
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -36,6 +35,7 @@
         </div>
         @endforeach
     </div>
+
     {{--Modal pour afficher le produit cliqué--}}
     @foreach ($products as $product)
     <div class="modal fade" id="product{{$product->id}}">
@@ -56,7 +56,7 @@
                             <form action="{{ route('cart_add',['id'=>$product->id])}}" method="POST">
                                 @csrf
                                 <input type="number" name="quantity" class="form form-control text-center" value="1">
-                                <button type="submit" class="btn btn-outline-primary w-100 mt-2">Ajouter dans le panier <i class="fa fa-shopping-cart text-primary"></i></button>
+                                <button type="submit" class="btn btn-outline-primary w-100 mt-2">Ajouter dans le panier <i class="fa fa-shopping-cart text-info"></i></button>
                             </form>
                             @if($errors->any())
                                 <ul class="mt-3">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <p class="text-primary">Prix TTC : {{$product->prixTTC()}} Ariary</p>
+                    <p class="text-primary fw-bolder">Prix TTC : {{$product->prixTTC()}} Ariary</p>
                 </div>
             </div>
         </div>

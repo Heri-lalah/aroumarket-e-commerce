@@ -8,13 +8,3 @@ document.addEventListener('scroll', function () {
         tohome.classList.replace('tohomeactive','tohome')
     }
 })
-
-//Cart animation
-let cards=document.querySelectorAll('.card');
-for (let index = 0; index < cards.length; index++) {
-    let card = cards[index];
-    let addto=card.children[1].children[1].children[1]
-    addto.addEventListener('click', function(){
-        this.classList.toggle('text-warning')
-    })
-}

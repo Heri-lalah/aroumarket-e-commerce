@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Command;
+use App\Models\UserAvance;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Notifications\Notifiable;
@@ -43,4 +45,39 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function commands()
+    {
+
+        return $this->hasMany(Command::class);
+
+    }
+
+
+    public function scopeAdmin($query)
+    {
+
+        return $query->where('admin', true);
+
+    }
+
+
+    public function scopeGuest($query)
+    {
+
+        return $query->where('admin', false);
+
+    }
+
+
+    public function scopeShowUser($query, $type)
+    {
+
+        if($type==1){
+            return $query->where('admin', true);
+        }else{
+            return $query->where('admin', false);
+        }
+
+    }
 }

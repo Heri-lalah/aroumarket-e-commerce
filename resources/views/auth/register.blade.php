@@ -91,7 +91,7 @@
                             {{--Input nom et prénoms--}}
                             <div class="form-group row">
                                 <div class="col-sm-6">
-                                    <input id="name" type="text" class="form-control form-control-user @error('name') is-invalid @enderror" id="exampleLastName"
+                                    <input id="name" type="text" class="form-control form-control-lg rounded-pill fs-6 p-3 my-2 @error('name') is-invalid @enderror" id="exampleLastName"
                                         placeholder="Votre nom" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                         @error('name')
@@ -102,14 +102,14 @@
                                 </div>
 
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                    <input type="text" class="form-control form-control-lg rounded-pill fs-6 p-3 my-2" id="exampleFirstName"
                                         placeholder="Votre prénom" name="firstName">
                                 </div>
                             </div>
 
                             {{--Input e-mail--}}
                             <div class="form-group">
-                                <input type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" id="exampleInputEmail"
+                                <input type="email" class="form-control form-control-lg rounded-pill fs-6 p-3 my-2  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" id="exampleInputEmail"
                                     placeholder="Votre e-mail" required autocomplete="email">
 
                                     @error('email')
@@ -122,7 +122,7 @@
                             {{--Input mot de passe et confirmation--}}
                             <div class="form-group row">
                                 <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="password" class="form-control form-control-user @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"
+                                    <input type="password" class="form-control form-control-lg rounded-pill fs-6 p-3 my-2  @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"
                                         id="exampleInputPassword" placeholder="Mot de passe">
 
                                     @error('password')
@@ -133,13 +133,13 @@
                                 </div>
 
                                 <div class="col-sm-6">
-                                    <input type="password" class="form-control form-control-user" name="password_confirmation" required autocomplete="new-password"
+                                    <input type="password" class="form-control form-control-lg rounded-pill fs-6 p-3 my-2" name="password_confirmation" required autocomplete="new-password"
                                         id="exampleRepeatPassword password-confirm" placeholder="Confirmer votre  mot de passe">
                                 </div>
                             </div>
 
                             {{--Input submit--}}
-                            <button type="submit" class="btn btn-primary btn-user btn-block">
+                            <button type="submit" class="btn btn-primary btn-block btn-lg rounded-pill my-2 w-100">
                                 {{ __("S'enregistrer") }}
                             </button>
 

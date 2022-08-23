@@ -7,13 +7,19 @@ use App\Models\Command;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class CartController extends Controller
 {
 
     //Ajout dans le panier
+
     public function add(Request $request)
     {
+
+        if(Gate::allows('admin')){
+            abort(401);
+        }
 
         $request->validate(['quantity' => ['required']]);
 
@@ -35,7 +41,8 @@ class CartController extends Controller
     }
 
 
-    //Affichage Panier
+    //Affichage
+
     public function index()
     {
 
@@ -45,6 +52,7 @@ class CartController extends Controller
 
 
     //Mettre à jour une commande dans le panier
+
     public function cart_update(Request $request, $id)
     {
 
@@ -62,16 +70,16 @@ class CartController extends Controller
 
 
     //Enregistrement la commande et suppression de la cookie
+
     public function storeAllCommands()
     {
 
         Command::Store();
 
-        Cart::clear();
-
         return redirect(route('cart_index'));
 
     }
+
 
 
     //Affichage suivi commande

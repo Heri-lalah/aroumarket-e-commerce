@@ -2,7 +2,7 @@
 @extends('auth.form')
 @section('authform')
 <div class="text-center">
-    <h1 class="h4 text-gray-900 mb-4">Bienvenue !</h1>
+    <h1 class="h4 text-secondary mb-4">Bienvenue !</h1>
 </div>
 
 <form class="user"  method="POST" action="{{ route('login') }}">
@@ -10,7 +10,7 @@
     @csrf
 
     <div class="form-group">
-        <input type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
+        <input type="email" class="form-control form-control-lg rounded-pill fs-6 p-3 my-2  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
             id="exampleInputEmail" aria-describedby="emailHelp"
             placeholder="adresse e-mail...">
 
@@ -22,7 +22,7 @@
     </div>
 
     <div class="form-group">
-        <input id="password" type="password" class="form-control form-control-user @error('password') is-invalid @enderror"  name="password" required autocomplete="current-password"
+        <input id="password" type="password" class="form-control form-control-lg fs-6 p-3 rounded-pill my-2 @error('password') is-invalid @enderror"  name="password" required autocomplete="current-password"
             id="exampleInputPassword" placeholder="mot de passe">
 
             @error('password')
@@ -34,8 +34,8 @@
     </div>
 
     <div class="form-group">
-        <div class="custom-control custom-checkbox small">
-            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+        <div class="custom-control custom-checkbox">
+            <input class="form-check-input me-2" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
             <label class="form-check-label" for="remember">
                 {{ __('Se souvenir de moi') }}
@@ -45,7 +45,7 @@
 
 
     <span>
-        <button type="submit" class="btn btn-primary btn-user btn-block">
+        <button type="submit" class="btn btn-lg rounded-pill btn-primary btn-user btn-block my-4 w-100">
             {{ __('Se connecter') }}
         </button>
     </span>
@@ -176,7 +176,8 @@
                             </div>
                         </div>
                     </form>
-                </div> --}}
+                </div>
             </div>
         </div>
     </div>
+ --}}

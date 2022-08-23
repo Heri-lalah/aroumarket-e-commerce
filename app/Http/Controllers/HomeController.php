@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Command;
+use App\Models\CommandList;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Gate;
@@ -16,6 +20,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+
     }
 
     /**
@@ -25,11 +30,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //return redirect(Route::currentRouteAction());
-        if(!Gate::allows('Administration')){
-            abort('403');
+
+        if(!Gate::allows('admin')){
+            abort('401');
         }
 
-        return view('admin.admin');
+        $admincount = User::Admin()->count();
+
+        $userscount = User::Guest()->count();
+
+        $onlineProductscount = Product::Online()->count();
+
+        $offlineProductscount = Product::Offline()->count();
+
+        return view('admin.admin', compact('admincount','userscount','onlineProductscount','offlineProductscount'));
     }
 }

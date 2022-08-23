@@ -12,33 +12,41 @@
     </button>
 
     <div class="collapse navbar-collapse mx-3" id="navbar-content">
-        <form
-            class="d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+        <form class="d-sm-inline-block form-inline ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group input-group-sm">
                 <input type="text" class="form-control bg-light border-0" placeholder="Rechercher..."
                     aria-label="Search" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                    </button>
-                </div>
+                <button class="btn btn-primary disabled" type="button">
+                    <i class="fas fa-search fa-sm"></i>
+                </button>
             </div>
         </form>
-        <nav>
-            <ul class="navbar-nav ml-3">
-                <li class="nav-item fs-4"><a href="{{route('products')}}" class="nav-link">Accueil</a></li>
+        <nav class="ms-auto">
+            <ul class="navbar-nav ms-2">
+                <li class="nav-item fs-4">
+                    @auth
+                        @if (Auth::user()->admin)
+                            <a href="{{route('admin')}}" class="nav-link">Accueil</a>
+                        @else
+                            <a href="{{route('products')}}" class="nav-link">Accueil</a>
+                        @endif
+                    @else
+                        <a href="{{route('products')}}" class="nav-link">Accueil</a>
+                    @endauth
+
+                </li>
                 <li class="nav-item fs-4"><a href="{{route('about')}}" class="nav-link">A-propos</a></li>
                 <li class="nav-item fs-4"><a href="" class="nav-link disabled">Contacter</a></li>
             </ul>
         </nav>
 
 
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto align-items-center">
             <!-- Authentication Links -->
             @guest
                 @if (Route::has('login'))
                     <li class="nav-item">
-                        <a class="nav-link small fs-4 text-info" href="{{ route('login') }}" type="buttom" {{--data-bs-toggle="modal" data-bs-target="#loginModal"--}}>{{__('Mon compte')}}</a>
+                        <a class="nav-link fs-4 text-info" href="{{ route('login') }}" type="buttom" {{--data-bs-toggle="modal" data-bs-target="#loginModal"--}}>{{__('Mon compte')}}</a>
                     </li>
                 @endif
 
@@ -49,24 +57,22 @@
                     </li>
                 @endif --}}
             @else
-                <li class="nav-item dropdown no-arrow">
-                    <a class="nav-link dropdown-toggle d-flex  ml-3" href="#"  id="userDropdown" role="button"  data-bs-toggle="dropdown" data-bs-target="#userTools" aria-haspopup="true" aria-expanded="false" v-pre>
+                @if ($commandnotpaied>0)
+                <li class="nav-item ml-3 position-relative p-2" type="button" data-bs-toggle="modal" data-bs-target="#message">
+                    <i class="fa fa-envelope fs-5"></i>
+                    <span class="badge bg-danger rounded-circle position-absolute top-0 end-0 fs-small">
+                        1
+                    </span>
+                </li>
+                @endif
+                <li class="nav-item dropdown">
+                    <a class="nav-link d-flex  ml-3" href="#"  id="userDropdown" role="button"  data-bs-toggle="dropdown" data-bs-target="#userTools" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{-- Auth::user()->name --}}
-                        <span class="mt-2 me-1">{{ Str::length(Auth::user()->firstName.' '.Auth::user()->name)>10 ? Str::substr(Auth::user()->firstName.' '.Auth::user()->name, 0, 10).'...' : Auth::user()->firstName.' '.Auth::user()->name }}</span>
+                        <span class="mt-2 me-1 fs-5">{{ Str::length(Auth::user()->firstName.' '.Auth::user()->name)>10 ? Str::substr(Auth::user()->firstName.' '.Auth::user()->name, 0, 10).'...' : Auth::user()->firstName.' '.Auth::user()->name }}</span>
                         <img src="{{ Storage::url('avatars/img_avatar.png') }}" class="rounded-circle" alt="avatar" width="40px">
                     </a>
 
-                    <div class="dropdown-menu shadow animated--grow-in" aria-labelledby="userDropdown">
-                        <a class="dropdown-item fs-6 text-gray-600 disabled" href="#">
-                            <i class="fas fa-user fa-sm fa-fw text-gray-400"></i>
-                            Profil
-                        </a>
-                        <a class="dropdown-item fs-6 text-gray-600 disabled" href="#">
-                            <i class="fas fa-cogs fa-sm fa-fw text-gray-400"></i>
-                            Parametres
-                        </a>
-
-                        <div class="dropdown-divider"></div>
+                    <div class="dropdown-menu shadow" aria-labelledby="userDropdown">
 
                         <a href="{{ route('logout') }}" class="dropdown-item fs-6 text-danger"  onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
