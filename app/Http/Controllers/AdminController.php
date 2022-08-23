@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Gate;
 class AdminController extends Controller
 {
 
+    //Afficher la liste des produits
     public function products($online)
     {
 
@@ -20,7 +21,7 @@ class AdminController extends Controller
 
     }
 
-
+    //Afficher la liste des User
     public function users()
     {
 
@@ -30,6 +31,7 @@ class AdminController extends Controller
 
     }
 
+    //Afficher la liste des User Admin
     public function usersAdmin()
     {
         $users = User::ShowUser(true)->get();
@@ -37,6 +39,7 @@ class AdminController extends Controller
         return view('admin.users.users',compact('users'));
     }
 
+    //Afficher la liste de tous les commandes
     public function showcommands($status)
     {
 
