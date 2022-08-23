@@ -24,10 +24,10 @@
             </a>
 
             <ul class="collapse show" id="dashboard">
-                <li class="my-1"><a href="{{route('admin')}}"><i class="fa fa-home"></i><span class="d-none d-lg-inline ms-2">Accueil</span></a></li>
-                <li class="my-1"><a href="{{route('users')}}"><i class="fa fa-user-circle"></i><span class="d-none d-lg-inline ms-2">Utilisateurs</span></a></li>
-                <li class="my-1"><a href="{{route('admin_products', ['online' => "tous"])}}"><i class="fa fa-industry"></i><span class="d-none d-lg-inline ms-2">Produits</span></a></li>
-                <li class="my-1"><a href="{{route('showcommands',['status' => 'tous'])}}"><i class="fa fa-shopping-cart"></i><span class="d-none d-lg-inline ms-2">Commandes</span></a></li>
+                <li class="my-2"><a href="{{route('admin')}}"><i class="fa fa-home"></i><span class="d-none d-lg-inline ms-2">Accueil</span></a></li>
+                <li class="my-2"><a href="{{route('users')}}"><i class="fa fa-user-circle"></i><span class="d-none d-lg-inline ms-2">Utilisateurs</span></a></li>
+                <li class="my-2"><a href="{{route('admin_products', ['online' => "tous"])}}"><i class="fa fa-industry"></i><span class="d-none d-lg-inline ms-2">Produits</span></a></li>
+                <li class="my-2"><a href="{{route('showcommands',['status' => 'tous'])}}"><i class="fa fa-shopping-cart"></i><span class="d-none d-lg-inline ms-2">Commandes</span></a></li>
             </ul>
         </li>
 

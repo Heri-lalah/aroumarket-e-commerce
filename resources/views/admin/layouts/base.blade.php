@@ -13,7 +13,7 @@
 
     <title>ArouMarket</title>
 
-    <link rel="shortcut icon" href="{{Storage::url('avatars/logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{Storage::url('/avatars/logo.png') }}" type="image/x-icon">
 
     <script src="{{ asset('js/bootstrap.bundle.js') }}" defer></script>
 
