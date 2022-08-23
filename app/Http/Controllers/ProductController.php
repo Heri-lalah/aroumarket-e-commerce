@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
-
+	//Affiche produit en particulier
     public function showProduct(Product $product)
     {
 
@@ -17,6 +17,7 @@ class ProductController extends Controller
 
     }
 
+	//Vers formulare nouveau produit
     public function toNewProduct()
     {
 
@@ -24,6 +25,7 @@ class ProductController extends Controller
 
     }
 
+	//Ajout nouveau produit dans BDD
     public function addNewProduct(Request $request)
     {
 
@@ -33,6 +35,7 @@ class ProductController extends Controller
 
     }
 
+	//Mis à jour produit en particulier
     public function updateProduct(Product $product, Request $request)
     {
 
@@ -55,6 +58,7 @@ class ProductController extends Controller
 
     }
 
+	//vers formulaire suppression produit
     public function toDeleteProduct()
     {
 
@@ -62,6 +66,7 @@ class ProductController extends Controller
 
     }
 
+	//Enregistrer la suppression d'un produit
     public function deleteProduct(Product $product)
     {
 

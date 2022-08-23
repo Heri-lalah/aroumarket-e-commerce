@@ -17,12 +17,14 @@ class CommandController extends Controller
 
     }
 
+	//procéder au payement
     public function topayement($command){
 
         return view('admin.commands.form.payment',['command' => $command]);
 
     }
 
+	//enregistrement payement vers BDD
     public function postpayement(Request $request, $command)
     {
 
@@ -31,6 +33,7 @@ class CommandController extends Controller
         return redirect(route('command_view',['command' => $command]));
     }
 
+	//Procéder au resérvation de livraison d'une commande
     public function reservation($command)
     {
 
@@ -44,6 +47,7 @@ class CommandController extends Controller
 
     }
 
+	//Affiche la liste de livraison User connecté
     public function MyLivraison($user)
     {
         $myLivraisons = Command::MyLivraisons($user);
@@ -52,6 +56,7 @@ class CommandController extends Controller
 
     }
 
+	//Marquer la livraison : fini
     public function postfinalisationLivraison($command)
     {
 

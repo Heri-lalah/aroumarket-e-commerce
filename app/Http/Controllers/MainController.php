@@ -14,6 +14,7 @@ class MainController extends Controller
 
     }
 
+	//Affiche tous les produits
     public function products()
     {
 
@@ -24,6 +25,7 @@ class MainController extends Controller
 
     }
 
+	//Affiche produit par catégorie
     public function viewproductbycategory($id){
 
         $products=Product::where('category_id', $id)->Online()->get();
