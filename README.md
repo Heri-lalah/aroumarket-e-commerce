@@ -8,7 +8,7 @@ ouvrez votre terminal et tapez
 <ul>
     <li>composer -install</span> puis npm install & npm run dev</li>
     <li>Reliez l'api avec votre Base de données puis php artisan migrate</li>
-    <li>php artisan db:seed pour ajouter les données que j'ai préparé pour tester l'application.</li>
+    <li>php artisan db:seed pour ajouter les données que j'ai préparé pour tester l'application. Si produits seullement : php artisan db:seed --class = ProductSeeder</li>
 </ul>
 <p>3-Ajoutez cette ligne de code dans : vendor\laravel\ui\auth-backend\AuthenticatesUsers.php</p>
 
