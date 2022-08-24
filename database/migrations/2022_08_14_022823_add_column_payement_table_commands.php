@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('commands', function (Blueprint $table) {
-            $table->boolean('paied')->default(false);
+            $table->boolean('paied')->default(false)->after('prix_TTC_Total');
         });
     }
 

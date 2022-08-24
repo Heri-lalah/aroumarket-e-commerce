@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->boolean('promo')->default(false);
-            $table->integer('reduction')->nullable();
+            $table->boolean('promo')->default(false)->after('description');
+            $table->integer('reduction')->nullable()->after('description');
         });
     }
 

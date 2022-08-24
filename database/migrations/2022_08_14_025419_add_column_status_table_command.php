@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('commands', function (Blueprint $table) {
-            $table->boolean('delivred')->default(false);
-            $table->string('status')->default('standby');
+            $table->boolean('delivred')->default(false)->after('paied');
+            $table->string('status')->default('standby')->after('delivred');
         });
     }
 
