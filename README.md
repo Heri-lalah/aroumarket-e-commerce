@@ -1,7 +1,7 @@
 <p>Aroumarket est une application E-Commerce que j'ai dévéloppé avec Laravel et bootstrap + sass .</p>
 <h3>##Installation</h3>
 Ouvrer votre ligne de commande :
-<p>1- Clounez l'application</p>
+<p>1- git clone https://github.com/Herilala-rakotonasolo/E-commerce.git</p>
 
 <p>2-Installer toutes les dependances :</p>
 ouvrez votre terminal et tapez

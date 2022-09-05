@@ -1,6 +1,6 @@
 /node_modules
 /public/hot
-/public/fontawesome-free-5.15.3-web
+/public/storage
 /resources/views/layouts/tmp
 /resources/sass
 /storage/*.key
