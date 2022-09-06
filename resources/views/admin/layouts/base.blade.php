@@ -17,6 +17,8 @@
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" defer></script>
+
     <style>
         .card{
             border-top-width : 0;

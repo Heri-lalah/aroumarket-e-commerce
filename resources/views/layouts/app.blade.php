@@ -9,6 +9,7 @@
     <title>ArouMarket</title>
     <link rel="shortcut icon" href="{{Storage::url('/avatars/logo.png') }}" type="image/x-icon">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" defer></script>
 </head>
 <body class="bg-light position-relative">
     <div class="banner position-relative bg-light">

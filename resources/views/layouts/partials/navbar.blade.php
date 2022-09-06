@@ -26,7 +26,7 @@
                 <li class="nav-item fs-4">
                     @auth
                         @if (Auth::user()->admin)
-                            <a href="{{route('admin')}}" class="nav-link">Accueil</a>
+                            <a href="{{route('admin')}}" class="nav-link">Dashboard</a>
                         @else
                             <a href="{{route('products')}}" class="nav-link">Accueil</a>
                         @endif

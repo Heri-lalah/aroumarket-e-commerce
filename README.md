@@ -1,4 +1,4 @@
-<p>Aroumarket est une application E-Commerce que j'ai dévéloppé avec Laravel et bootstrap + sass .</p>
+<p>Une application e-Commerce que j'ai dévéloppé avec Laravel.</p>
 <h3>##Installation</h3>
 Ouvrer votre ligne de commande :
 <p>1- git clone https://github.com/Herilala-rakotonasolo/E-commerce.git</p>
@@ -8,16 +8,8 @@ ouvrez votre terminal et tapez
 <ul>
     <li>composer -install</span> puis npm install & npm run dev</li>
     <li>Reliez l'api avec votre Base de données puis php artisan migrate</li>
-    <li>php artisan db:seed pour ajouter les données que j'ai préparé pour tester l'application. Si produits seullement : php artisan db:seed --class = ProductSeeder</li>
+    <li>php artisan db:seed pour ajouter les données que j'ai préparé afin que vous puissez tester l'application.</li>
 </ul>
-<p>3-Ajoutez cette ligne de code dans : vendor\laravel\ui\auth-backend\AuthenticatesUsers.php</p>
-
-    protected function authenticated(Request $request, $user)
-    {
-        if($user->admin){
-            return  redirect(route('admin'));
-        }
-    }
 
 <p>Liste des utilisateurs suite au db:seed</p>
 <ul>

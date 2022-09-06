@@ -1,4 +1,4 @@
-//import './bootstrap.bundle';
 import './myapp';
+//import './bootstrap';
 
 
