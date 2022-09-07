@@ -26,16 +26,16 @@
                 <li class="nav-item fs-4">
                     @auth
                         @if (Auth::user()->admin)
-                            <a href="{{route('admin')}}" class="nav-link">Dashboard</a>
+                            <a href="{{route('admin')}}" class="nav-link text-primary">Dashboard</a>
                         @else
-                            <a href="{{route('products')}}" class="nav-link">Accueil</a>
+                            <a href="{{route('products')}}" class="nav-link text-primary">Accueil</a>
                         @endif
                     @else
-                        <a href="{{route('products')}}" class="nav-link">Accueil</a>
+                        <a href="{{route('products')}}" class="nav-link text-primary">Accueil</a>
                     @endauth
 
                 </li>
-                <li class="nav-item fs-4"><a href="{{route('about')}}" class="nav-link">A-propos</a></li>
+                <li class="nav-item fs-4"><a href="{{route('about')}}" class="nav-link text-primary">A-propos</a></li>
                 <li class="nav-item fs-4"><a href="" class="nav-link disabled">Contacter</a></li>
             </ul>
         </nav>
@@ -67,8 +67,7 @@
                 @endif
                 <li class="nav-item dropdown">
                     <a class="nav-link d-flex  ml-3" href="#"  id="userDropdown" role="button"  data-bs-toggle="dropdown" data-bs-target="#userTools" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{-- Auth::user()->name --}}
-                        <span class="mt-2 me-1 fs-5">{{ Str::length(Auth::user()->firstName.' '.Auth::user()->name)>10 ? Str::substr(Auth::user()->firstName.' '.Auth::user()->name, 0, 10).'...' : Auth::user()->firstName.' '.Auth::user()->name }}</span>
+                        <span class="mt-2 me-1 fs-5  text-primary">{{ Str::length(Auth::user()->firstName.' '.Auth::user()->name)>10 ? Str::substr(Auth::user()->firstName.' '.Auth::user()->name, 0, 10).'...' : Auth::user()->firstName.' '.Auth::user()->name }}</span>
                         <img src="{{ Storage::url('avatars/img_avatar.png') }}" class="rounded-circle" alt="avatar" width="40px">
                     </a>
 

@@ -1,1 +1,0 @@
-let e=document.getElementById("tohome");document.getElementById("righttohome");document.addEventListener("scroll",function(){window.scrollY>80?e.classList.replace("tohome","tohomeactive"):e.classList.replace("tohomeactive","tohome")});

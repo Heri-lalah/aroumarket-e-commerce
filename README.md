@@ -6,7 +6,6 @@ Ouvrer votre ligne de commande :
 <p>2-Installer toutes les dependances :</p>
 ouvrez votre terminal et tapez
 <ul>
-    <li>composer -install</span> puis npm install & npm run dev</li>
     <li>Reliez l'api avec votre Base de données puis php artisan migrate</li>
     <li>php artisan db:seed pour ajouter les données que j'ai préparé afin que vous puissez tester l'application.</li>
 </ul>

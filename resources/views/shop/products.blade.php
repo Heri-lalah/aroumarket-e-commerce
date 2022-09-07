@@ -5,7 +5,6 @@
 <div class="bannerProduct mb-5 container bg-light">
 
     @include('layouts.partials.info')
-
     <div class="row gy-3 justify-content-center">
         @foreach ($products as $product)
         <div class="col-sm-3">
@@ -26,7 +25,7 @@
                                 <input type="number" name="quantity" value="1" class="d-none form-control bg-light border-0"
                                     aria-label="quantity" aria-describedby="basic-addon2">
                                 <button  type="submit" class="btn btn-primary h-100">
-                                    <i class="fa fa-shopping-cart fa-sm"></i>
+                                    <i class="fa fa-cart-plus fa-sm"></i>
                                 </button>
                             </div>
                         </form>
@@ -42,9 +41,9 @@
     <div class="modal fade" id="product{{$product->id}}">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="card-header">
-                    <button type="button" class="btn-close float-end" data-bs-dismiss="modal"></button>
-                    <p>{{$product->name}}</p>
+                <div class="modal-header">
+                    <p class="modal-title">{{$product->name}}</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                     <div class="d-flex container w-100 mt-1 justify-content-around bg-light align-items-center">

@@ -10,7 +10,7 @@
     @csrf
 
     <div class="form-group">
-        <input type="email" class="form-control form-control-lg rounded-pill fs-6 p-3 my-2  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
+        <input type="email" class="form-control form-control-lg rounded-pill fs-6 p-3 my-3  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus
             id="exampleInputEmail" aria-describedby="emailHelp"
             placeholder="adresse e-mail...">
 
@@ -22,7 +22,7 @@
     </div>
 
     <div class="form-group">
-        <input id="password" type="password" class="form-control form-control-lg fs-6 p-3 rounded-pill my-2 @error('password') is-invalid @enderror"  name="password" required autocomplete="current-password"
+        <input id="password" type="password" class="form-control form-control-lg fs-6 p-3 rounded-pill my-4 @error('password') is-invalid @enderror"  name="password" required autocomplete="current-password"
             id="exampleInputPassword" placeholder="mot de passe">
 
             @error('password')
