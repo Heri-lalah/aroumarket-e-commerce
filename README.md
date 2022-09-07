@@ -27,13 +27,13 @@ php artisan db:seed
 
 Liste des utilisateurs suite au db:seed
 
-<li>Utilisateur client</li>
-<li>login : user1@gmail.com  mot de passe : 123456789</li>
-<li>login : user2@gmail.com  mot de passe : 123456789</li>
-<li>login : user3@gmail.com  mot de passe : 123456789</li>
+Utilisateur client</li>
+    login : user1@gmail.com  mot de passe : 123456789
+    login : user2@gmail.com  mot de passe : 123456789
+    login : user3@gmail.com  mot de passe : 123456789
 
-<li>Utilisateur admin</li>
-<li>login : admin1@gmail.com  mot de passe : 123456789</li>
-<li>login : admin2@gmail.com  mot de passe : 123456789</li>
+Utilisateur admin</li>
+    login : admin1@gmail.com  mot de passe : 123456789
+    login : admin2@gmail.com  mot de passe : 123456789
 
 ## License
