@@ -3,7 +3,6 @@ Aroumarket est une application e-commerce que j'ai dévéloppé avec Laravel.
 
 ## Installation
 
-
 ```bash
 git clone https://github.com/Herilala-rakotonasolo/E-commerce.git
 ```
@@ -15,3 +14,24 @@ composer install
 ```bash
 npm install
 ```
+
+```bash
+php artisan migrate
+```
+
+Pour ajouter les données que j'ai préparé afin que vous puissez tester l'application, tapez :
+
+```bash
+php artisan db:seed
+```
+
+Liste des utilisateurs suite au db:seed
+
+<li>Utilisateur client</li>
+<li>login : user1@gmail.com  mot de passe : 123456789</li>
+<li>login : user2@gmail.com  mot de passe : 123456789</li>
+<li>login : user3@gmail.com  mot de passe : 123456789</li>
+
+<li>Utilisateur admin</li>
+<li>login : admin1@gmail.com  mot de passe : 123456789</li>
+<li>login : admin2@gmail.com  mot de passe : 123456789</li>
