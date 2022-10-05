@@ -1,3 +1,6 @@
+//fontawesome
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -6,8 +9,10 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
 //
 @import 'allcomponents';
 @import 'Pagination/service';
 @import 'Pagination/carts';
 @import '/resources/css/animate.min.css';
+

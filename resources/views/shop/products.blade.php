@@ -25,7 +25,7 @@
                                 <input type="number" name="quantity" value="1" class="d-none form-control bg-light border-0"
                                     aria-label="quantity" aria-describedby="basic-addon2">
                                 <button  type="submit" class="btn btn-primary h-100">
-                                    <i class="fa fa-cart-plus fa-sm"></i>
+                                    <i class="fas fa-cart-plus fa-sm"></i>
                                 </button>
                             </div>
                         </form>
