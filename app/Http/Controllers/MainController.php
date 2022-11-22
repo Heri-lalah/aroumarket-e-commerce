@@ -18,7 +18,7 @@ class MainController extends Controller
     public function products()
     {
 
-        $products = Product::OrderByName()->Online()->get();
+        $products = Product::inRandomOrder()->Online()->get();
 
 
         return view('shop.products', compact('products'));
