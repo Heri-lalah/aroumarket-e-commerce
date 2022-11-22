@@ -38,12 +38,19 @@
                     <td class="fw-bold">Montant Total TTC</td>
                     <td class="text-end fw-bold border border-lg pink fw-bold">{{ number_format($totalTTC,2) }} Ariary</td>
                 </tr>
+                <tr>
+                    <td><td></td></td>
+                    <td></td>
+
+                    <td colspan="2" class="text-center">
+                        <form action="{{ route('storeAllCommands') }}" method="POST">
+                                @csrf
+                            <input type="submit" value="Passer à la caisse" class="btn btn-outline-primary text-center w-100">
+                        </form>
+                    </td>
+                </tr>
             </tfoot>
         </table>
-        <form action="{{ route('storeAllCommands') }}" method="POST">
-                @csrf
-            <input type="submit" value="Envoyer la commande" class="btn btn-outline-primary w-100">
-        </form>
     @endif
 </div>
 @endsection
