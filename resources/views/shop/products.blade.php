@@ -4,7 +4,6 @@
 @include('layouts.partials.categoryitem')
 <div class="bannerProduct mt-4 mb-5 container bg-light">
 
-    @include('layouts.partials.info')
     <div class="d-flex flex-wrap gy-3">
         @foreach ($products as $product)
         <div class="col-sm-3 p-2">
@@ -14,7 +13,7 @@
                 <div class="card-body">
                     <p class="card-text d-none d-md-block">
                         {{strtoupper(Str::substr($product->name, 0, 15))}} <br>
-                        Prix TTC : {{$product->prixTTC()}} €
+                        <span class="fw-bold text-primary">Prix TTC : {{$product->prixTTC()}} €</span>
                     </p>
 
                     <div class="btn-group d-flex">
