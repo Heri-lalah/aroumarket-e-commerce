@@ -12,14 +12,10 @@
             <p class="text-dark"><i class="fa fa-check-circle text-primary fs-4"></i> Produits de qualité supérieur</p>
             <p class="text-dark"><i class="fa fa-check-circle text-primary fs-4"></i> Avec garantie</p>
             <p class="text-dark"><i class="fa fa-check-circle text-primary fs-4"></i>
-                Payement en toute sécurité
-                <picture class="gx-2-">
-                    <img class="animate__animated animate__zoomIn rounded rounded-circle" src="{{Storage::url('assets/services/Mvola.jpg')}}" alt="mobileMoney"  style="width: 60px" >
-                    <img class="animate__animated animate__zoomIn rounded rounded-circle" src="{{Storage::url('assets/services/AirtelMoney.jpg')}}" alt="mobileMoney" style="width: 50px">
-                    <img class="animate__animated animate__zoomIn rounded rounded-circle" src="{{Storage::url('assets/services/OrangeMoney.jpg')}}" alt="mobileMoney" style="width: 50px">
-                    <img class="boa animate__animated animate__zoomIn" src="{{Storage::url('/assets/services/BOA.png')}}" alt="boa"  style="width: 70px">
-                    <img class="animate__animated animate__zoomIn" src="{{Storage::url('assets/services/mastercard.png')}}" alt="mastercard"  style="width: 60px">
-                </picture>
+                Payement en toute sécurité avec
+                <span class="fw-bold text-primary p-2 border border-primary">
+                    Stripe
+                </span>
             </p>
             <p class="text-dark"><i class="fa fa-check-circle text-primary fs-4"></i> Livraison possible</p>
             <p class="text-dark"><i class="fa fa-check-circle text-primary fs-4"></i> Service apres vente assurée</p>

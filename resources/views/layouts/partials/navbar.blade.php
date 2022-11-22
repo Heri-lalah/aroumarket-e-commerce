@@ -1,6 +1,6 @@
 <header class="navbar navbar-expand-lg">
     <a href="{{route('about')}}" class="navbar-brand ms-3">
-        <img src="{{asset('/storage/avatars/logo.png')}}" class="logo" alt="aro-logo" width="40px">
+        <img src="{{asset('/storage/avatars/logo.png')}}" class="logo. animate__animated animate__rotateIn" alt="aro-logo" width="40px">
     </a>
     <a href="{{route('about')}}" class="navbar-text navbar-brand text-primary">
         ArouMarket
