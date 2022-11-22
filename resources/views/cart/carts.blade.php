@@ -19,7 +19,7 @@
             <tbody>
                 @foreach($content->all() as $items)
                 <tr>
-                    <td><img src="{{ Storage::url('/assets/products/'.$items->attributes->photo)}}" class="img-thumbnail" alt="{{ $items->name }}" width="50px"></td>
+                    <td><img src="{{$items->attributes->photo}}" class="img-thumbnail" alt="{{ $items->name }}" width="50px"></td>
                     <td>{{ $items->name }}</td>
                     <form action="{{route('cart_update',['id'=>$items->attributes->id])}}" class="d-inline">
                         <td><input name="quantity" type="number" value="{{$items->quantity}}" class="form-control w-50 text-center"></td>

@@ -2,18 +2,19 @@
 @section('main')
 @yield('section')
 @include('layouts.partials.categoryitem')
-<div class="bannerProduct mb-5 container bg-light">
+<div class="bannerProduct mt-4 mb-5 container bg-light">
 
     @include('layouts.partials.info')
     <div class="row gy-3 justify-content-center">
         @foreach ($products as $product)
         <div class="col-sm-3">
             <div class="card shadow-sm animate__animated animate__fadeIn">
-                <img src="{{Storage::url('/assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}" class="img-fluid">
+                <img src="{{$product->photo_principal}}" alt="{{$product->name}}" class="img-fluid">
+
                 <div class="card-body">
                     <p class="card-text d-none d-md-block">
                         {{strtoupper($product->name)}} <br>
-                        Prix TTC : {{$product->prixTTC()}} Ar
+                        Prix TTC : {{$product->prixTTC()}} €
                     </p>
 
                     <div class="btn-group d-flex">
@@ -42,17 +43,17 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <p class="modal-title">{{$product->name}}</p>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="d-flex container w-100 mt-1 justify-content-around bg-light align-items-center">
-                        <div class=" animate__animated animate__fadeIn">
-                            <img src="{{Storage::url('assets/products/'.$product->photo_principal)}}" alt="{{$product->name}}">
-                            <p class="fw-bold">{{strtoupper($product->name)}}</p>
+
+                    <div class="container row w-100 mt-1 justify-content-around bg-light align-items-center">
+                        <div class="animate__animated animate__fadeIn">
+                            <img src="{{$product->photo_principal}}" alt="{{$product->name}}" class="img-fluid">
+                            <p class="mt-2 text-primary fw-bold">{{strtoupper($product->name)}}</p>
                             <p>{{$product->description}}</p>
                         </div>
-                        <div class="w-50 animate__animated animate__fadeIn">
+                        <div class="w-75 align-self-center text-center  animate__animated animate__fadeIn">
                             <form action="{{ route('cart_add',['id'=>$product->id])}}" method="POST">
                                 @csrf
                                 <input type="number" name="quantity" class="form form-control text-center" value="1">

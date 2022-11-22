@@ -2,10 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
+use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
 use Database\Seeders\UserSeeder;
-use Database\Seeders\CategorySeeder;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
@@ -17,8 +18,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Category::factory(3)->has(Product::factory(25))->create();
 
-        $this->call([ProductSeeder::class, UserSeeder::class, CategorySeeder::class]);
+        User::factory(5)->create();
 
     }
 }
