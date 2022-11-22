@@ -32,7 +32,7 @@ class AppServiceProvider extends ServiceProvider
 
         View::composer(['shop.products','cart.carts','cart.commandList','home','admin.products.form.product','admin.products.form.newProduct'],HeaderComposer::class);
 
-        View::composer(['shop.products','cart.carts', 'home',], CartComposer::class);
+        View::composer(['shop.products','cart.carts', 'home', 'cart.cartTemplate','cart.commandList',], CartComposer::class);
 
         view()->composer(['admin.admin'], AdminComposer::class);
 
