@@ -6,7 +6,7 @@
 
     <div class="d-flex flex-wrap gy-3">
         @foreach ($products as $product)
-        <div class="col-sm-3 p-2">
+        <div class="col-sm-6 col-md-4 col-lg-3 p-2">
             <div class="card shadow-sm animate__animated animate__fadeIn">
                 <img src="{{$product->photo_principal}}" alt="{{$product->name}}" class="img-fluid">
 
@@ -21,11 +21,11 @@
                         <button type="button" data-bs-toggle="modal" data-bs-target="#product{{$product->id}}" class="btn btn-sm btn-outline-info">View</button>
                         <form action="{{route('cart_add',['id'=>$product->id])}}" method="POST" class="d-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                             @csrf
-                            <div class="input-group d-sm-flex w-sm-100 input-group-sm">
+                            <div class="input-group d-flex input-group-sm">
                                 <input type="number" name="quantity" value="1" class="d-none form-control bg-light border-0"
                                     aria-label="quantity" aria-describedby="basic-addon2">
                                 <button  type="submit" class="btn btn-primary h-100">
-                                    <i class="fas fa-cart-plus fa-sm"></i>
+                                    <i class="fas fa-cart-plus"></i>
                                 </button>
                             </div>
                         </form>
