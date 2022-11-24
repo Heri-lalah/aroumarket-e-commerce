@@ -10,7 +10,7 @@
 </head>
 <body class="bg-light position-relative animate__animated animate__fadeIn">
     <div class="banner position-relative bg-light">
-        @include('layouts.partials.navbar')
+        <x-layouts.navbar></x-layouts.navbar>
         @yield('main')
         <p class="tohome bounce position-fixed end-2 w-25 ms-5" id="tohome">
             <a href="#"><i class="fa fa-angle-double-up py-1 px-2 border border-dark rounded-circle"></i></a>

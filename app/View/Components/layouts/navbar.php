@@ -1,0 +1,32 @@
+<?php
+
+namespace App\View\Components\layouts;
+
+use App\Models\Command;
+use Illuminate\View\Component;
+use Illuminate\Support\Facades\Auth;
+
+class navbar extends Component
+{
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
+    public $infoCarts;
+
+    public function __construct()
+    {
+        $this->infoCarts = Auth::user() ? Command::NotPaiedCount()->count() : 0;
+    }
+
+    /**
+     * Get the view / contents that represent the component.
+     *
+     * @return \Illuminate\Contracts\View\View|\Closure|string
+     */
+    public function render()
+    {
+        return view('components.layouts.navbar');
+    }
+}
