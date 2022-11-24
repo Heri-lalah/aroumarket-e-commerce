@@ -1,15 +1,16 @@
 <?php
 
+use App\Models\Command;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommandController;
 use App\Http\Controllers\ProductController;
-use App\Models\Command;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,11 @@ Route::get('Commande/Listes',[CartController::class, 'cart_command'])->name('car
 
 
 Auth::routes();
+
+
+//Shopping routes
+
+Route::get('products/{product}', [ShopController::class, 'create'])->name('shop.create');
 
 //Route::get('Administration',[AdminController::class,'index']);
 

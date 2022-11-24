@@ -18,7 +18,7 @@
 
                     <div class="btn-group d-flex">
                         {{--<a href="{{route('showproduct',['id'=>$product->id,'category_id'=>$product->category_id])}}" class="btn btn-sm btn-outline-info">View</a>--}}
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#product{{$product->id}}" class="btn btn-sm btn-outline-info">View</button>
+                        <a href="{{ route('shop.create',[$product]) }}" class="btn btn-sm btn-outline-info">View</a>
                         <form action="{{route('cart_add',['id'=>$product->id])}}" method="POST" class="d-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                             @csrf
                             <div class="input-group d-flex input-group-sm">
