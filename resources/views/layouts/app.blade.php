@@ -16,7 +16,7 @@
             <a href="#"><i class="fa fa-angle-double-up py-1 px-2 border border-dark rounded-circle"></i></a>
         </p>
         @include('layouts.partials.messageModal')
-        @include('layouts.partials.footer')
+        <x-layouts.footer></x-layouts.footer>
     </div>
     @yield('script')
 </body>
