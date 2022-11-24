@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ShopController extends Controller
@@ -23,7 +24,7 @@ class ShopController extends Controller
      */
     public function create()
     {
-        return view("shop.create");
+
     }
 
     /**
@@ -43,9 +44,10 @@ class ShopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        //
+        $moresProducts = Product::inRandomOrder()->where('category_id', $product->category_id)->take(5)->get();
+        return view("shop.showProduct", ['product' => $product, 'moresProducts' => $moresProducts]);
     }
 
     /**

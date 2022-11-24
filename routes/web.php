@@ -45,7 +45,7 @@ Auth::routes();
 
 //Shopping routes
 
-Route::get('products/{product}', [ShopController::class, 'create'])->name('shop.create');
+Route::get('products/{product}', [ShopController::class, 'show'])->name('product.show');
 
 //Route::get('Administration',[AdminController::class,'index']);
 

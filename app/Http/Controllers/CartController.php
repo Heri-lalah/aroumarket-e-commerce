@@ -21,7 +21,7 @@ class CartController extends Controller
             abort(401);
         }
 
-        $request->validate(['quantity' => ['required']]);
+        $request->validate(['quantity' => ['required','numeric','not_in:0','gt:1']]);
 
         $product=Product::findOrFail($request->id);
 
@@ -36,7 +36,7 @@ class CartController extends Controller
 
         $products = Product::OrderByName()->get();//->where('category_id',$product->category_id)
 
-        return view('shop.products', compact('products'));
+        return redirect()->back();
 
     }
 

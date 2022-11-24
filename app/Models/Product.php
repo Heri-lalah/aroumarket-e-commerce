@@ -97,4 +97,9 @@ class Product extends Model
             return $query->get();
         }
     }
+
+    public function scopebyCategory($query, $product)
+    {
+        return $query->where('category_id', $product);
+    }
 }
