@@ -24,10 +24,10 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::get('A-propos', [MainController::class,'about'])->name('about');
-Route::get('', [MainController::class,'products'])->name('products');
+Route::get('/', [MainController::class,'products'])->name('products');
 
 
-Route::get('Produits/Catégorie/{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
+Route::get('produits/Catégorie/{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
 
 Route::prefix('Panier')->group(function () {
     Route::post('ajout/{id}',[CartController::class, 'add'])->name('cart_add');
@@ -45,7 +45,7 @@ Auth::routes();
 
 //Shopping routes
 
-Route::get('products/{product}', [ShopController::class, 'show'])->name('product.show');
+Route::get('produits/{product}', [ShopController::class, 'show'])->name('product.show');
 
 //Route::get('Administration',[AdminController::class,'index']);
 
