@@ -22,7 +22,7 @@
             </div>
         </form>
         <nav class="ms-auto">
-            <ul class="navbar-nav ms-2">
+            <ul class="navbar-nav ms-2 align-items-center">
                 <li class="nav-item fs-4">
                     @auth
                         @if (Auth::user()->admin)
@@ -41,7 +41,7 @@
         </nav>
 
 
-        <ul class="navbar-nav ms-auto align-items-center">
+        <ul class="navbar-nav ms-md-auto align-md-items-center">
             <!-- Authentication Links -->
             @guest
                 @if (Route::has('login'))
@@ -58,16 +58,20 @@
                 @endif --}}
             @else
                 @if ($commandnotpaied>0)
-                <li class="nav-item ml-3 position-relative p-2" type="button" data-bs-toggle="modal" data-bs-target="#message">
-                    <i class="fa fa-envelope fs-5"></i>
-                    <span class="badge bg-danger rounded-circle position-absolute top-0 end-0 fs-small">
+                <li class="nav-item align-self-md-center me-auto position-relative p-2 animate__animated animate__fadeIn">
+
+                    <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#message">
+                        <i class="fa fa-envelope fs-4 ms-1"></i>
+                    </a>
+
+                    <span class="badge bg-danger rounded-circle position-absolute top-0 end-0">
                         1
                     </span>
                 </li>
                 @endif
 
                 @if ($infoCarts>0)
-                <li class="nav-item me-2 position-relative animate__animated animate__fadeIn">
+                <li class="nav-item align-self-md-center me-auto position-relative p-2 animate__animated animate__fadeIn">
                     <a href="{{ route('cart_index') }}" class="nav-link"  title="Cliquer ici pour voir votre panier">
                         <i class="fa fa-shopping-cart fs-4"></i>
                     </a>
@@ -79,8 +83,8 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link d-flex  ml-3" href="#"  id="userDropdown" role="button"  data-bs-toggle="dropdown" data-bs-target="#userTools" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <span class="mt-2 me-1 fs-5  text-primary">{{ Str::length(Auth::user()->firstName.' '.Auth::user()->name)>10 ? Str::substr(Auth::user()->firstName.' '.Auth::user()->name, 0, 10).'...' : Auth::user()->firstName.' '.Auth::user()->name }}</span>
-                        <img src="{{ Storage::url('avatars/img_avatar.png') }}" class="rounded-circle" alt="avatar" width="40px">
+                        <span class="mt-2 me-1 fs-5 text-primary">{{ Str::length(Auth::user()->firstName.' '.Auth::user()->name)>10 ? Str::substr(Auth::user()->firstName.' '.Auth::user()->name, 0, 10).'...' : Auth::user()->firstName.' '.Auth::user()->name }}</span>
+                        <img src="{{ Storage::url('avatars/img_avatar.png') }}" class="rounded-circle ms-sm-auto" alt="avatar" width="40px">
                     </a>
 
                     <div class="dropdown-menu shadow" aria-labelledby="userDropdown">
