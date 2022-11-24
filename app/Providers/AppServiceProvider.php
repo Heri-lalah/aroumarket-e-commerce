@@ -30,8 +30,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
 
-        View::composer(['shop.products','cart.carts','cart.commandList', 'shop.showProduct','home','admin.products.form.product','admin.products.form.newProduct'],HeaderComposer::class);
-
         View::composer(['shop.products','cart.carts', 'shop.showProduct', 'home', 'cart.cartTemplate','cart.commandList',], CartComposer::class);
 
         view()->composer(['admin.admin'], AdminComposer::class);
