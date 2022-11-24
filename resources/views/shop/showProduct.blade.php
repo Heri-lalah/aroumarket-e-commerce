@@ -43,7 +43,7 @@
         <p class="text-primary fw-bold">Plus de produits</p>
         <div class="more_products d-flex flex-wrap gy-3">
             @foreach ($moresProducts as $item)
-            <div class="col-sm-6 col-md-4 col-lg-3 p-2">
+            <a href="{{ route('product.show',[$item])}}" class="col-sm-6 col-md-4 col-lg-3 p-2">
                 <div class="card shadow-sm animate__animated animate__fadeIn">
                     <img src="{{$item->photo_principal}}" alt="{{$item->name}}" class="img-fluid">
 
@@ -54,7 +54,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </a>
             @endforeach
         </div>
 </div>
