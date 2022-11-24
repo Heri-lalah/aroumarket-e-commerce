@@ -19,8 +19,7 @@
                     <div class="btn-group d-flex">
                         {{--<a href="{{route('showproduct',['id'=>$product->id,'category_id'=>$product->category_id])}}" class="btn btn-sm btn-outline-info">View</a>--}}
                         <a href="{{ route('product.show',[$product]) }}" class="btn btn-sm btn-outline-info">View</a>
-                        <form action="{{route('cart_add',['id'=>$product->id])}}" method="POST" class="d-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                            @csrf
+                        <div class="d-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                             <div class="input-group d-flex input-group-sm">
                                 <input type="number" name="quantity" value="1" class="d-none form-control bg-light border-0"
                                     aria-label="quantity" aria-describedby="basic-addon2">
@@ -28,7 +27,7 @@
                                     <i class="fas fa-cart-plus"></i>
                                 </button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

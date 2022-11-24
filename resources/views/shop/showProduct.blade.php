@@ -4,7 +4,7 @@
 @include('layouts.partials.categoryitem')
 <div class="bannerProduct mt-4 mb-5 container bg-light">
     <div class="container">
-        <div class="row">
+        <div class="row gy-3">
             <div class="col-md-6 d-flex flex-wrap">
                 <div class="product">
                     <img src="{{ $product->photo_principal}}" alt="{{ $product->name }}" class="img-fluid">
@@ -23,7 +23,7 @@
                 <p class="fs-2 fw-bold">{{ $product->name }}</p>
                 <p><span class="fs-1 fw-bolder text-danger">{{ $product->prix_ht }} €</span>/pièce</p>
                 <p>{{ $product->description }}</p>
-                <form action="{{ route('cart_add',['id' => $product->id]) }}" method="POST">
+                <form action="{{ route('cart_add',['id' => $product]) }}" method="POST">
                     @csrf
                     <input type="number" name="quantity" class="form form-control text-center @error('quantity') is-invalid @enderror">
                     <button type="submit" class="btn btn-outline-primary w-100 mt-2">Ajouter dans le panier <i class="fa fa-shopping-cart text-info"></i></button>
