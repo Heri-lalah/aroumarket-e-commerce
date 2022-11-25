@@ -6,11 +6,17 @@ namespace App\Http\Repositories;
 
         //GetTotalQuantity
 
-        public static function totalQuantity()
+        public static function getCount()
         {
 
             return \Cart::getTotalQuantity();
 
+        }
+
+        //Get Content
+        public function getContent()
+        {
+            return \Cart::getContent();
         }
 
     }

@@ -17,7 +17,7 @@ class navbar extends Component
 
     public function __construct()
     {
-        $this->infoCarts = (new CartRepositories)->totalQuantity();
+        $this->infoCarts = (new CartRepositories)->getCount();
     }
 
     /**

@@ -29,7 +29,7 @@ Route::get('/', [MainController::class,'products'])->name('products');
 
 Route::get('produits/Catégorie/{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
 
-Route::prefix('Panier')->group(function () {
+Route::prefix('panier')->group(function () {
     Route::post('ajout/{id}',[CartController::class, 'add'])->name('cart_add');
     Route::get('Listes',[CartController::class, 'index'])->name('cart_index');
     Route::get('Lists',[CartController::class, 'clearCommand'])->name('carts_clear');
