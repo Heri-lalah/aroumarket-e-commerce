@@ -35,6 +35,7 @@ Route::prefix('panier')->group(function () {
     Route::get('Lists',[CartController::class, 'clearCommand'])->name('carts_clear');
     Route::get('update/increase/{id}',[CartController::class, 'increase'])->name('cart.increase');
     Route::get('update/decrease/{id}',[CartController::class, 'decrease'])->name('cart.decrease');
+    Route::get('update/delete/{id}',[CartController::class, 'delete'])->name('cart.delete');
     Route::post('EnvoieDeLaCommande',[CartController::class,'storeAllCommands'])->name('storeAllCommands')->middleware('auth');
 });
 

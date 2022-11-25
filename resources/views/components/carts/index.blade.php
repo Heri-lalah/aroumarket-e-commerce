@@ -7,7 +7,7 @@
     @else
         <div class="row gy-4 h-100">
             <div class="col-md-8">
-                <div class="card p-2 shadow">
+                <div class="card p-2 shadow h-100">
                     <div class="card-body">
                         @foreach($content->all() as $items)
                         <div class="row gy-3 m-2 align-items-center justify-content-between">
@@ -25,7 +25,7 @@
                                 <a href="{{ route('cart.increase',['id'=>$items->attributes->id]) }}" class="p-1 border" type="button"><i class="fa fa-plus"></i></a>
                             </section>
                             <section class="others col-md-1 text-center">
-                                <a href="" ><i class="fa fa-trash fs-5 text-danger"></i></a>
+                                <a href="{{ route('cart.delete',['id'=>$items->attributes->id]) }}" ><i class="fa fa-trash fs-5 text-danger"></i></a>
                             </section>
                         </div>
                         @endforeach

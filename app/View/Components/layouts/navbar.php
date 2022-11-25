@@ -2,7 +2,7 @@
 
 namespace App\View\Components\layouts;
 
-use App\Http\Repositories\CartRepositories;
+use App\Repositories\CartRepositories;
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\Auth;
 

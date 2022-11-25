@@ -2,7 +2,7 @@
 
 namespace App\View\Components\carts;
 
-use App\Http\Repositories\CartRepositories;
+use App\Repositories\CartRepositories;
 use Illuminate\View\Component;
 
 class index extends Component

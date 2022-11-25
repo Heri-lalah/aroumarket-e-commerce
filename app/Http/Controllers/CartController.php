@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Repositories\CartRepositories;
+use App\Repositories\CartRepositories;
 use Cart;
 use App\Models\Command;
 use Illuminate\Http\Request;
@@ -65,6 +65,12 @@ class CartController extends Controller
 
     }
 
+    public function delete($id)
+    {
+        (new CartRepositories)->delete($id);
+
+        return redirect()->back();
+    }
 
     //Enregistrement la commande et suppression de la cookie
 
