@@ -22,7 +22,11 @@ class CartRepositories
             'name' => $product->name,
             'price' => $product->prix_ht,
             'quantity' => $request->quantity,
-            'attributes' =>['id' => $product->id,'photo' => $product->photo_principal]
+            'attributes' =>[
+                'id' => $product->id,
+                'description' => $product->description,
+                'photo' => $product->photo_principal
+                ]
         ]);
 
     }
@@ -35,7 +39,7 @@ class CartRepositories
 
         if($request->quantity <=0) {
 
-            \Cart::remove($id);
+            $this->delete($id);
 
         }else{
 
@@ -44,6 +48,26 @@ class CartRepositories
             ]);
 
         }
+
+    }
+
+
+    //delete
+    public function delete($id)
+    {
+
+        return \Cart::remove($id);
+
+    }
+
+    //increase
+    public function increase($id, $quantity){
+
+    }
+
+
+    //decrease
+    public function decrease($id, $quantity){
 
     }
 

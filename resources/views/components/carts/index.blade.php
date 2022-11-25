@@ -1,65 +1,49 @@
 @extends('layouts.app')
 @section('main')
 <div class="container mb-5">
-    @include('cart.cartTemplate')
+    <p class="mt-3 fs-3 text-center text-uppercase text-info fw-bold">Récapitulatif de mon panier</p>
     @if ($content->isEmpty())
         <p class="allcommandstitle h4 mt-2">Votre panier est vide <a href="{{route('products')}}">Cliquer ici pour remplir</a></p>
     @else
-        <table class="table table-hover table-borderless">
-            <p class="float-end"><a href="{{route('carts_clear')}}" class="text-danger">Vider le panier</a></p>
-            <thead>
-                <tr class="border-bottom bg-primary text-light">
-                    <th scope="col">Images</th>
-                    <th scope="col">Nom Produits</th>
-                    <th scope="col">Quantité</th>
-                    <td scope="col">Modification</td>
-                    <th scope="col" class="text-center">Prix TTC</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($content->all() as $items)
-                <tr>
-                    <td><img src="{{$items->attributes->photo}}" class="img-thumbnail" alt="{{ $items->name }}" width="50px"></td>
-                    <td>{{ $items->name }}</td>
-                    <form action="{{route('cart_update',['id'=>$items->attributes->id])}}" class="d-inline">
-                        <td><input name="quantity" type="number" value="{{$items->quantity}}" class="form-control w-50 text-center"></td>
-                        <td>
-                            <input type="submit" value="Mettre à jour" class="btn btn-outline-success">
-                        </td>
-                    </form>
-                    <td class="text-end">{{ number_format($items->quantity * $items->price,2) }} €</td>
-                </tr>
-                @endforeach
-            </tbody>
-            <tfoot>
+        <div class="row gy-4 h-100">
+            <div class="col-md-8">
+                <div class="card p-2 shadow">
+                    <div class="card-body">
+                        @foreach($content->all() as $items)
+                        <div class="row gy-3 m-2 align-items-center justify-content-between">
+                            <section class="productimg col-md-2 text-center overflow-hidden">
+                                <img src="{{$items->attributes->photo}}" alt="{{ $items->name }}" class="img-fluid">
+                            </section>
+                            <section class="productinfo text-center col-md-4 p-2">
+                                <span class="fw-bold">{{ $items->name }}</span><br>
+                                <span class="" style="font-size: 12px">{{ Str::substr($items->attributes->description, 0, 30) }}...</span><br>
+                                <span class="text-danger fw-bold">{{ $items->price }} €</span>
+                            </section>
+                            <section class="quantity  col-md-3 text-center">
+                                <form action="{{route('cart_update',['id'=>$items->attributes->id])}}" class="form-inline d-inline">
+                                    <button type="submit" class="p-1 border"><i class="fa fa-minus"></i></button>
+                                    <input type="number" class="d-none" name="quantity" id="" value="0">
+                                    <span class="px-2">{{$items->quantity}}</span>
+                                    <button type="submit" class="p-1 border"><i class="fa fa-plus"></i></button>
+                                </form>
+                            </section>
+                            <section class="others col-md-1 text-center">
+                                <a href="" ><i class="fa fa-trash fs-5 text-danger"></i></a>
+                            </section>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-2 shadow">
+                    <div class="card-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi amet atque cumque fugit? Quam, ipsa? Numquam atque deserunt minima, nulla laboriosam placeat illum! Adipisci totam eveniet dolorum impedit! Vitae provident dolorem voluptas qui eos, totam aliquid ad accusantium, adipisci repudiandae tempora, quos molestiae earum. Vel, incidunt ut sint, quisquam laboriosam quo modi aspernatur quos dolores eaque dignissimos nisi consequuntur voluptate adipisci beatae odit inventore harum nesciunt. Esse dolorum temporibus, laudantium illum molestiae repudiandae accusamus laborum aperiam odio asperiores modi beatae inventore exercitationem quasi nostrum recusandae neque explicabo tempora cumque illo, fuga assumenda corrupti! Aperiam commodi aspernatur sint debitis blanditiis possimus!
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                <tr>
-                    <td><td></td></td>
-                    <td></td>
-                    <td class="fw-bold">Montant Total</td>
-                    <td class="text-end fw-bold border border-lg pink fw-bold">{{ number_format($total,2) }} €</td>
-                </tr>
-
-                <tr>
-                    <td><td><a href="{{route('products')}}" class="nav-link">Plus des produits</a></td></td>
-                    <td></td>
-                    <td class="fw-bold">Montant Total TTC</td>
-                    <td class="text-end fw-bold border border-lg pink fw-bold">{{ number_format($totalTTC,2) }} €</td>
-                </tr>
-
-                <tr>
-                    <td><td></td></td>
-                    <td></td>
-
-                    <td colspan="2" class="text-center">
-                        <form action="{{ route('storeAllCommands') }}" method="POST">
-                                @csrf
-                            <input type="submit" value="Passer à la caisse" class="btn btn-outline-primary text-center w-100">
-                        </form>
-                    </td>
-                </tr>
-            </tfoot>
-        </table>
     @endif
 </div>
 @endsection
