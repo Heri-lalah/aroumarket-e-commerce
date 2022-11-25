@@ -25,7 +25,7 @@
                 <p>{{ $product->description }}</p>
                 <form action="{{ route('cart_add',['id' => $product]) }}" method="POST">
                     @csrf
-                    <input type="number" name="quantity" class="form form-control text-center @error('quantity') is-invalid @enderror">
+                    <input type="number" name="quantity" class="form form-control text-center @error('quantity') is-invalid @enderror" value="1">
                     <button type="submit" class="btn btn-outline-primary w-100 mt-2">Ajouter dans le panier <i class="fa fa-shopping-cart text-info"></i></button>
                 </form>
 

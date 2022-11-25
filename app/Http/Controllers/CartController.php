@@ -21,7 +21,7 @@ class CartController extends Controller
             abort(401);
         }
 
-        $request->validate(['quantity' => ['required','numeric','not_in:0','gt:1']]);
+        $request->validate(['quantity' => ['required','numeric','not_in:0','gt:0']]);
 
         $product=Product::findOrFail($request->id);
 
@@ -56,7 +56,7 @@ class CartController extends Controller
     public function cart_update(Request $request, $id)
     {
 
-        $request->validate(['quantity'=>['required']]);
+        $request->validate(['quantity'=>['required','numeric','not_in:0','gt:0']]);
 
         Cart::update($id,[
                 'quantity' => ['relative' => false,'value' => $request->quantity]
