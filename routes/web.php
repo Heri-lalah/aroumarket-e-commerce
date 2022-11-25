@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CommandController;
 use App\Http\Controllers\ProductController;
 
@@ -22,6 +23,8 @@ use App\Http\Controllers\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Auth::routes();
 
 Route::get('A-propos', [MainController::class,'about'])->name('about');
 Route::get('/', [MainController::class,'products'])->name('products');
@@ -43,10 +46,15 @@ Route::prefix('panier')->group(function () {
     Route::post('EnvoieDeLaCommande',[CartController::class,'storeAllCommands'])->name('storeAllCommands')->middleware('auth');
 });
 
+
+//Routes payement
+Route::prefix('payement')->group(function(){
+    route::get('', [CheckoutController::class, 'create'])->name("payement.index");
+});
+
 Route::get('Commande/Listes',[CartController::class, 'cart_command'])->name('cart_command')->middleware('auth');
 
 
-Auth::routes();
 
 //Route::get('Administration',[AdminController::class,'index']);
 

@@ -47,6 +47,9 @@
                             <div class="fw-bold fs-4">Montant TTC</div>
                             <div class="fw-bold fs-4">{{ number_format($totalTTC,2) }} €</div>
                         </div>
+                        <div>
+                            <a href="{{ route('payement.index') }}" class="btn w-100 btn-primary">Passer à la caisse</a>
+                        </div>
                     </div>
                 </div>
             </div>
