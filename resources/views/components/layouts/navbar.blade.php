@@ -22,7 +22,7 @@
             </div>
         </form>
         <nav class="ms-auto">
-            <ul class="navbar-nav ms-2 align-items-center">
+            <ul class="navbar-nav">
                 <li class="nav-item fs-4">
                     @auth
                         @if (Auth::user()->admin)
