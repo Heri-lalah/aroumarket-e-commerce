@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Repositories\CartRepositories;
 use Cart;
 use App\Models\Command;
 use App\Models\Product;
@@ -17,24 +18,7 @@ class CartController extends Controller
     public function add(Request $request)
     {
 
-        if(Gate::allows('admin')){
-            abort(401);
-        }
-
-        $request->validate(['quantity' => ['required','numeric','not_in:0','gt:0']]);
-
-        $product=Product::findOrFail($request->id);
-
-        Cart::add([
-            'id' => $product->id, // inique row ID
-            'name' => $product->name,
-            'price' => $product->prix_ht * 1.2,
-            'quantity' => $request->quantity,
-            'attributes' =>['id' => $product->id,'photo' => $product->photo_principal]
-        ]);
-
-
-        $products = Product::OrderByName()->get();//->where('category_id',$product->category_id)
+        (new CartRepositories)->add($request);
 
         return redirect()->back();
 
@@ -56,13 +40,7 @@ class CartController extends Controller
     public function cart_update(Request $request, $id)
     {
 
-        $request->validate(['quantity'=>['required','numeric','not_in:0','gt:0']]);
-
-        Cart::update($id,[
-                'quantity' => ['relative' => false,'value' => $request->quantity]
-        ]);
-
-
+        (new CartRepositories)->update($request, $id);
 
         return view('cart.carts');
 
