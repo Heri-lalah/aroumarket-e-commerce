@@ -33,6 +33,18 @@
 
 
         <ul class="navbar-nav ms-md-auto align-md-items-center">
+
+            @if ($infoCarts>0)
+            <li class="nav-item align-self-md-center me-auto position-relative p-2 animate__animated animate__fadeIn">
+                <a href="{{ route('cart_index') }}" class="nav-link"  title="Cliquer ici pour voir votre panier">
+                    <i class="fa fa-shopping-cart fs-4"></i>
+                </a>
+                <span class="badge bg-danger rounded-circle position-absolute top-0 end-0 animate__animated animate__fadeIn">
+                        {{$infoCarts}}
+                </span>
+            </li>
+            @endif
+
             <!-- Authentication Links -->
             @guest
                 @if (Route::has('login'))
@@ -48,17 +60,6 @@
                     </li>
                 @endif --}}
             @else
-
-                @if ($infoCarts>0)
-                <li class="nav-item align-self-md-center me-auto position-relative p-2 animate__animated animate__fadeIn">
-                    <a href="{{ route('cart_index') }}" class="nav-link"  title="Cliquer ici pour voir votre panier">
-                        <i class="fa fa-shopping-cart fs-4"></i>
-                    </a>
-                    <span class="badge bg-danger rounded-circle position-absolute top-0 end-0 animate__animated animate__fadeIn">
-                            {{$infoCarts}}
-                    </span>
-                </li>
-                @endif
 
                 <li class="nav-item dropdown">
                     <a class="nav-link d-flex  ml-3" href="#"  id="userDropdown" role="button"  data-bs-toggle="dropdown" data-bs-target="#userTools" aria-haspopup="true" aria-expanded="false" v-pre>
