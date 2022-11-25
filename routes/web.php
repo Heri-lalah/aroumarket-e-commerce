@@ -26,9 +26,13 @@ use App\Http\Controllers\ProductController;
 Route::get('A-propos', [MainController::class,'about'])->name('about');
 Route::get('/', [MainController::class,'products'])->name('products');
 
+//Routes produits
+route::prefix('produits')->group(function(){
+    Route::get('Catégorie/{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
+    Route::get('{product}', [ShopController::class, 'show'])->name('product.show');
+});
 
-Route::get('produits/Catégorie/{id}',[MainController::class,'viewproductbycategory'])->name('viewproductbycategory');
-
+//Routes gestion Panier
 Route::prefix('panier')->group(function () {
     Route::post('ajout/{id}',[CartController::class, 'add'])->name('cart_add');
     Route::get('Listes',[CartController::class, 'index'])->name('cart_index');
@@ -43,11 +47,6 @@ Route::get('Commande/Listes',[CartController::class, 'cart_command'])->name('car
 
 
 Auth::routes();
-
-
-//Shopping routes
-
-Route::get('produits/{product}', [ShopController::class, 'show'])->name('product.show');
 
 //Route::get('Administration',[AdminController::class,'index']);
 

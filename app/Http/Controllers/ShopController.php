@@ -46,7 +46,7 @@ class ShopController extends Controller
      */
     public function show(Product $product)
     {
-        $moresProducts = Product::inRandomOrder()->where('category_id', $product->category_id)->take(5)->get();
+        $moresProducts = Product::inRandomOrder()->with('category')->where('category_id', $product->category_id)->take(5)->get();
         return view("shop.showProduct", ['product' => $product, 'moresProducts' => $moresProducts]);
     }
 

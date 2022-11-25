@@ -1,7 +1,17 @@
 @extends('layouts.app')
 @section('main')
 @yield('section')
-<x-layouts.categories></x-layouts.categories>
+
+<div class="container position-sticky top-0 bg-light shadow-sm">
+    <nav aria-label="breadcrumb container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item h5"><a href="{{route('products')}}">Accueil</a></li>
+          <li class="breadcrumb-item h5"><a href="{{ route('viewproductbycategory',['id'=>$product->category->id])}}">Catégorie</a></li>
+          <li class="breadcrumb-item h5 active">{{ $product->category->name }}</li>
+        </ol>
+    </nav>
+</div>
+
 <div class="bannerProduct mt-4 mb-5 container bg-light">
     <div class="container">
         <div class="row gy-3">
