@@ -2,7 +2,7 @@
 
 namespace App\View\Components\layouts;
 
-use App\Models\Command;
+use App\Http\Repositories\CartRepositories;
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,7 +17,7 @@ class navbar extends Component
 
     public function __construct()
     {
-        $this->infoCarts = Auth::user() ? Command::NotPaiedCount()->count() : 0;
+        $this->infoCarts = (new CartRepositories)->totalQuantity();
     }
 
     /**
