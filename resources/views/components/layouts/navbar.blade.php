@@ -23,7 +23,7 @@
         </form>
         <nav class="ms-auto">
             <ul class="navbar-nav">
-                <li class="nav-item fs-4">
+                <li class="nav-item fs-5">
                     @auth
                         @if (Auth::user()->admin)
                             <a href="{{route('admin')}}" class="nav-link text-primary">Dashboard</a>
@@ -35,8 +35,8 @@
                     @endauth
 
                 </li>
-                <li class="nav-item fs-4"><a href="{{route('about')}}" class="nav-link text-primary">A-propos</a></li>
-                <li class="nav-item fs-4"><a href="" class="nav-link disabled">Contacter</a></li>
+                <li class="nav-item fs-5"><a href="{{route('about')}}" class="nav-link text-primary">A-propos</a></li>
+                <li class="nav-item fs-5"><a href="" class="nav-link disabled">Contacter</a></li>
             </ul>
         </nav>
 

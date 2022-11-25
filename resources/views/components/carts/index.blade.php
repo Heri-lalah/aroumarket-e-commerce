@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('main')
 <div class="container mb-5">
-    <p class="mt-3 fs-3 text-center text-uppercase text-info fw-bold">Récapitulatif de mon panier</p>
+    <p class="mt-3 fs-3 cartTitle text-center text-uppercase text-info fw-bold">Récapitulatif de mon panier</p>
     @if ($content->isEmpty())
         <p class="allcommandstitle h4 mt-2">Votre panier est vide <a href="{{route('products')}}">Cliquer ici pour remplir</a></p>
     @else
