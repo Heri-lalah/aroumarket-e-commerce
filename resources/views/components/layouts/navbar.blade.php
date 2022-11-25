@@ -49,10 +49,12 @@
 
             <!-- Authentication Links -->
             @guest
+                @if(Route::currentRouteName()!=='login')
                 @if (Route::has('login'))
-                    <li class="nav-item">
-                        <a class="nav-link fs-4 text-info" href="{{ route('login') }}" type="buttom" {{--data-bs-toggle="modal" data-bs-target="#loginModal"--}}>{{__('Mon compte')}}</a>
+                    <li class="nav-item nav-link">
+                        <a class="btn btn-sm fs-6 btn-warning p-2 rounded-pill" href="{{ route('login') }}" type="buttom">{{__('Mon compte')}}</a>
                     </li>
+                @endif
                 @endif
 
                 {{-- @if (Route::has('register'))
