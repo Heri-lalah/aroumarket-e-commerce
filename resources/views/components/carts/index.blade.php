@@ -20,11 +20,9 @@
                                 <span class="text-danger fw-bold">{{ $items->price }} €</span>
                             </section>
                             <section class="quantity  col-md-3 text-center">
-                                <form action="" class="form-inline d-inline">
-                                    <a href="{{ route('cart.decrease',['id'=>$items->attributes->id]) }}" class="p-1 border" type="button"><i class="fa fa-minus"></i></a>
-                                    <span class="px-2">{{$items->quantity}}</span>
-                                    <a href="{{ route('cart.increase',['id'=>$items->attributes->id]) }}" class="p-1 border" type="button"><i class="fa fa-plus"></i></a>
-                                </form>
+                                <a href="{{ route('cart.decrease',['id'=>$items->attributes->id]) }}" class="p-1 border" type="button"><i class="fa fa-minus"></i></a>
+                                <span class="px-2">{{$items->quantity}}</span>
+                                <a href="{{ route('cart.increase',['id'=>$items->attributes->id]) }}" class="p-1 border" type="button"><i class="fa fa-plus"></i></a>
                             </section>
                             <section class="others col-md-1 text-center">
                                 <a href="" ><i class="fa fa-trash fs-5 text-danger"></i></a>
