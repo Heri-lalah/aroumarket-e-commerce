@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Repositories\CartRepositories;
 use Cart;
 use App\Models\Command;
-use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
@@ -42,7 +41,7 @@ class CartController extends Controller
 
         (new CartRepositories)->update($request, $id);
 
-        return view('cart.carts');
+        return redirect()->back();
 
     }
 
