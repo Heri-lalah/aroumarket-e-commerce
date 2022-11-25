@@ -117,6 +117,11 @@ class CartRepositories
         return \Cart::getTotal();
     }
 
+    public function tva()
+    {
+        return $this->total() * 20/100;
+    }
+
     public function totalTTC()
     {
         return $this->total() * 1.2;

@@ -35,7 +35,18 @@
             <div class="col-md-4">
                 <div class="card p-2 shadow">
                     <div class="card-body">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi amet atque cumque fugit? Quam, ipsa? Numquam atque deserunt minima, nulla laboriosam placeat illum! Adipisci totam eveniet dolorum impedit! Vitae provident dolorem voluptas qui eos, totam aliquid ad accusantium, adipisci repudiandae tempora, quos molestiae earum. Vel, incidunt ut sint, quisquam laboriosam quo modi aspernatur quos dolores eaque dignissimos nisi consequuntur voluptate adipisci beatae odit inventore harum nesciunt. Esse dolorum temporibus, laudantium illum molestiae repudiandae accusamus laborum aperiam odio asperiores modi beatae inventore exercitationem quasi nostrum recusandae neque explicabo tempora cumque illo, fuga assumenda corrupti! Aperiam commodi aspernatur sint debitis blanditiis possimus!
+                        <div class="ht my-3 d-flex justify-content-between">
+                            <div>Montant HT</div>
+                            <div>{{ number_format($total,2) }} €</div>
+                        </div>
+                        <div class="tva my-3 d-flex justify-content-between">
+                            <div>Tva</div>
+                            <div>{{ number_format($tva ,2)}} €</div>
+                        </div>
+                        <div class="ttc my-4 d-flex justify-content-between">
+                            <div class="fw-bold fs-4">Montant TTC</div>
+                            <div class="fw-bold fs-4">{{ number_format($totalTTC,2) }} €</div>
+                        </div>
                     </div>
                 </div>
             </div>
