@@ -45,6 +45,26 @@ class CartController extends Controller
 
     }
 
+    //diminuer le quantité
+    public function decrease($id)
+    {
+
+        (new CartRepositories)->decrease($id);
+
+        return redirect()->back();
+
+    }
+
+    //augmenter le quantité
+    public function increase($id)
+    {
+
+        (new CartRepositories)->increase($id);
+
+        return redirect()->back();
+
+    }
+
 
     //Enregistrement la commande et suppression de la cookie
 

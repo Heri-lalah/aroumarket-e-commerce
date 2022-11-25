@@ -33,7 +33,8 @@ Route::prefix('panier')->group(function () {
     Route::post('ajout/{id}',[CartController::class, 'add'])->name('cart_add');
     Route::get('Listes',[CartController::class, 'index'])->name('cart_index');
     Route::get('Lists',[CartController::class, 'clearCommand'])->name('carts_clear');
-    Route::get('update/{id}',[CartController::class, 'cart_update'])->name('cart_update');
+    Route::get('update/increase/{id}',[CartController::class, 'increase'])->name('cart.increase');
+    Route::get('update/decrease/{id}',[CartController::class, 'decrease'])->name('cart.decrease');
     Route::post('EnvoieDeLaCommande',[CartController::class,'storeAllCommands'])->name('storeAllCommands')->middleware('auth');
 });
 

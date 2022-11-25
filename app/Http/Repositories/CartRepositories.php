@@ -61,13 +61,38 @@ class CartRepositories
     }
 
     //increase
-    public function increase($id, $quantity){
+    public function increase($id){
+
+        $oldQuantity = \Cart::get($id)->quantity;
+        $newQuantity = $oldQuantity + 1;
+
+        return \Cart::update($id, array(
+            'quantity' => array(
+                'relative' => false,
+                'value' => $newQuantity
+            ),
+          ));
 
     }
 
 
     //decrease
-    public function decrease($id, $quantity){
+    public function decrease($id){
+
+        $oldQuantity = \Cart::get($id)->quantity;
+        $newQuantity = $oldQuantity - 1;
+
+
+        if((int)$newQuantity === 0){
+            return $this->delete($id);
+        }
+
+        return \Cart::update($id, array(
+            'quantity' => array(
+                'relative' => false,
+                'value' => $newQuantity
+            ),
+          ));
 
     }
 
