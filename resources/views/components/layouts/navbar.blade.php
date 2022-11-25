@@ -34,6 +34,7 @@
 
         <ul class="navbar-nav ms-md-auto align-md-items-center">
 
+            @if(Route::currentRouteName() !=='payement.index')
             @if ($infoCarts>0)
             <li class="nav-item align-self-md-center me-auto position-relative p-2 animate__animated animate__fadeIn">
                 <a href="{{ route('cart_index') }}" class="nav-link"  title="Cliquer ici pour voir votre panier">
@@ -43,6 +44,7 @@
                         {{$infoCarts}}
                 </span>
             </li>
+            @endif
             @endif
 
             <!-- Authentication Links -->
