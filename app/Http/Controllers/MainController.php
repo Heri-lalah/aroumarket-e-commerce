@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\View\Components\layouts\contact;
 
 class MainController extends Controller
 {
@@ -23,6 +24,12 @@ class MainController extends Controller
 
         return view('shop.products', compact('products'));
 
+    }
+
+    //Affiche page de contact
+    public function contact()
+    {
+        return (new contact)->render();
     }
 
 	//Affiche produit par catégorie

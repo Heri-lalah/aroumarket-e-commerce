@@ -2,12 +2,12 @@
 @section('main')
 @yield('section')
 
-<div class="container position-sticky top-0 bg-light shadow-sm">
-    <nav aria-label="breadcrumb container">
+<div class="position-sticky top-0 bg-light shadow-sm">
+    <nav class="container" aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item h5"><a href="{{route('products')}}">Accueil</a></li>
-          <li class="breadcrumb-item h5"><a href="{{ route('viewproductbycategory',['id'=>$product->category->id])}}">Catégorie</a></li>
-          <li class="breadcrumb-item h5 active">{{ $product->category->name }}</li>
+          <li class="breadcrumb-item"><a href="{{route('products')}}">Accueil</a></li>
+          <li class="breadcrumb-item"><a href="{{ route('viewproductbycategory',['id'=>$product->category->id])}}">Catégorie</a></li>
+          <li class="breadcrumb-item active">{{ $product->category->name }}</li>
         </ol>
     </nav>
 </div>

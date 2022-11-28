@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse mx-3" id="navbar-content">
         <nav class="ms-auto">
             <ul class="navbar-nav">
-                <li class="nav-item fs-5">
+                <li class="nav-item">
                     @auth
                         @if (Auth::user()->admin)
                             <a href="{{route('admin')}}" class="nav-link text-primary">Dashboard</a>
@@ -26,8 +26,8 @@
                     @endauth
 
                 </li>
-                <li class="nav-item fs-5"><a href="{{route('about')}}" class="nav-link text-primary">A-propos</a></li>
-                <li class="nav-item fs-5"><a href="" class="nav-link disabled">Contacter</a></li>
+                <li class="nav-item"><a href="{{route('about')}}" class="nav-link text-primary">A-propos</a></li>
+                <li class="nav-item"><a href="{{route('layout.contact')}}" class="nav-link">Contact</a></li>
             </ul>
         </nav>
 
@@ -36,7 +36,7 @@
 
             @if(Route::currentRouteName() !=='payement.index')
             @if ($infoCarts>0)
-            <li class="nav-item align-self-md-center me-auto position-relative p-2 animate__animated animate__fadeIn">
+            <li class="nav-item align-self-md-center me-sm-auto me-lg-5 position-relative p-2 animate__animated animate__fadeIn">
                 <a href="{{ route('cart_index') }}" class="nav-link"  title="Cliquer ici pour voir votre panier">
                     <i class="fa fa-shopping-cart fs-4"></i>
                 </a>
@@ -52,7 +52,7 @@
                 @if(Route::currentRouteName()!=='login')
                 @if (Route::has('login'))
                     <li class="nav-item nav-link">
-                        <a class="btn btn-sm fs-6 btn-warning p-2 rounded-pill" href="{{ route('login') }}" type="buttom">{{__('Mon compte')}}</a>
+                        <a class="btn btn-sm fs-6 fw-bolder btn-warning p-2 rounded-pill" href="{{ route('login') }}" type="buttom">{{__('Mon compte')}}</a>
                     </li>
                 @endif
                 @endif
@@ -67,7 +67,7 @@
 
                 <li class="nav-item dropdown">
                     <a class="nav-link d-flex  ml-3" href="#"  id="userDropdown" role="button"  data-bs-toggle="dropdown" data-bs-target="#userTools" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <span class="mt-2 me-1 fs-5 text-primary">{{ Str::length(Auth::user()->firstName.' '.Auth::user()->name)>10 ? Str::substr(Auth::user()->firstName.' '.Auth::user()->name, 0, 10).'...' : Auth::user()->firstName.' '.Auth::user()->name }}</span>
+                        <span class="mt-2 me-1 text-primary">{{ Str::length(Auth::user()->firstName.' '.Auth::user()->name)>10 ? Str::substr(Auth::user()->firstName.' '.Auth::user()->name, 0, 10).'...' : Auth::user()->firstName.' '.Auth::user()->name }}</span>
                         <img src="{{ Storage::url('avatars/img_avatar.png') }}" class="rounded-circle ms-sm-auto" alt="avatar" width="40px">
                     </a>
 
