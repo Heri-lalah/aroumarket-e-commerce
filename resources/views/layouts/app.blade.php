@@ -7,6 +7,7 @@
     <title>ArouMarket</title>
     <link rel="shortcut icon" href="{{Storage::url('/avatars/logo.png') }}" type="image/x-icon">
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @yield('style')
 </head>
 <body class="bg-light position-relative animate__animated animate__fadeIn">
     <div class="banner position-relative bg-light">
