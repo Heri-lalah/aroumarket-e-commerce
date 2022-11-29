@@ -34,6 +34,8 @@ class CheckoutController extends Controller
             $totalamount, $request->paymentMethodId
         );
 
+        (new CartRepositories)->clear();
+
         return redirect()->back()->with(['message' => 'payment avec succès']);
 
     }

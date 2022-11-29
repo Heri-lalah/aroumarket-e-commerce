@@ -3,7 +3,9 @@
     <div class="mt-1 mt-md-5">
         <div class="row justify-content-center">
             <div class="col-md-5 p-4 shadow">
+                @if($amount>0)
                 <div class="mb-3 fw-bold">Montant TTC : <span class="text-primary">{{ $amount }} €</span></div>
+                @endif
                 <form id="checkoutForm" action="{{ route('purchase') }}" method="POST">
                     @csrf
                     <input id="card-holder-name" class="d-none" type="text">
@@ -15,7 +17,7 @@
                 <button id="card-button" class="fw-bold">
                     Payer maintenant
                 </button>
-                <div id="payment-message" class="hidden text-danger fs-6"></div>
+                <div id="payment-message" class="hidden fs-6"></div>
             </div>
         </div>
     </div>
@@ -55,12 +57,13 @@
     const cardButton = document.getElementById('card-button');
     const checkoutForm = document.getElementById('checkoutForm');
 
-    function showMessage(messageText) {
+    function showMessage(messageText,style) {
         const messageContainer = document.querySelector("#payment-message");
         messageContainer.classList.remove("hidden");
+        messageContainer.classList.add(style);
         messageContainer.textContent = messageText;
 
-        setTimeout(showMessage, 6000);
+        setTimeout(showMessage(messageText,style), 6000);
     }
 
     cardButton.addEventListener('click', async (e) => {
@@ -74,10 +77,11 @@
     );
 
     if (error) {
-        showMessage(error.message);
+        showMessage(error.message,'text-danger');
     } else {
         document.getElementById('paymentMethodId').value = paymentMethod.id
         checkoutForm.submit();
+        showMessage('Payement avec succès', 'text-success')
     }
 
 });

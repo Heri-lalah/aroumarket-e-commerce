@@ -127,4 +127,8 @@ class CartRepositories
         return $this->total() * 1.2;
     }
 
+    public function clear()
+    {
+        return \Cart::clear();
+    }
 }
