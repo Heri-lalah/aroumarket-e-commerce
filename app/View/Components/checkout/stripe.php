@@ -17,7 +17,6 @@ class stripe extends Component
     public function __construct()
     {
         $this->amount = (new CartRepositories)->totalTTC();
-        $this->text = 'test';
 
     }
 
