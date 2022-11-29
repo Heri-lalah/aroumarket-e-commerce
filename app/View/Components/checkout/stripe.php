@@ -2,6 +2,7 @@
 
 namespace App\View\Components\checkout;
 
+use App\Repositories\CartRepositories;
 use Illuminate\View\Component;
 
 class stripe extends Component
@@ -11,9 +12,13 @@ class stripe extends Component
      *
      * @return void
      */
+    public $amount;
+
     public function __construct()
     {
-        //
+        $this->amount = (new CartRepositories)->totalTTC();
+        $this->text = 'test';
+
     }
 
     /**

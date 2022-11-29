@@ -1,5 +1,6 @@
-import 'bootstrap';
+import './bootstrap';
 import './myapp';
+import 'bootstrap';
 
 
 

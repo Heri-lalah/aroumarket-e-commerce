@@ -39,7 +39,7 @@ route::prefix('produits')->group(function(){
 //Routes gestion Panier
 Route::prefix('panier')->group(function () {
     Route::post('ajout/{id}',[CartController::class, 'add'])->name('cart_add');
-    Route::get('Listes',[CartController::class, 'index'])->name('cart_index');
+    Route::get('listes',[CartController::class, 'index'])->name('cart_index');
     Route::get('Lists',[CartController::class, 'clearCommand'])->name('carts_clear');
     Route::get('update/increase/{id}',[CartController::class, 'increase'])->name('cart.increase');
     Route::get('update/decrease/{id}',[CartController::class, 'decrease'])->name('cart.decrease');
@@ -51,6 +51,7 @@ Route::prefix('panier')->group(function () {
 //Routes payement
 Route::prefix('payement')->group(function(){
     route::get('', [CheckoutController::class, 'create'])->name("payement.index");
+    route::post('/purchase', [CheckoutController::class, 'purchase'])->name("purchase");
 });
 
 Route::get('Commande/Listes',[CartController::class, 'cart_command'])->name('cart_command')->middleware('auth');
