@@ -52,7 +52,7 @@
                 @if(Route::currentRouteName()!=='login')
                 @if (Route::has('login'))
                     <li class="nav-item nav-link">
-                        <a class="btn btn-sm fs-6 fw-bolder btn-warning p-2 rounded-pill" href="{{ route('login') }}" type="buttom">{{__('Mon compte')}}</a>
+                        <a class="btn btn-sm fw-bolder btn-warning p-2 rounded-pill" href="{{ route('login') }}" type="buttom">{{__('Mon compte')}}</a>
                     </li>
                 @endif
                 @endif
@@ -73,7 +73,7 @@
 
                     <div class="dropdown-menu shadow" aria-labelledby="userDropdown">
 
-                        <a href="{{ route('logout') }}" class="dropdown-item fs-6 text-danger"  onclick="event.preventDefault();
+                        <a href="{{ route('logout') }}" class="dropdown-item text-danger"  onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw text-danger"></i>
                             {{ __('Déconnection') }}
