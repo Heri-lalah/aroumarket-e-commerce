@@ -39,13 +39,14 @@ class CheckoutController extends Controller
             $user->charge($totalamount, $paymentMethodId);
 
         } catch (\Throwable $th) {
-            return redirect()->back()->with('message','erreur payement, réessayez');
-
+            session()->flash('error', "Erreur payement, réessayez");
+            return redirect()->back();
         }
 
         (new CartRepositories)->clear();
 
-        return redirect()->back()->with('message', 'payment avec succès');
+        session()->flash('success', "Payment avec succès");
+        return redirect()->back();
 
     }
 

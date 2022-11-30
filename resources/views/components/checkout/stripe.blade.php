@@ -17,14 +17,21 @@
                 <button id="card-button" class="fw-bold">
                     Payer maintenant
                 </button>
-                <div id="msg" class="hidden fs-6"></div>
-                @if(session()->has($message))
-                    {{ $message }}
-                @endif
+                <div id="msg" class="hidden fs-6">
+                    @if (Session::has('error'))
+                        <div id="redirectmsg" class="error bg-danger">
+                            {{ Session::get('error') }}
+                        </div>
+                    @endif
+                    @if (Session::has('success'))
+                        <div id="redirectmsg" class="success bg-success">
+                            {{ Session::get('success') }}
+                        </div>
+                    @endif
+                </div>
             </div>
         </div>
     </div>
-    <div id="dmsg"></div>
 
 @endsection
 @section('style')
@@ -41,6 +48,19 @@
     transition: all 0.2s ease;
     box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
     width: 100%;
+    }
+    #redirectmsg{
+        visibility: visible;
+        min-width: 250px; /* Set a default minimum width */
+        margin-left: -125px; /* Divide value of min-width by 2 */
+        color: #fff; /* White text color */
+        text-align: center; /* Centered text */
+        border-radius: 2px; /* Rounded borders */
+        padding: 10px; /* Padding */
+        position: fixed; /* Sit on top of the screen */
+        z-index: 1; /* Add a z-index if needed */
+        left: 50%; /* Center the snackbar */
+        bottom: 30px; /
     }
     #msg {
         visibility: hidden; /* Hidden by default. Visible on click */
@@ -100,7 +120,12 @@
 @endsection
 @section('script')
 <script src="https://js.stripe.com/v3/"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    setTimeout(function(){
+        document.getElementById('redirectmsg').style.visibility = "hidden";
+        document.getElementById('redirectmsg').style.animation = "fadeout 1s 1s";
+    }, 5000);
+</script>
 <script>
 
     const stripe = Stripe('pk_test_51LtmFqKHA3Com7kdQhSwTEQ5ZKVAKd0jh77v8zrn6er4dCI6TQcsZiddLgOycLxEB6BSBx6YZF372XfcuzJcnBIb007ZwakEbr');
