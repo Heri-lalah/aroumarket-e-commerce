@@ -18,16 +18,19 @@
                     Payer maintenant
                 </button>
                 <div id="msg" class="hidden fs-6">
+
                     @if (Session::has('error'))
                         <div id="redirectmsg" class="error bg-danger">
                             {{ Session::get('error') }}
                         </div>
                     @endif
+
                     @if (Session::has('success'))
                         <div id="redirectmsg" class="success bg-success">
                             {{ Session::get('success') }}
                         </div>
                     @endif
+
                 </div>
             </div>
         </div>
