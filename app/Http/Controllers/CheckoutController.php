@@ -28,15 +28,24 @@ class CheckoutController extends Controller
     public function purchase(Request $request)
     {
 
+        $user = auth()->user();
+        $paymentMethodId = $request->paymentMethodId;
         $totalamount = (new CartRepositories)->totalTTC() * 100;
 
-        $stripeCharge = $request->user()->charge(
-            $totalamount, $request->paymentMethodId
-        );
+        try {
+
+            $user->createOrGetStripeCustomer();
+            $user->updateDefaultPaymentMethod($paymentMethodId);
+            $user->charge($totalamount, $paymentMethodId);
+
+        } catch (\Throwable $th) {
+            return redirect()->back()->with('message','erreur payement, réessayez');
+
+        }
 
         (new CartRepositories)->clear();
 
-        return redirect()->back()->with(['message' => 'payment avec succès']);
+        return redirect()->back()->with('message', 'payment avec succès');
 
     }
 

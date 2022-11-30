@@ -18,6 +18,9 @@
                     Payer maintenant
                 </button>
                 <div id="payment-message" class="hidden fs-6"></div>
+                @if(session()->has($message))
+                    {{ $message }}
+                @endif
             </div>
         </div>
     </div>
@@ -42,6 +45,7 @@
 @endsection
 @section('script')
 <script src="https://js.stripe.com/v3/"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script>
     const stripe = Stripe('pk_test_51LtmFqKHA3Com7kdQhSwTEQ5ZKVAKd0jh77v8zrn6er4dCI6TQcsZiddLgOycLxEB6BSBx6YZF372XfcuzJcnBIb007ZwakEbr');
     const elements = stripe.elements();
@@ -81,7 +85,6 @@
     } else {
         document.getElementById('paymentMethodId').value = paymentMethod.id
         checkoutForm.submit();
-        showMessage('Payement avec succès', 'text-success')
     }
 
 });

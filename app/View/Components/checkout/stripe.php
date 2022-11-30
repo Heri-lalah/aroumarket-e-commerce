@@ -13,11 +13,14 @@ class stripe extends Component
      * @return void
      */
     public $amount;
+    public $intent;
+    public $message;
 
-    public function __construct()
+    public function __construct($message = null)
     {
         $this->amount = (new CartRepositories)->totalTTC();
-
+        $this->intent = auth()->user()->createSetupIntent();
+        //$this->message = $message;
     }
 
     /**
