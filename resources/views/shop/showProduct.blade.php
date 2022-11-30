@@ -30,8 +30,8 @@
                 </div>
             </div>
             <div class="col-md-6 px-md-5 align-self-center">
-                <p class="fs-2 fw-bold">{{ $product->name }}</p>
-                <p><span class="fs-1 fw-bolder text-danger">{{ $product->prix_ht }} €</span>/pièce</p>
+                <p class="fs-5 fw-bold">{{ $product->name }}</p>
+                <p><span class="fw-bolder text-danger">{{ $product->prix_ht }} €</span>/pièce</p>
                 <p>{{ $product->description }}</p>
                 <form action="{{ route('cart_add',['id' => $product]) }}" method="POST">
                     @csrf
