@@ -10,7 +10,7 @@
     @yield('style')
 </head>
 <body class="bg-light position-relative animate__animated animate__fadeIn">
-    <div class="banner position-relative bg-light">
+    <div class="banner position-relative bg-light " style="font-size: 15px">
         <x-layouts.navbar></x-layouts.navbar>
         @yield('main')
         <p class="tohome bounce position-fixed end-2 w-25 ms-5" id="tohome">

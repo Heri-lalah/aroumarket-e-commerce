@@ -32,6 +32,12 @@ class MainController extends Controller
         return (new contact)->render();
     }
 
+    //Affiche dashboard
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
+
 	//Affiche produit par catégorie
     public function viewproductbycategory($id){
 
