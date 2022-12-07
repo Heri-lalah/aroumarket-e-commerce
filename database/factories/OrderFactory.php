@@ -17,7 +17,9 @@ class OrderFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'order_number' => $this->faker->numberBetween(1,10),
+            'total_price' => rand(1,5) * 100,
+            'shipped_at' => $this->faker->dateTime()
         ];
     }
 }

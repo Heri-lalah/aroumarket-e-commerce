@@ -7,6 +7,7 @@ use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Database\Eloquent\Relations\belongsToMany;
 
 class Product extends Model
 {
@@ -15,6 +16,12 @@ class Product extends Model
     private static $facteur_tva=1.2;
 
     protected $fillable=['name', 'prix_ht', 'description', 'photo_principal', 'category_id', 'promo', 'reduction', 'is_online', 'quantityStock'];
+
+    //relation entre produits et commande
+    public function orders():BelongsToMany
+    {
+        return $this->belongsToMany(Order::class)->withPivot('quantity');
+    }
 
     public function category()
     {
@@ -32,12 +39,6 @@ class Product extends Model
 
     }
 
-    public function commands()
-    {
-
-        return $this->hasMany(Command::class);
-
-    }
 
     public function scopeNewProduct($query, $request)
     {

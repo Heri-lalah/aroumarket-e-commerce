@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use App\Models\Command;
+use App\Models\Product;
+use App\Models\Order;
 use App\Models\UserAvance;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Gate;
@@ -47,12 +49,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function commands()
+    public function orders()
     {
-
-        return $this->hasMany(Command::class);
-
+        return $this->hasMany(Order::class);
     }
+
+//    public function commands()
+//    {
+//
+//        return $this->hasMany(Command::class);
+//
+//    }
 
 
     public function scopeAdmin($query)

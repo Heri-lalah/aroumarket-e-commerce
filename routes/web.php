@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OrderController;
 use App\Models\Command;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
@@ -46,6 +47,11 @@ Route::prefix('panier')->group(function () {
     Route::get('update/decrease/{id}',[CartController::class, 'decrease'])->name('cart.decrease');
     Route::get('update/delete/{id}',[CartController::class, 'delete'])->name('cart.delete');
     Route::post('EnvoieDeLaCommande',[CartController::class,'storeAllCommands'])->name('storeAllCommands')->middleware('auth');
+});
+
+//Routes Commande
+Route::prefix('commande')->group(function(){
+    Route::post('store', [OrderController::class, 'store'])->name('order.store');
 });
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Repositories\CartRepositories;
 use App\View\Components\checkout\stripe;
 use Illuminate\Http\Request;
@@ -31,6 +32,8 @@ class CheckoutController extends Controller
         $user = auth()->user();
         $paymentMethodId = $request->paymentMethodId;
         $totalamount = (new CartRepositories)->totalTTC() * 100;
+
+        Order::store();
 
         try {
 

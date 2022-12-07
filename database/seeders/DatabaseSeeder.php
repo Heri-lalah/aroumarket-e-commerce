@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Order;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Category;
@@ -18,9 +19,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Category::factory(3)->has(Product::factory(25))->create();
-
-        User::factory(5)->create();
-
+        Category::factory(5)->has(Product::factory(10))->create();
+        User::factory(5)
+            ->has(Order::factory(2)
+                ->hasAttached(Product::factory(5),['quantity' => \rand(1,5)]))
+            ->create();
     }
 }
