@@ -18,13 +18,13 @@ return new class extends Migration
             $table->integer('order_number');
             $table->integer('total_price');
             $table->dateTime('shipped_at')->nullable();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
 
         Schema::create('order_product', function (Blueprint $table){
-            $table->foreignId('product_id')->constrained()->onDelete('cascade');
             $table->foreignId('order_id')->constrained()->onDelete('cascade');
+            $table->foreignId('product_id')->constrained()->onDelete('cascade');
             $table->integer("quantity");
         });
     }

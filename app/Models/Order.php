@@ -20,19 +20,25 @@ class Order extends Model
     }
 
 
+    /*
+     * Enregistrement commande
+     * */
     public function  scopeStore()
     {
+
         $cartRepositories = new CartRepositories;
+
         $all = $cartRepositories->getContent();
-        Order::firstOrCreate([
+
+        $order = Order::firstOrCreate([
             'order_number' => 5,
             'total_price' => $cartRepositories->totalTTC(),
             'user_id' => Auth::user()->id,
         ]);
 
-        $all->each(function ($item, $key){
-            var_dump($item);
+        $all->each(function ($item) use ($order){
+            $order->products()->attach([$item->id],['quantity' => $item->quantity]);
         });
-        dd($all);
     }
+
 }

@@ -33,7 +33,12 @@ class CheckoutController extends Controller
         $paymentMethodId = $request->paymentMethodId;
         $totalamount = (new CartRepositories)->totalTTC() * 100;
 
-        Order::store();
+        try {
+            Order::store();
+        }catch (\Throwable $error){
+            session()->flash('error', "une erreur est survenue lors de l'enregistrement de votre commande");
+            return redirect()->back();
+        }
 
         try {
 
