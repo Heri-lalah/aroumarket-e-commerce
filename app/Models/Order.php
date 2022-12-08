@@ -22,7 +22,7 @@ class Order extends Model
 
     /*
      * Enregistrement commande
-     * */
+     */
     public function  scopeStore()
     {
 

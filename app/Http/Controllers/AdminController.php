@@ -39,15 +39,4 @@ class AdminController extends Controller
         return view('admin.users.users',compact('users'));
     }
 
-    //Afficher la liste de tous les commandes
-    public function showcommands($status)
-    {
-
-        $commands = Command::Showinadmin($status)->get();
-
-        $commandsCount = Command::Showinadmin($status)->count();
-
-        return view('admin.commands.commands', compact('commands','commandsCount'));
-
-    }
 }

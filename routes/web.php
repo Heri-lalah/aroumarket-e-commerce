@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\OrderController;
-use App\Models\Command;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -11,7 +10,6 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CheckoutController;
-use App\Http\Controllers\CommandController;
 use App\Http\Controllers\ProductController;
 
 /*
@@ -72,19 +70,9 @@ Route::prefix('Admin')->middleware('auth')->group(function(){
     Route::get('Gestion/Utilisateurs', [AdminController::class, 'users'])->name('users');
     Route::get('Gestion/Utilisateurs/Admin', [AdminController::class, 'usersAdmin'])->name('usersadmin');
 
-    //Commandes
-    Route::get('commande/{command}',[CommandController::class, 'view'])->name('command_view');
     Route::get('Gestion/Commandes/Listes/{status}', [AdminController::class, 'showcommands'])->name('showcommands');
 
-    //payement
-    Route::get('commande/{command}/payement', [CommandController::class, 'topayement'])->name('topayement');
-    Route::post('commande/{command}/payement', [CommandController::class, 'postpayement'])->name('payement');
 
-
-    //livraison
-    Route::post('commande/{command}/livraison', [CommandController::class, 'reservation'])->name('reservation');
-    Route::get('commande/Meslivraisons/{user}',[CommandController::class, 'MyLivraison'])->name('MyLivraison');
-    Route::post('commande/{command}/livraison/finalisation',[CommandController::class, 'postfinalisationLivraison'])->name('postfinalisationLivraison');
 
     //Produits
     Route::get('produits/{online}',[AdminController::class,'products'])->name('admin_products');
