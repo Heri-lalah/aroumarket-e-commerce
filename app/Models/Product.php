@@ -17,7 +17,7 @@ class Product extends Model
 
     protected $fillable=['name', 'prix_ht', 'description', 'photo_principal', 'category_id', 'promo', 'reduction', 'is_online', 'quantityStock'];
 
-    //relation entre produits et commande
+
     public function orders():BelongsToMany
     {
         return $this->belongsToMany(Order::class)->withPivot('quantity');

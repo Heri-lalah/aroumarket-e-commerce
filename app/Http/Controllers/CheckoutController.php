@@ -34,27 +34,21 @@ class CheckoutController extends Controller
         $totalamount = (new CartRepositories)->totalTTC() * 100;
 
         try {
-            Order::store();
-        }catch (\Throwable $error){
-            session()->flash('error', "une erreur est survenue lors de l'enregistrement de votre commande");
-            return redirect()->back();
-        }
-
-        try {
 
             $user->createOrGetStripeCustomer();
             $user->updateDefaultPaymentMethod($paymentMethodId);
             $user->charge($totalamount, $paymentMethodId);
+            Order::store();
 
         } catch (\Throwable $th) {
-            session()->flash('error', "Erreur payement, réessayez");
+            session()->flash('error', "une erreur est survenue lors de l'enregistrement de votre commande");
             return redirect()->back();
         }
 
         (new CartRepositories)->clear();
 
         session()->flash('success', "Payment avec succès");
-        return redirect()->back();
+        return redirect()->route('layout.dashboard');
 
     }
 

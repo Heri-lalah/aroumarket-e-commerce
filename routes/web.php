@@ -44,7 +44,6 @@ Route::prefix('panier')->group(function () {
     Route::get('update/increase/{id}',[CartController::class, 'increase'])->name('cart.increase');
     Route::get('update/decrease/{id}',[CartController::class, 'decrease'])->name('cart.decrease');
     Route::get('update/delete/{id}',[CartController::class, 'delete'])->name('cart.delete');
-    Route::post('EnvoieDeLaCommande',[CartController::class,'storeAllCommands'])->name('storeAllCommands')->middleware('auth');
 });
 
 //Routes Commande
@@ -69,8 +68,6 @@ Route::prefix('Admin')->middleware('auth')->group(function(){
     Route::get('', [HomeController::class, 'index'])->name('admin');
     Route::get('Gestion/Utilisateurs', [AdminController::class, 'users'])->name('users');
     Route::get('Gestion/Utilisateurs/Admin', [AdminController::class, 'usersAdmin'])->name('usersadmin');
-
-    Route::get('Gestion/Commandes/Listes/{status}', [AdminController::class, 'showcommands'])->name('showcommands');
 
 
 

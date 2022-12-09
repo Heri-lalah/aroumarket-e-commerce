@@ -22,7 +22,9 @@ class ProductFactory extends Factory
             'description' => $this->faker->sentence(15,true),
             'photo_principal' =>substr($this->faker->imageUrl(), 0, strpos($this->faker->imageUrl(),"=")). "=Arou",
             'category_id' => rand(1,3),
-            'is_online' => $this->faker->boolean(90)
+            'is_online' => $this->faker->boolean(90),
+            'reduction' =>\rand(5,15),
+            'promo'=>$this->faker->boolean(20)
         ];
     }
 }

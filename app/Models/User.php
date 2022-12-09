@@ -54,12 +54,6 @@ class User extends Authenticatable
         return $this->hasMany(Order::class);
     }
 
-//    public function commands()
-//    {
-//
-//        return $this->hasMany(Command::class);
-//
-//    }
 
 
     public function scopeAdmin($query)

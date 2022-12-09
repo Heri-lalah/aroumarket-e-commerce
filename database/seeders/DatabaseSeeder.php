@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
     {
         Category::factory(5)->has(Product::factory(10))->create();
         User::factory(5)
-            ->has(Order::factory(2)
+            ->has(Order::factory(3)
                 ->hasAttached(Product::factory(5),['quantity' => \rand(1,5)]))
             ->create();
     }

@@ -72,29 +72,7 @@ class CartController extends Controller
         return redirect()->back();
     }
 
-    //Enregistrement la commande et suppression de la cookie
 
-    public function storeAllCommands()
-    {
-
-        Command::Store();
-
-        return redirect(route('cart_index'));
-
-    }
-
-
-
-    //Affichage suivi commande
-
-    public function cart_command()
-    {
-
-        $command = Command::where('user_id', Auth::user()->id)->orderByDesc('created_at') ->get();
-
-        return view('cart.commandList', compact('command'));
-
-    }
 
     public function clearCommand(){
 
