@@ -73,6 +73,11 @@
 
                     <div class="dropdown-menu shadow" aria-labelledby="userDropdown">
 
+                        <a href="{{ route('layout.dashboard') }}" class="dropdown-item text-danger">
+                            <i class="fa fa-dashboard fa-fw text-danger"></i>
+                            {{ __('Dashboard') }}
+                        </a>
+
                         <a href="{{ route('logout') }}" class="dropdown-item text-danger"  onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw text-danger"></i>
