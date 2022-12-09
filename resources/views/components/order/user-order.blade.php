@@ -2,7 +2,7 @@
     @if($orders)
         @foreach($orders as $order)
             <div class="card @if($order->shipped_at) bg-primary text-white @else bg-warning @endif" style="width: 18rem;">
-                <div class="card-header">ref : {{ $order->order_number  }}</div>
+                <div class="card-header">ref : {{ Str::substr($order->order_number,0,10)  }}</div>
                 <div class="card-body">
                     <h5 class="card-title fw-bold text-center">{{ number_format($order->total_price/100, 2)  }} €</h5>
                     <div class="card-text">

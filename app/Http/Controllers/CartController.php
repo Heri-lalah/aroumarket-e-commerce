@@ -78,7 +78,7 @@ class CartController extends Controller
 
         Cart::clear();
 
-        return view('cart.carts');
+        return redirect()->back();
 
     }
 }

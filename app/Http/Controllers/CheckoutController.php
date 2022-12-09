@@ -41,7 +41,7 @@ class CheckoutController extends Controller
             Order::store();
 
         } catch (\Throwable $th) {
-            session()->flash('error', "une erreur est survenue lors de l'enregistrement de votre commande");
+            session()->flash('error', "une erreur est survenue lors de l'enregistrement de votre commande" . $th->getMessage());
             return redirect()->back();
         }
 

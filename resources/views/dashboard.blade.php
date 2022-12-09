@@ -6,6 +6,7 @@
         <div class="fs-6">
             <x-order.user-order></x-order.user-order>
         </div>
+
         <div id="msg" class="hidden fs-6">
 
             @if (Session::has('error'))
@@ -114,6 +115,7 @@
 <script>
     setTimeout(function(){
         document.getElementById('redirectmsg').style.visibility = "hidden";
+        document.getElementById('redirectmsg').style.animation = "fadein 1s 1s";
         document.getElementById('redirectmsg').style.animation = "fadeout 1s 1s";
     }, 6000);
 </script>

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\belongsToMany;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class Order extends Model
 {
@@ -29,9 +30,9 @@ class Order extends Model
         $cartRepositories = new CartRepositories;
 
         $all = $cartRepositories->getContent();
-
+        $order_number = Auth::user()->id . now();
         $order = Order::firstOrCreate([
-            'order_number' => 5,
+            'order_number' => Hash::make($order_number),
             'total_price' => $cartRepositories->totalTTC(),
             'user_id' => Auth::user()->id,
         ]);
