@@ -28,7 +28,7 @@ Auth::routes();
 Route::get('A-propos', [MainController::class,'about'])->name('about');
 Route::get('/', [MainController::class,'products'])->name('products');
 Route::get('contact', [MainController::class,'contact'])->name('layout.contact');
-Route::get('dashboard', [MainController::class, 'dashboard'])->name('layout.dashboard');
+Route::get('dashboard', [MainController::class, 'dashboard'])->name('layout.dashboard')->middleware('auth');
 
 //Routes produits
 route::prefix('produits')->group(function(){

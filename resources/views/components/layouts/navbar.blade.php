@@ -73,8 +73,8 @@
 
                     <div class="dropdown-menu shadow" aria-labelledby="userDropdown">
 
-                        <a href="{{ route('layout.dashboard') }}" class="dropdown-item text-danger">
-                            <i class="fa fa-dashboard fa-fw text-danger"></i>
+                        <a href="{{ route('layout.dashboard') }}" class="dropdown-item text-success">
+                            <i class="fa fa-dashboard fa-fw text-success"></i>
                             {{ __('Dashboard') }}
                         </a>
 
