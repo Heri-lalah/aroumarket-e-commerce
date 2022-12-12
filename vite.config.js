@@ -6,8 +6,10 @@ export default defineConfig({
     plugins: [
         laravel({
             input : [
-            'resources/sass/app.scss',
-            'resources/js/app.js',
+                'resources/sass/app.scss',
+                'resources/js/app.js',
+                'resources/css/redirectMessage.css',
+                'resources/js/redirectMessage.js'
             ],
             refresh: true
         }),

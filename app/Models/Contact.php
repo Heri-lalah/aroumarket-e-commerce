@@ -11,21 +11,10 @@ class Contact extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'email', 'subject', 'message'];
+    protected $fillable = ['email', 'subject', 'message','user_id'];
 
     public  function user()
     {
         return $this->belongsTo(user::class);
-    }
-
-    public static function boot()
-    {
-        parent::boot();
-        static::created(function($item){
-
-            $adminEmail = env('MAIL_FROM_ADDRESS');
-            Mail::to($adminEmail)->send(new ContactMailNotify($item));
-
-        });
     }
 }

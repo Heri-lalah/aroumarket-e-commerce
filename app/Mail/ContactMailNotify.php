@@ -5,9 +5,11 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Auth;
 
 class ContactMailNotify extends Mailable
 {
@@ -31,6 +33,7 @@ class ContactMailNotify extends Mailable
     public function envelope()
     {
         return new Envelope(
+            from: new Address($this->data->email, Auth::user()->name),
             subject: 'Contact Mail Notify',
         );
     }
@@ -44,6 +47,7 @@ class ContactMailNotify extends Mailable
     {
         return new Content(
             view: 'Mail.contactMailNotify',
+            with : ['name' => Auth::user()->name]
         );
     }
 
