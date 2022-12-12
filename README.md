@@ -16,7 +16,7 @@ npm install
 ```
 
 ```bash
-php artisan migrate:refresh -seed
+php artisan migrate --seed
 ```
 
 
