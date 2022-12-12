@@ -6,9 +6,9 @@
         ArouMarket
     </a>
 
-    <button type="button" class="navbar-toggler navbar-light text-start bg-danger" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+    <button type="button" class="navbar-toggler navbar-light text-white text-start bg-danger" data-bs-toggle="collapse" data-bs-target="#navbar-content">
         {{--<span class="navbar-toggler-icon border-primary"></span>--}}
-        <i class="fa fa-align-justify p-2 rounded"></i>
+        <i class="fa fa-align-justify p-1 rounded"></i>
     </button>
 
     <div class="collapse navbar-collapse mx-3" id="navbar-content">
