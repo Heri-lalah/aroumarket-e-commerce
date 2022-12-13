@@ -33,8 +33,8 @@ class ContactMailNotify extends Mailable
     public function envelope()
     {
         return new Envelope(
-            from: new Address($this->data->email, Auth::user()->name),
-            subject: 'Contact Mail Notify',
+            from: new Address($this->data->email, ucfirst(Auth::user()->name ? Auth::user()->name : 'Aroumarket')),
+            subject: 'Contact',
         );
     }
 
