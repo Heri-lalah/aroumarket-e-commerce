@@ -8,7 +8,7 @@
         @foreach ($products as $product)
         <div class="col-sm-6 col-md-4 col-lg-3 p-2">
             <div class="card shadow-sm animate__animated animate__fadeIn">
-                <img src="{{$product->photo_principal}}" alt="{{$product->name}}" class="img-fluid">
+                <img src="{{Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{$product->name}}" class="img-fluid">
 
                 <div class="card-body">
                     <p class="card-text d-none d-md-block">

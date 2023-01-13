@@ -4,22 +4,17 @@
 Aroumarket-e-commerce est une application e-commerce que j'ai dévéloppé avec Laravel.
 
 ## Installation
-
-```bash
-git clone https://github.com/Herilala-rakotonasolo/aroumarket-e-commerce.git
-```
-
-```bash
+```sh
 composer install
 ```
+### Compile and Hot-Reload for Development
 
-```bash
-npm install
+```sh
+npm run dev
 ```
 
-```bash
-php artisan migrate --seed
+### Compile and Minify for Production
+
+```sh
+npm run build
 ```
-
-
-## License

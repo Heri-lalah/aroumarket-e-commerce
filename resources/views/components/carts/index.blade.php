@@ -12,7 +12,7 @@
                         @foreach($content->all() as $items)
                         <div class="row gy-3 m-2 align-items-center justify-content-between">
                             <section class="productimg col-md-2 text-center overflow-hidden">
-                                <img src="{{$items->attributes->photo}}" alt="{{ $items->name }}" class="img-fluid">
+                                <img src="{{Storage::url('assets/products/'. $items->attributes->photo)}}" alt="{{ $items->name }}" class="img-fluid">
                             </section>
                             <section class="productinfo text-center col-md-4 p-2">
                                 <span class="fw-bold">{{ $items->name }}</span><br>

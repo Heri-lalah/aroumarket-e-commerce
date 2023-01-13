@@ -17,15 +17,15 @@
         <div class="row gy-3">
             <div class="col-md-6 d-flex flex-wrap">
                 <div class="product">
-                    <img src="{{ $product->photo_principal}}" alt="{{ $product->name }}" class="img-fluid">
+                    <img src="{{ Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{ $product->name }}" class="img-fluid">
                 </div>
 
                 <div class="product_details mt-2">
                     <picture class="d-flex justify-content-around">
-                        <img src="{{ $product->photo_principal}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
-                        <img src="{{ $product->photo_principal}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
-                        <img src="{{ $product->photo_principal}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
-                        <img src="{{ $product->photo_principal}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
+                        <img src="{{ Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
+                        <img src="{{ Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
+                        <img src="{{ Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
+                        <img src="{{ Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
                     </picture>
                 </div>
             </div>
@@ -55,7 +55,7 @@
             @foreach ($moresProducts as $item)
             <a href="{{ route('product.show',[$item])}}" class="col-sm-6 col-md-4 col-lg-3 p-2">
                 <div class="card shadow-sm animate__animated animate__fadeIn">
-                    <img src="{{$item->photo_principal}}" alt="{{$item->name}}" class="img-fluid">
+                    <img src="{{ Storage::url('/assets/products/' . $item->photo_principal)}}" alt="{{$item->name}}" class="img-fluid">
 
                     <div class="card-body">
                         <p class="card-text d-none d-md-block">
