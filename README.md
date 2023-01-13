@@ -7,13 +7,13 @@ Aroumarket-e-commerce est une application e-commerce que j'ai dévéloppé avec 
 ```sh
 composer install
 ```
-### Compile and Hot-Reload for Development
+### Compilation et rechargement automatique en mode développement
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compiler et minifier pour la production
 
 ```sh
 npm run build
