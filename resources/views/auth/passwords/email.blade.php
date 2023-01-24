@@ -60,7 +60,7 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-2">Mot de passe oublié?</h1>
                                     <p class="mb-4">
-                                        Voulez-vous entrez votre adresse e-mail pour réinitialiser votre mot de passe. Merci de vérifier votre message e-mail après!
+
                                     </p>
                                 </div>
                                 <form class="user"  method="POST" action="{{ route('password.email') }}">
