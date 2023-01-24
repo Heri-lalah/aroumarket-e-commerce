@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse mx-3" id="navbar-content">
         <nav class="ms-auto">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                <li class="nav-item fw-bold">
                     @auth
                         @if (Auth::user()->admin)
                             <a href="{{route('admin')}}" class="nav-link text-primary">Dashboard</a>
@@ -26,8 +26,8 @@
                     @endauth
 
                 </li>
-                <li class="nav-item"><a href="{{route('about')}}" class="nav-link text-primary">A-propos</a></li>
-                <li class="nav-item"><a href="{{route('layout.contact')}}" class="nav-link">Contact</a></li>
+                <li class="nav-item fw-bold"><a href="{{route('about')}}" class="nav-link text-primary">A-propos</a></li>
+                <li class="nav-item fw-bold"><a href="{{route('layout.contact')}}" class="nav-link">Contact</a></li>
             </ul>
         </nav>
 
