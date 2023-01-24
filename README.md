@@ -20,23 +20,27 @@ npm run build
 ```
 
 ### Page d'accueil si utilisateur non identifié
-![aroumarket-cb427713](https://user-images.githubusercontent.com/105268379/214247085-00e3813d-f131-4226-9992-cd7f8421dc9f.jpg)
+![accueil-](https://user-images.githubusercontent.com/105268379/214269119-97e585b4-ac34-49f5-99c8-72044c1844ed.jpg)
 
 ### Page d'identification
-![login](https://user-images.githubusercontent.com/105268379/214267610-9b3fbe41-b386-4185-a0e2-72e57f57a8e4.jpg)
+![login](https://user-images.githubusercontent.com/105268379/214269226-2e7ebe4a-fc9b-4e1d-84f6-1cf9d6f0e3b5.jpg)
+
 
 ### Page d'inscription
-![register](https://user-images.githubusercontent.com/105268379/214267707-bc94345c-a6ef-4a18-b7a9-0af08e6e9d59.jpg)
+![register](https://user-images.githubusercontent.com/105268379/214269292-ebc0708d-6c15-454f-8843-f32e72f0c903.jpg)
+
 
 ### Page d'accueil si utilisateur identifié
+![accueil](https://user-images.githubusercontent.com/105268379/214269361-f850b15f-6ece-41fc-9a53-ccdae5df97b1.jpg)
 
-![accueil](https://user-images.githubusercontent.com/105268379/214267941-d821a196-c96f-4021-9029-8dff9ca19c0c.jpg)
 
 ### Page d'affichage de produit en particulier et ajout produit dans le panier
-![voirProduits](https://user-images.githubusercontent.com/105268379/214268017-92c5fe21-b559-4095-82b6-f366bc9947c5.jpg)
+![voirProduits](https://user-images.githubusercontent.com/105268379/214269641-a09904fc-51bd-41e0-b775-ad4280cf5050.jpg)
 
-### Page de récapitulation Panier
+
+### Page de récapitulation Panier!
 ![recaptPanier](https://user-images.githubusercontent.com/105268379/214268168-c5c02210-f5f4-4943-b929-1846a5655860.jpg)
+
 ### Page de Payement avec Stripe
 ![page de payement avec stripe](https://user-images.githubusercontent.com/105268379/214268272-fde5d09a-525b-44ed-a9e0-222e376bd486.jpg)
 
