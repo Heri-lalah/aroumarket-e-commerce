@@ -18,4 +18,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+###Page d'accueil
 ![aroumarket-cb427713](https://user-images.githubusercontent.com/105268379/214247085-00e3813d-f131-4226-9992-cd7f8421dc9f.jpg)
