@@ -20,14 +20,6 @@
                     <img src="{{ Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{ $product->name }}" class="img-fluid">
                 </div>
 
-                <div class="product_details mt-2">
-                    <picture class="d-flex justify-content-around">
-                        <img src="{{ Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
-                        <img src="{{ Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
-                        <img src="{{ Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
-                        <img src="{{ Storage::url('/assets/products/' . $product->photo_principal)}}" alt="{{ $product->name }}" class="img-fluid block" style="width: 22%">
-                    </picture>
-                </div>
             </div>
             <div class="col-md-6 px-md-5 align-self-center">
                 <p class="fs-5 fw-bold">{{ $product->name }}</p>
